@@ -1,0 +1,40 @@
+\select@language {english}
+\select@language {brazil}
+\select@language {brazil}
+\select@language {english}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{Figura~\numberline {1}{\ignorespaces Vis\~ao geral do processo de desenvolvimento de software.}}{35}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{Figura~\numberline {2}{\ignorespaces Caso de uso de neg\'ocios da aplica\c c\~ao de gest\~ao do ciclo produtivo para pomares de pessegueiro}}{50}
+\contentsline {figure}{Figura~\numberline {3}{\ignorespaces Modelo de dom\IeC {\'\i }nio da aplica\c c\~ao de gest\~ao para pomares de pessegueiro.}}{52}
+\addvspace {10\p@ }
+\contentsline {figure}{Figura~\numberline {4}{\ignorespaces Caso de uso de ``Cadastrar recursos''}}{61}
+\contentsline {figure}{Figura~\numberline {5}{\ignorespaces Esquema conceitual do caso de uso de ``Cadastrar recursos''}}{66}
+\contentsline {figure}{Figura~\numberline {6}{\ignorespaces Esquema navegacional do caso de uso de ``Cadastrar recursos''}}{67}
+\contentsline {figure}{Figura~\numberline {7}{\ignorespaces Diagrama de Contextos do caso de uso de ``Cadastrar recursos''}}{68}
+\contentsline {figure}{Figura~\numberline {8}{\ignorespaces Abstract Data Views do caso de uso ``Cadastrar recursos''}}{69}
+\contentsline {figure}{Figura~\numberline {9}{\ignorespaces Interface para o usu\'ario do ADV LOGIN}}{72}
+\contentsline {figure}{Figura~\numberline {10}{\ignorespaces Interface para o usu\'ario do ADV IDX MENU PRINCIPAL}}{72}
+\contentsline {figure}{Figura~\numberline {11}{\ignorespaces Implementa\c c\~ao do ADV CTX CRIA HUMANO}}{73}
+\contentsline {figure}{Figura~\numberline {12}{\ignorespaces Met\'afora de interface para o ADV HUMANO}}{74}
+\contentsline {figure}{Figura~\numberline {13}{\ignorespaces Caso de uso de ``Planejar tratos culturais''}}{75}
+\contentsline {figure}{Figura~\numberline {14}{\ignorespaces Modelo conceitual do caso de uso ``Planejar Tratos Culturais''}}{78}
+\contentsline {figure}{Figura~\numberline {15}{\ignorespaces Esquema navegacional do caso de uso ``Planejar Tratos Culturais''}}{80}
+\contentsline {figure}{Figura~\numberline {16}{\ignorespaces Diagrama de contextos do caso de uso ``Planejar Tratos Culturais''}}{81}
+\contentsline {figure}{Figura~\numberline {17}{\ignorespaces Abstract Data Views do caso de uso ``Planejar Tratos Culturais''}}{82}
+\contentsline {figure}{Figura~\numberline {18}{\ignorespaces Caso de uso de ``Registrar tarefas''}}{83}
+\contentsline {figure}{Figura~\numberline {19}{\ignorespaces Modelo conceitual do caso de uso de ``Registrar Tarefas''}}{86}
+\contentsline {figure}{Figura~\numberline {20}{\ignorespaces Esquema navegacional do caso de uso de ``Registrar Tarefas''}}{87}
+\contentsline {figure}{Figura~\numberline {21}{\ignorespaces Diagrama de contextos do caso de uso de ``Registrar Tarefas''}}{87}
+\contentsline {figure}{Figura~\numberline {22}{\ignorespaces ADVs do caso de uso de ``Registrar Tarefas''}}{88}
+\contentsline {figure}{Figura~\numberline {23}{\ignorespaces Caso de uso de neg\'ocio ``Apurar resultados''}}{89}
+\contentsline {figure}{Figura~\numberline {24}{\ignorespaces Diagrama de contextos do caso de uso de neg\'ocio ``Apurar resultados''}}{89}
+\contentsline {figure}{Figura~\numberline {25}{\ignorespaces ADVs do caso de uso de neg\'ocio ``Apurar resultados''}}{90}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\select@language {brazil}
+\addvspace {10\p@ }

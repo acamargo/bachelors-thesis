@@ -1,0 +1,222 @@
+\section{Object-Oriented Hypermedia Design Method}
+
+\paragraph{Como foi colocado na Seção \ref{sec:oohdm}, a OOHDM é um método de 
+projeto
+para aplicações hipermídia que divide a construção do sistema em 4 atividades.}
+\paragraph{A seguir, explanarei de forma resumida, cada
+uma das atividades desenvolvidas em um projeto OOHDM.}
+
+\subsection{Modelagem conceitual}
+
+\paragraph{A modelagem conceitual compreende a primeira atividade do método 
+OOHDM, sendo responsável pela análise do domínio da aplicação, englobando assim 
+todo o universo de informações relevantes para a aplicação em questão. \cite{patricia}}
+\paragraph{Durante a modelagem conceitual é construído um modelo de domínio da aplicação
+utilizando princípios de modelagem orientada a objetos. A OOHDM não prescreve
+nenhuma notação em particular para produzir este esquema conceitual, podendo
+ser empregado UML, OMT, OOSE ou qualquer outra. Neste trabalho 
+utilizarei a
+UML por acreditar que, atualmente, esta linguagem de modelagem é de fato um 
+padrão notacional para modelagem de aplicações orientada a objetos.}
+\paragraph{A finalidade desta atividade é capturar a semântica do domínio da aplicação.
+Para isso, utiliza-se formalismos de modelagem orientada a objetos como classes,
+relacionamentos e casos de uso. Produz-se um esquema conceitual composto de
+classes, subsistemas, relacionamentos e perspectivas de atributos baseados em
+mecanismos como classificação, agregação, generalização e especialização.}
+\paragraph{As informações necessárias para criação do esquema conceitual foram
+extraídas dos casos de uso definidos na seção anterior. Para facilitar a
+tarefa de mapeamento de casos de uso para o esquema conceitual, existe uma
+ferramenta chamada User Interaction Diagram (UID) que descreve a troca de 
+informações entre o sistema e o usuário em um alto nível de abstração. Maiores
+informações sobre UID são descritas em \cite{UID}.}
+\paragraph{Devido a restrição de tempo para desenvolvimento deste trabalho,
+não foi possível aplicar a ferramenta de UID nos casos de uso desta aplicação,
+sendo que o mapeamento se deu de maneira empírica e intuitiva.}
+
+\subsection{Projeto navegacional}
+
+\paragraph{Segundo \cite{ROS96} ``Os aplicativos de hipermídia são projetados 
+para efetuar navegação através de um espaço de informações''.}
+\paragraph{Em OOHDM, uma aplicação é vista como um conjunto de visões 
+navegacionais \textbf{derivadas} do modelo conceitual construído na atividade 
+anterior. ``Esta é uma das maiores inovações da OOHDM, já que reconhece objetos 
+que o usuário navega \textbf{não} como objetos conceituais, mas sim, outros 
+tipos de objetos que são ``construídos'' de um ou mais objetos conceituais'' 
+\cite{DHAUO}. Logo, o modelo conceitual funcionará como um repositório 
+compartilhado de modelagem, a partir do qual construiremos diferentes visões 
+navegacionais do domínio do problema, baseado nos usuários que utilizarão a 
+aplicação e as tarefas que realizarão nele \cite{ROS96}.}
+\begin{quotation}
+``Cada visão define um conjunto de contextos e classes navegacionais. Os contextos
+navegacionais expressam a estrutura navegacional geral do aplicativo hipermídia,
+enquanto as classes navegacionais, como os nós e os elos, especificam os objetos
+que serão vistos pelo usuário.
+
+Os nós representam `janelas' lógicas em classes definidas no esquema conceitual
+através de uma mapeamento que fornece um `corte e colagem' de atributos conceituais
+semelhantes às visões dos objetos.
+
+Os contextos navegacionais são um conjunto de nós, elos e outros contextos navegacionais
+(aninhados) que auxiliam na organização dos objetos navegacionais, fornecendo
+espaços de navegação consistentes e, deste modo, diminuindo as chances do usuário
+`perder-se no hiperespaço''' \cite{ROS96}.
+\end{quotation}
+
+\subsubsection{O esquema de classes navegacionais da aplicação}
+
+\begin{quotation}
+``Um dos produtos da atividade de projeto de navegação é o esquema navegacional,
+construído sobre nós e elos. As classes navegacionais definidas nesta atividade
+são especificadas como especializações de um conjunto de classes básicas que
+definem a semântica dos objetos navegacionais'' \cite{ROS96}.
+\end{quotation}
+
+\paragraph{Em OOHDM há um conjunto de tipos pré-definidos de classes navegacionais como:
+nós, links, âncoras e estruturas de acesso. A semântica dos nós, links e âncoras
+são as mesmas utilizadas em aplicações hipermídia usuais, enquanto que estruturas
+de acesso representam as possíveis maneiras de acessar nós.}
+
+\subsubsection{O diagrama de contextos}
+
+\begin{quotation}
+``Um contexto de navegação é um conjunto de objetos (nós, elos e, recursivamente,
+outros contextos navegacionais) que estão relacionados de acordo com algum 
+aspecto (ex.: os nós do mesmo tipo que apresentam um atributo com o mesmo
+conteúdo; os nós do mesmo tipo que apresentam um relacionamento com um mesmo
+nó de outro tipo; os nós de tipos diferentes que apresentam uma característica
+em comum).'' \cite{patricia}
+\end{quotation}
+
+\paragraph{Os contextos de navegação da aplicação ficam documentados em cartões
+próprios e são representados graficamente no diagrama de contextos.}
+
+\paragraph{Os contextos possuem formas pré-definidas de acesso e de navegação
+entre seus elementos, bem como restrições de acesso a usuários.}
+
+\paragraph{Há um tipo de contexto de navegação chamado \textbf{estrutura de 
+acesso} que age como índice para outros contextos. Em cada estrutura de acesso
+são especificados atributos ``seletores'', que são os objetos que ativam a 
+navegação a outros contextos.}
+
+\subsubsection{Classes em contexto}
+
+\paragraph{Classes em contexto são artifícios utilizados para acrescentar
+características a nós conforme o contexto em que estão sendo acessados. Estas
+classes em contexto só se fazem necessárias caso o nó deva possuir uma aparência 
+diferente e âncoras distintas no contexto em questão.}
+\paragraph{Quando um nó possui atributos com múltiplas perspectivas, é um indício
+para utilização de classes em contexto.}
+\paragraph{Na representação de classes em contexto utiliza-se a mesma notação
+de classes da UML, diferenciando-se apenas pela adição de 
+um compartimento onde é especificado os
+contextos nos quais a classe em contexto participa.}
+
+\subsection{Projeto de interface abstrata}
+
+\paragraph{A atividade de Projeto de Interface Abstrata compreende uma 
+abordagem para especificar a interface de usuário para aplicações
+hipermídia. Esta atividade deve ser desenvolvida antes de iniciar a 
+atividade de implementação, de forma que seja independente do ambiente onde
+se pretende efetivamente construir o aplicativo, sempre procurando manter uma
+coerência com o ambiente de implementação (por exemplo, de nada adianta 
+especificar algo que o ambiente de implementação não suporta).}
+\paragraph{Na especificação da interface abstrata utilizamos o conceito de 
+Abstract Data Views (ADVs). ADVs são objetos que especificam a organização
+e procedimentos da interface, são abstratos porque sua real aparência física
+é feita na fase de implementação. ADVs possuem um estado e uma 
+interface, onde a interface é utilizada para entrada e/ou saída de eventos
+externos gerados pelo usuário.}
+\paragraph{OOHDM também utiliza Abstract Data Objects (ADOs), que similarmente
+aos ADVs são objetos, só que não suportam eventos externos gerados pelo usuário.}
+\begin{quotation}
+``Em uma típica aplicação utilizando ADVs, temos um conjunto de ADOs
+gerenciando estruturas de dados e de controle, e um conjunto de objetos
+de interface (instâncias de ADVs) gerenciando aspectos de interface da aplicação, 
+como entrada de dados do usuário e saída de dados do sistema para o usuário.'' \cite{IWHD}
+\end{quotation}
+\paragraph{``No contexto da OOHDM, os objetos navegacionais (nós, elos, classes 
+em contexto e estruturas de acesso) agirão como ADOs e estarão associados a ADVs
+que serão usados para especificar a sua aparência para o usuário.'' \cite{IWHD}}
+\paragraph{Utilizamos também uma variável chamada ``ContextoPerceptivo'' para
+indicar os objetos que são perceptíveis num dado momento. Todo e qualquer objeto
+que vier a se tornar visível é acrescido a ``ContextoPerceptivo'', enquanto
+que todos aqueles que forem excluídos da variável deixam de ser perceptíveis.}
+
+\subsubsection{Diagramas de Configuração}
+
+\paragraph{Nesta fase constrói-se Diagramas de Configuração, que são utilizados
+para representar os relacionamentos entre os objetos de interface e os objetos
+navegacionais. \cite{patricia}}
+\paragraph{Além de representarem os objetos de interface (ADVs), os diagramas de
+configuração especificam outras características da interface abstrata da aplicação,
+que conforme \cite{patricia} são:}
+\begin{itemize}
+\item os eventos externos iniciados pelo usuário e que serão manipulados pelos ADVs;
+\item os relacionamentos estruturais entre os ADVs;
+\item os relacionamentos entre os ADVs (que representam os objetos de interface)
+e os ADOs (que representam os objetos navegacionais).
+\end{itemize}
+
+\subsubsection{ADVcharts\label{sec:advcharts}}
+
+\paragraph{Outro diagrama também é construído nesta fase, os ADVcharts. Estes 
+procuram apresentar as transformações ocorridas nos ADVs,
+sendo que cada ADVchart está relacionado com uma tela da interface.}
+\paragraph{Enquanto que os Diagramas de Configuração representam a estrutura
+estática da interface, utilizamos ADVcharts para representar a estrutura dinâmica.}
+
+\subsection{Implementação}
+
+\paragraph{A atividade de Implementação é a última etapa de uma iteração em OOHDM,
+sendo que agora é o momento de transformarmos os artefatos abstratos produzidos nas
+fases anteriores em artefatos concretos de software.}
+\paragraph{Para feitura deste mapeamento utilizaria-se ferramentas que suportassem 
+a notação OOHDM, bem como um framework\footnote{%
+Segundo \cite{pizzol} ``um \textbf{framework} é o esqueleto de uma aplicação
+que pode ser customizada por um desenvolvedor de aplicação''.}
+que possibilitasse a implementação de uma 
+especificação OOHDM da maneira menos traumática possível.}
+\paragraph{Infelizmente não há ferramentas para desenho dos diagramas, fazendo
+necessário a adaptação das ferramentas existentes a notação da metodologia.}
+\paragraph{Quanto aos frameworks, existem atualmente duas opções que abordo
+brevemente a seguir.}
+
+\begin{itemize}
+\item \textbf{OOHDM-Java}\\
+\cite{pizzol} propõe um framework em Java para implementação na WWW 
+de aplicações hipermídia modeladas com OOHDM.\\
+O framework é implementado com uma biblioteca de classes em Java,
+que representa as primitivas OOHDM na web.\\
+OOHDM-Java é considerado um framework caixa-branca \footnote{``Um framework
+é considerado \textbf{caixa-branca} quando é necessário que programadores
+estendam o seu projeto e sua implementação, pelo menos até um certo grau
+de detalhe, para utilizá-lo. Por esta razão, esses tipos de frameworks
+geralmente são mais difíceis de aprender e usar.'' \cite{pizzol}}
+, sendo portanto,
+de difícil aprendizado. Infelizmente, não há tempo para estudar todo o
+framework e ainda implementar um protótipo.\\
+Apesar dos requisitos de sistema especificados na dissertação
+relacionarem apenas software proprietário, acredito que seja possível obter
+plataforma igual baseada em software livre.
+\item \textbf{OOHDM-WEB}\\
+\cite{isabela} propõe um ambiente de desenvolvimento para dar
+suporte às aplicações WWW modeladas com OOHDM. Esse ambiente faz uso da
+linguagem script CGILua e o pacote DBLua (para acesso a bases de dados)
+e permite a implementação de script CGI, que geram páginas dinamicamente,
+baseando-se em templates pré-definidos e nos dados contidos em um
+banco de dados.\\
+Uma característica interessante deste ambiente é a 
+possibilidade de compilação, gerando uma aplicação estática,
+eliminando desta maneira a necessidade de manter um banco de dados e o 
+``overhead'' causado pela geração dinâmica das páginas.\\
+Infelizmente não há implementação deste ambiente de 
+desenvolvimento para rodar sobre software livre.
+\end{itemize}
+
+\paragraph{Acredito ser esta a atividade mais delicada da OOHDM na atualidade,
+a falta de um framework para implementação faz o desenvolvedor pensar duas
+vezes antes de utilizar um método, porque é sabido que todo o trabalho feito
+nas atividades anteriores não é mapeado de forma direta para artefatos
+concretos de software.}
+\paragraph{Como não existe um framework para PHP, decidi criar um para poder
+implementar o protótipo deste trabalho.}

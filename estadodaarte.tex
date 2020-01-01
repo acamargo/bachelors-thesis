@@ -1,0 +1,388 @@
+\chapter{ESTADO DA ARTE EM SOFTWARE LIVRE}
+
+\section{Introdução}
+
+\paragraph{No desenvolvimento desse projeto, procurarei utilizar somente 
+ferramentas cuja licença seja livre. Sendo assim, inicialmente pesquisei até 
+obter uma suite de ferramentas passíveis de serem utilizadas na implementação 
+do estudo de caso proposto neste trabalho.}
+\paragraph{A pesquisa sobre as ferramentas citadas nesta seção são frutos
+de pesquisa nos sites \emph{AppWatch} \cite{appwatch}, \emph{freshmeat} 
+\cite{fresmeat} e \emph{FreeOS} \cite{freeos}.}
+
+\section{Sistemas operacionais livres}
+
+\paragraph{Sistemas operacionais são necessários para possibilitar a operação 
+de qualquer sistema computacional ou de alguns dispositivos.}
+\paragraph{Alguns sistemas operacionais populares são Windows, MacOS, Unix, 
+GNU/Linux e Solaris. Dos casos citados, GNU/Linux é um sistema operacional 
+livre, enquanto que os demais não.}
+\paragraph{Sistemas operacionais livres são sistema operacionais que podem ser 
+copiados, redistribuídos e que ainda oferecem o código fonte para que o usuário 
+possa adaptá-lo as suas necessidades.}
+\paragraph{A seguir, abordaremos brevemente alguns sistemas operacionais livre 
+existentes para plataforma PC, já que esta é a única plataforma que tenho 
+acesso para implementar este trabalho.}
+\begin{itemize}
+\item FreeBSD \cite{freebsd}\\
+FreeBSD é um avançado Sistema Operacional Unix BSD para plataforma PC, desenvolvido
+e mantido por uma coletividade de pessoas. Oferece performance, segurança, avançado
+suporte a redes e características de compatibilidade que ainda hoje falta em
+outros sistemas operacionais, até mesmo em alguns sistemas operacionais comerciais
+e proprietários. Provê robustos serviços de rede, até mesmo sobre grandes cargas
+de acesso e usa eficientemente a memória para manter uma boa resposta a centenas,
+ou milhares, de processos simultâneos.\\
+A qualidade do FreeBSD combinado com o baixo custo de hardware PC faz do FreeBSD
+um ótima alternativa para estações comerciais de trabalho UNIX.\\
+Exige conhecimentos avançados para manutenção e é de difícil configuração, já
+que não existem ferramentas \emph{user-friendly} para ajudar nessa tarefa.
+\item GNU/Linux \cite{linux}\\
+GNU/Linux é um sistema operacional livre do tipo Unix, sendo uma implementação
+independente de POSIX\footnote{%
+\textbf{POSIX} é um conjunto de padrões que definem funções e standards para um sistema
+operacional visando portabilidade.}
+que inclui multitarefa real, memória virtual, bibliotecas compartilháveis, carregamento
+em-demanda, gerenciador de memória otimizado, suporte a TCP/IP e outras características
+encontradas em sistemas do tipo Unix.\\
+Desenvolvido sobre a GNU GPL, o código fonte é distribuído livremente para qualquer
+um.
+\item Alliance \cite{alliance}\\
+Alliance é um projeto ``open source'' que está desenvolvendo um sistema operacional
+baseado sobre o conceito de Cache Kernel (desenvolvido pela Universidade de
+Stanford) e CORBA da OMG.\\
+Alliance usa o conceito de Cache Kernel para criar um ambiente operacional para
+funcionar em direção a emulação de outros sistemas operacionais e plataformas
+de hardware. A meta não é somente ter um fantástico emulador de sistemas operacionais,
+mas prover um ambiente onde os dados transitem entre as fronteiras do sistema
+operacional. Ele também provê muitos recursos avançados para aplicações nativas
+(suporte a processos de tempo real, suporte a computação distribuída, entre
+outras características).\\
+Este sistema operacional encontrava-se em fase inicial de desenvolvendo quando
+este documento foi escrito, onde 75\% da características planejadas para a primeira
+versão já estavam finalizadas, sendo distribuído conforme a licença GNU GPL.
+\item FreeDOS \cite{freedos}\\
+FreeDOS é um sistema operacional ``open source'', sendo desenvolvido
+para atender à demanda dos usuários que não necessitam de um sistema operacional
+``complexo'' como os disponíveis atualmente, aos que tem computadores velhos e desejam
+``ressuscitá-los'' e para, finalmente, quem não quiser pagar
+nada por isso... Ao mesmo tempo, os desenvolvedores do FreeDOS estão procurando
+manter 100\% de compatibilidade com o popularíssimo DOS!\\
+Por ser um sistema monotarefa, monousuário, ele não é indicado no desenvolvimento
+deste projeto. Mesmo assim, citei-o apenas por motivos informativos.
+\item EROS \cite{eros}\\
+EROS é um novo sistema operacional sendo implementado na Univesidade da Pensilvânia.
+O sistema funde algumas idéias antigas em sistemas operacionais com algumas
+novas idéias sobre performance e gerenciamento de recursos. O resultado é um
+pequeno, seguro, sistema operacional de tempo real que provê persistência ortogonal.\\
+O sistema se encontra na versão 0.8.3 atualmente e achei deveras interessante
+as suas características.
+\item GNU Hurd \cite{hurd}\\
+GNU Hurd é o futuro kernel Unix para o sistema operacional GNU. O Hurd consiste 
+de uma coleção de servidores que rodam sobre um micro-kernel Mach, gerenciando 
+sistemas de arquivos, protocolos de rede, controle de acesso a arquivos, e 
+outras características que são implementadas por kerneis Unix ou similares 
+(como Linux, por exemplo).\\
+Atualmente, Hurd roda em máquinas i386. Futuramente, será portado para outras
+plataformas.\\
+Como todo software GNU, o GNU Hurd também é licenciado utilizando a GNU GPL.
+\item Minix \cite{minix}\\
+MINIX é um clone de UNIX livre. Com obrigação de ocupar poucos recursos, projeto
+baseado em micro-kernel e ampla documentação, ele é indicado para pessoas que
+querem rodar um sistema operacional Unix em seu computadores pessoais e aprender
+como o sistema funciona.\\
+Este sistema operacional tem fins didáticos, não sendo recomendado seu uso
+em máquinas de produção.
+\item NetBSD \cite{netbsd}\\
+NetBSD é um sistema operacional UNIX livre, altamente portável, disponível para
+várias plataformas (quando este documento foi escrito, suportava 28 plataformas
+de hardware!), compreendendo desde estações Alpha de 64 bits até handhelds.
+Projetado com bom-senso, suportando uma larga variedade de hardware, distribuído
+através da licença BSD, com código fonte distribuído, seguro, maduro e estável,
+estes adjetivos tornam o NetBSD uma opção tanto para ambientes de produção como
+de pesquisa. A principal desvantagem, vem de não ser \emph{user-friendly}.
+\item OpenBSD \cite{openbsd}\\
+O projeto OpenBSD produz um sistema operacional livre, multiplataforma, sendo
+um UNIX baseado no BSD4.4. Portabilidade, padronização, segurança e 
+criptograficamente integrado, OpenBSD suporta emulação binária da maioria dos 
+programas para SVR4(Solaris), FreeBSD, BSD/OS, SunOS e HP-UX. Atualmente roda 
+em 10 plataformas diferentes de hardware e é considerado o sistema operacional 
+mais seguro.
+\end{itemize}
+
+\section{Banco de dados}
+
+\paragraph{Sistemas gerenciadores de banco de dados serão utilizados para armazenar eficaz
+e eficientemente todos os dados que a aplicação do estudo de caso deste trabalho
+utilizará.}
+\paragraph{A seguir, apresentaremos alguns bancos de dados livres.}
+\begin{itemize}
+\item GNU SQL Server \cite{sqlserver}\\
+SQL Server é um sistema gerenciador de bancos de dados multiusuário, portável
+e livre. Suporta completamente o dialeto SQL89 e implementa algumas extensões
+de SQL92. Ele provê acesso multiusuário e isolamento de transações através de
+``predicative locks''. Roda somente em UNIXes. Também usa Remote Procedure Call 
+(RPC), memória compartilhada e agendamento de mensagens. É distribuído conforme 
+a GNU GPL e enquanto este documento foi escrito, encontrava-se em fase de 
+desenvolvimento.
+\item Lago \cite{lago}\\
+Lago é um projeto que almeja prover um sistema gerenciador de bancos de dados
+livre licenciado através da GNU GPL. Lago é multi-thread, portável e escrito
+em C++.\\
+Devido as características atuais que este banco de dados implementa, não é possível
+utilizarmos no desenvolvimento deste projeto.
+\item Interbase \cite{interbase}\\
+Até mesmo as companhias de software proprietário estão procurando ``aderir''
+ao Movimento de Software Livre, a Interbase abriu o código fonte de seu banco
+de dados distribuindo-o através de sua licença IPL (Interbase Public Licence).\\
+A versão 6 implementa algumas características interessantes como a criação de
+dialetos (adicionaram novas cláusulas ao padrão SQL, como por exemplo a cláusula
+ALTER COLUMN) e replicação.
+\item LEAP \cite{leap}\\
+LEAP é um sistema gerenciador de bancos de dados relacional que é utilizado
+como uma ferramenta educacional, ajudando estudantes, assistindo pesquisadores
+e professores como estudar e ensinar banco de dados.\\
+É distribuído através da licença GNU GPL e escrito em linguagem C padrão, sendo
+portável para várias plataformas operacionais.\\
+Implementa uma linguagem de consulta baseada em \textbf{álgebra relacional},
+não suportando SQL. O que o deixa de fora da possibilidade de utilizá-lo no
+desenvolvimento desse projeto.
+\item PostgreSQL \cite{pgsql}\\
+PostgreSQL é um sofisticado sistema gerenciador de bancos de dados objeto-relacional,
+suportando quase todas cláusulas ANSI SQL, incluindo sub-selects, transações e tipos
+e funções definidas pelo usuário. É o banco de dados livre mais avançado atualmente,
+já que implementa herança, valores não-atômicos, entre outras características
+interessantes.\\
+A distribuição do PostgreSQL é baseada nos termos da Berkeley licence, que também
+é uma licença livre.
+\item mySQL \cite{mysql}\\
+mySQL é um sistema gerenciador de banco de dados relacional. Distribuído conforme
+a GNU GPL, este banco de dados é apontado como um dos mais velozes bancos de
+dados da atualidade. Baseado na arquitetura cliente-servidor, este sistema consiste
+de um servidor SQL multi-threaded que suporta diferentes back-ends, vários programas
+e bibliotecas cliente, ferramentas de administração e interfaces de programação.
+O SQL implementado procura seguir o padrão ANSI SQL92.
+\end{itemize}
+
+\section{Ferramentas de desenvolvimento para Internet}
+
+\paragraph{Como a proposta deste trabalho é modelar e parcialmente implementar uma aplicação
+para web, esta seção ilustra algumas ferramentas que poderão ser utilizadas
+na implementação do estudo de caso proposto.}
+
+\subsection{Common Gateway Interface}
+\paragraph{A Common Gateway Interface (CGI) é um padrão para interfaceamento de aplicações
+externas com servidores web. Um documento HTML que um servidor web entrega é
+estático, o que significa que existe em um estado constante: um arquivo de texto
+que não se altera. Um programa CGI, é executado em tempo real, então ele pode
+criar informação (páginas web) dinamicamente.}
+\paragraph{Um programa CGI pode ser escrito utilizando qualquer linguagem que pode ser
+executada no sistema, como:}
+\begin{itemize}
+\item C/C++
+\item Fortran
+\item PERL
+\item TCL
+\item Qualquer Unix shell
+\end{itemize}
+
+\subsection{Pré-processadores}
+\paragraph{Pré-processadores basicamente são programas que executam scripts que podem ou
+não estar embutidos no código HTML de páginas web. São estes pré-processadores
+que geram a parte dinâmica das páginas. Dependendo do pré-processador, é possível
+executar as mais diversas operações como: acesso a bases de dados e/ou recursos
+do sistema.}
+\begin{itemize}
+\item HB \cite{hb}\\
+HB age como uma extensão ao HTML. Rodando junto ao servidor web, HB depura os
+documentos conforme eles são requisitados. Com HB é possível criar conteúdo
+dinâmico de maneira fácil e poderosa.\\
+Licenciado através da GNU GPL, tem suporte a PERL e ao banco de dados PostgreSQL.
+\item PHP \cite{php}\\
+PHP é uma linguagem script embutida em HTML. Basicamente, qualquer coisa que
+pode ser feita por algum programa CGI pode ser feita também com PHP, como coletar
+dados de um formulário, gerar páginas dinamicamente ou enviar e receber cookies.\\
+PHP também tem como uma das características mais importantes o suporte a um
+grande número de bancos de dados como: ``dBase'', Interbase, mSQL, mySQL,
+Oracle, Sybase, PostgreSQL e vários outros. Construir uma página baseada em
+um banco de dados torna-se uma tarefa extremamente simples com PHP.\\
+Além disso, PHP tem suporte a outros serviços através de protocolos como IMAP,
+SNMP, NNTP, POP3 e, logicamente, HTTP. Ainda é possível abrir sockets e interagir
+com outros protocolos.\\
+Esta ótima ferramenta, até a versão 3, é licenciada através da GNU GPL.
+\end{itemize}
+
+\subsection{Servidores de aplicações}
+\paragraph{Servidores de Aplicações oferecem um ambiente completo para o desenvolvimento
+de aplicações, ``facilitando'' o processo de construção de sites dinâmicos
+através de módulos pré-programados.}
+\paragraph{A seguir, brevemente introduzirei alguns servidores de aplicações
+de distribuição livre.}
+\begin{itemize}
+\item Midgard \cite{midgard}\\
+Midgard é uma ferramenta livre para desenvolvimento de aplicações via web, baseado
+em na linguagem script PHP. É um projeto Open Source, dando a você liberdade
+para criar suas soluções em um ambiente aberto. Midgard é uma ferramenta para
+criar, modificar e gerenciar serviços web dinâmicos com suporte a banco de dados.\\
+Este servidor de aplicações é licenciado através da LGPL
+\item ZOPE \cite{zope}\\
+Zope é um servidor de aplicações web que permite o trabalho colaborativo entre 
+equipes, na criação e gerenciamento de aplicações dinâmicas baseada na web, como 
+intranets e portais. Este servidor de aplicações torna fácil construir 
+\emph{search} e \emph{news} personalizados, além de, aplicações e-commerce via 
+web.\\
+Zope consiste de vários componentes que trabalham cooperativamente para prover 
+um servidor de aplicações completo e flexível, incluindo um servidor de internet,
+um banco de dados objeto-transacional, um mecanismo de procura, um sistema de
+modelos de páginas web, uma ferramenta para gerenciamento de desenvolvimento
+e suporte a extensões.\\
+Este servidor de aplicações é distribuído conforme a licença própria, que não
+é compatível com GNU GPL.
+\end{itemize}
+
+\subsection{Java Server Pages (JSP)}
+\paragraph{Java Server Pages é uma tecnologia desenvolvida pela Sun 
+Microsystems que permite embutir código escrito na linguagem Java em
+páginas HTML, é possível também fazer com que o código Java das páginas
+HTML executem servlets\footnote{\textbf{Servlets} são componentes de software escritos
+em Java.} no lado do servidor web.}
+\begin{itemize}
+\item GNUJSP \cite{GNUJSP}\\
+GNUJSP é uma implementação livre do Java Server Pages da Sun Microsystems, 
+suportando a especificação 1.0 do JSP.\\
+Este produto é distribuído sob a licença GNU GPL.
+\item Resin \cite{resin}\\
+Resin é uma veloz implementação de servlet e JSP que suporta ``load balancing'' para
+incrementar a performance e disponibilidade de serviços.\\
+Possui um servidor web compatível com o protocolo HTTP/1.1 dedicado a servir
+conteúdo dinâmico em Java.\\
+Suporta a especificação 2.2 para Servlet e a 1.1 para JSP da Sun.\\
+Este software é distribuído conforme a licença QPL.
+\item Tomcat \cite{tomcat}\\
+Tomcat é uma implementação na forma de software livre das especificações Java 
+Servlet 2.2 e JSP 1.1.
+Esta implementação é usada no servidor web Apache \cite{apache} bem como em
+outros servidores web e ferramentas de desenvolvimento.\\
+Este produto é licenciado através da licença Apache.
+\item PolyJSP \cite{polyjsp}\\
+PolyJSP é uma implementação de Java Server Pages projetada para suportar
+múltiplas linguagens script e múltiplas versões de JSP.\\
+Completamente baseada em XML e XSL, PolyJSP atualmente suporta scripts em Java,
+JavaScript e WebL. Suporta parcialmente a especificação 0.92 do JSP.\\
+Segundo informações retirados do seu website, PolyJSP é um produto distribuído
+conforme a licença Apache. Quando entrei em contato com Ricardo Rocha
+(ricardo@apache.org), que é o seu desenvolvedor, ele informou-me que o 
+desenvolvimento deste produto está parado.
+\end{itemize}
+
+\section{Servidor de HTTP}
+\paragraph{Servidor de HTTP\footnote{\textbf{Servidores de HTTP} também podem ser 
+chamados de ``servidores web''} é um programa que utilizando o modelo 
+cliente/servidor e o protocolo HTTP, serve a requisições de páginas de 
+usuários da World Wide Web.}
+\paragraph{A seguir, brevemente e sem intenção de esgotar o assunto, apresentarei
+alguns servidores de HTTP que pesquisei.}
+\begin{itemize}
+\item Apache \cite{apache}\\
+Apache é o servidor HTTPD mais popular, sendo possivelmente o melhor em termos
+de funcionalidade, eficiência, segurança e velocidade. Foi originalmente baseado
+no código e idéias do NCSA httpd 1.3. Extremamente extensivo, suporta módulos
+PERL, PHP, XML entre outros.\\
+Este servidor de HTTP é licenciado através de licença própria.
+\item ghttpd \cite{ghttpd}\\
+ghttpd é um servidor HTTP rápido e eficiente. Suporta CGI, virtual hosts e inetd,
+sendo capaz de manipular centenas de conexões simultaneamente. De fácil configuração,
+ghttpd roda na maioria dos sistemas UNIX e é distribuído sob a licença GNU GPL.
+\item Xitami \cite{xitami}\\
+Desenvolvido e mantido pela empresa iMatix, Xitami é um servidor web que roda
+em todas plataformas UNIX, OS/2, OpenVMS, Windows 3.x, Windows 95 e Windows
+NT. De fácil instalação, já que o software vem totalmente pré-configurado, não
+exigindo a configuração de uma se quer opção para funcionar. Xitami aloca poucos
+recursos, é rápido e robusto: ele é baseado em sólidas ferramentas de engenharia
+de software que a iMatix desenvolveu para servidores TCP/IP multithreaded. Ao
+contrário de outros servidores web, Xitami foi projetado como um conjunto de
+componentes reusáveis altamente portável. Tornando fácil a extensão e reincorporação
+de seus módulos.\\
+Distribuído sob licença Open Source este servidor web é gratuito.
+\item thttpd \cite{thttpd}\\
+thttpd é um servidor web simples, pequeno, rápido e seguro. Possui algumas características
+extremamente úteis (como URL-traffic-based throttling) que nenhum outro servidor
+possui. Adicionalmente, suporta IPv6 nativamente.\\
+Este servidor web é licenciado sob licença BSD
+\end{itemize}
+
+\section{Implementações de Máquina Virtual Java}
+\paragraph{Uma Máquina Virtual Java é uma suite de ferramentas, que formam
+um ambiente capaz de interpretar e executar programas escritos na linguagem 
+Java.}
+\begin{itemize}
+\item Kaffe \cite{kaffe}\\
+Kaffe é uma implementação livre da Máquina Virtual Java e de suas classes.
+É um projeto de software livre porque pratica a licença GNU GPL.\\
+Kaffe é compatível com a especificação do Java Development Kit\footnote{%
+\textbf{Java Development Kit (JDK)} é uma suite de ferramentas que possibilitam
+o desenvolvimento de aplicações em Java.} 1.1, faltando
+apenas algumas partes, sendo que outras já suportam a especificação
+1.2.
+\item Japhar \cite{japhar}\\
+Japhar é "um interpretador portável para bytecodes Java" \cite{japhar} 
+distribuído sob a licença LGPL. Enquanto esta monografia está sendo escrita, 
+Japhar encontrava-se em um estágio inicial de desenvolvimento, apesar de
+já implementar algumas funcionalidade dos JDKs 1.1 e 1.2.
+\end{itemize}
+
+\section{Navegadores Web}
+\paragraph{Navegadores Web são programas que permitem a visualização de
+páginas web.}
+\paragraph{Estes programas poderão ser utilizados pelos usuários da aplicação
+que este trabalho pretende construir.}
+
+\begin{itemize}
+\item Amaya \cite{amaya}\\
+Amaya é um completo navegador e ambiente de autoria com interface ``WYSIWYG''
+\footnote{\textbf{What You See Is What You Get (WYSIWYG)}, nome dado a ferramentas que 
+permitem que o usuário edite documentos e visualize o resultado 
+final, sem que seja necessário executar qualquer passo adicional para isso.}. 
+Com esse
+estilo de interface possibilita gerar facilmente páginas HTML e XHTML.\\
+Este navegador suporta as tecnologias estado da arte para web, licenciado sob
+uma licença do tipo BSD, este projeto é hospedado pelo W3C\footnote{O 
+\textbf{World Wide Web Consortium (W3C)}, desenvolve
+tecnologias interoperáveis (especificações, normas, software e ferramentas)
+para conduzir a Web para todo seu potencial como fórum de informações,
+comércio, comunicações e entendimento coletivo.}.
+\item Armadillo \cite{armadillo}\\
+Armadillo é um navegador distribuído sob GNU GPL, escrito completamente em C
+utilizando a biblioteca gráfica GTK+. Seu criador pretende torná-lo rápido,
+eficiente, altamente extensível e compatível com todos padrões para web.
+\item Chimera \cite{chimera}\\
+Chimera é um navegador web baseado em UNIX para computadores que rodam o
+ambiente gráfico X Window. Utiliza a biblioteca gráfica Athena, é horrível
+de feio e suporta algumas características da versão 3.2 do HTML.
+\item Galeon \cite{galeon}\\
+Galeon é um navegador para o ambiente GNOME\cite{gnome} baseado no ``gecko'' 
+(renderizador HTML do Mozilla). É rápido, tem uma interface limpa e é compatível
+com os padrões atuais.
+\item Konqueror \cite{konqueror}\\
+Konqueror faz parte do ambiente KDE\cite{kde} e além de ser um navegador web, 
+agrega outras características como: gerenciador de arquivos e visualizador
+universal. Suporta as tecnologias estado da arte da web e é licenciado através
+da QPL e GNU GPL.
+\item Mozilla \cite{mozilla}\\
+Mozilla surgiu quando a Netscape Corporation liberou o código fonte do
+seu navegador Netscape. Atualmente é licenciado através da MPL, mas há planos
+de liberarem o código através da GNU GPL. 
+\item SkateBrowser \cite{skatebrowser}\\
+Skate é um navegador escrito em Java, que não requere muitos recursos do sistema,
+oferece suporte a toda especificação HTML 3.2, servidor proxy e suporte a Java
+(não suporta Javascript). É licenciado através da GNU GPL.
+\end{itemize}
+
+\section{Conclusão do capítulo}
+
+\paragraph{Como pode ser visto no decorrer deste capítulo, opções de ferramentas
+livres é o que não falta. Concordo que algumas são de manuseio bem mais 
+complicado do que outras (principalmente se considerarmos soluções proprietárias), 
+mas acredito que com o aumento da comunidade usuária, os desenvolvedores 
+acabarão procurando facilitar a utilização de seus produtos (através de 
+front-ends gráficos, etc), sempre mantendo a filosofia do software livre e 
+encorajando os usuários a utilizarem seus cérebros.}

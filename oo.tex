@@ -1,0 +1,461 @@
+\chapter{METODOLOGIA DE ENGENHARIA DE SOFTWARE}
+
+\section{Introdução}
+
+\begin{quotation}
+``Software é um lugar onde sonhos são plantados e pesadelos colhidos, uma abstração,
+um pântano místico onde demônios terríveis competem por panacéias mágicas, um
+mundo de lobisomens e balas de prata'' \cite{COX1990}
+\end{quotation}
+
+\paragraph{Conforme vou adquirindo maior conhecimento sobre engenharia de software e trabalhando
+no desenvolvimento de aplicações, concordo com a definição de software apresentada
+acima e concluo que a utilização de um método para desenvolvimento de software
+é um fator indispensável para construção de sistemas. Quando o desenvolvimento
+é feito por uma só pessoa e o ambiente a ser informatizado é simples, talvez
+a utilização de uma metodologia até possa ser dispensada. Mas quando uma equipe
+composta por várias pessoas com funções diversas se unem no desenvolvimento
+de uma aplicação acredito ser indispensável a utilização de um método de engenharia
+de software. Neste caso, o método principalmente organiza os processos de desenvolvimento,
+permitindo um gerenciamento mais eficaz através de uma distribuição de tarefas
+mais elaborada e bem definida. Além de facilitar a comunicação entre os componentes
+da equipe. O principal problema que vejo na adoção de uma metodologia é principalmente
+com treinamento, visto que cada componente da equipe possui uma curva de aprendizado
+própria e o custo com consultoria pode ser elevado. Mesmo assim, acredito que
+se a equipe for composta pelas pessoas certas, o investimento vale a pena e
+se paga rapidamente. ``O problema está deixando de ser o software e o
+hardware - cada dia mais poderosos do que no dia anterior - para se tornar os
+métodos de trabalho que empregamos no uso dessa tecnologia, bem como seu alvo
+de utilização.'' \cite{FURLAN}}
+
+\paragraph{Segundo \cite{BERARD} as melhores técnicas para engenharia de software seriam
+aquelas que:}
+
+\begin{itemize}
+\item poderiam ser descritas quantitativamente, bem como qualitativamente;
+\item poderiam ser usadas repetidamente, cada vez arquivando resultados similares;
+\item poderiam ser ensinadas a outras pessoas dentro de um razoável espaço de tempo;
+\item poderiam ser aplicadas por outras pessoas com uma razoável nível de sucesso;
+\item alcançassem significativamente e consistentemente, melhores resultados do que
+qualquer outra técnica ou abordagem ``ad hoc'';
+\item seja aplicável em uma larga porcentagem de casos;
+\end{itemize}
+
+\paragraph{A seguir, apresentarei brevemente algumas metodologias que utilizam 
+uma abordagem orientada a objetos para a construção de software. A escolha por 
+esta abordagem, e não outra, se deu devido ao referencial teórico citar, que 
+atualmente, a orientação a objetos é a abordagem estado da arte no 
+desenvolvimento de aplicações.}
+
+\section{Abordagem para desenvolvimento de software orientado a objetos}
+
+\begin{quotation}
+``O projeto Orientado a Objetos (OO) tem se consolidado como a melhor maneira
+de alcançar a reusabilidade, visto que ele permite definir por abstração
+e por composição diferentes componentes de uma aplicação, que são interligados
+a fim de atender o comportamento esperado do sistema. Os dados da aplicação
+são distribuídos entre os componentes, que tornam-se responsáveis pela sua
+manutenção e pelo alcance dos comportamente estabelecido.''\cite{pizzol}
+\end{quotation}
+\paragraph{O enfoque tradicional de modelagem para a construção de sistemas de informação
+baseia-se na compreensão desse sistema como um conjunto de programas que, por
+sua vez, executam processos sobre dados. O enfoque da modelagem por objetos,
+vê o mundo como uma coletânea de objetos que interagem entre si, apresentam
+características próprias que são representadas pelos seus atributos (dados)
+e operações (processos).}
+
+\paragraph{Essa abordagem Orientada a Objetos é justificada pelo fato de que objetos existem
+na natureza muito antes de haver qualquer tipo de aplicação deles pelo negócio:
+equipamentos, pessoas, minerais, petróleo etc., existem por si só, apresentam
+características peculiares representadas pelos seus atributos e, adiante, pelo
+seu comportamento no mundo real. Essa abordagem oferece como principais benefícios:}
+
+\begin{itemize}
+\item Manter a modelagem do sistema e, em decorrência, sua automação o mais próximo
+possível de uma visão conceitual do mundo real;
+\item Servir de base à decomposição e modelagem do sistema nos dados, que é o elemento
+mais estável de todos aqueles que compõem um sistema de informação;
+\item Oferecer maior transparência na passagem da fase de modelagem para a de construção
+através da introdução de detalhes, não requerendo uma reorganização do modelo.
+\end{itemize}
+
+\paragraph{Programas orientados a objetos são feitos de objetos. Estes objetos empacotam
+tanto os dados como os procedimentos que operam sobre esses dados. Os procedimentos
+são chamados de métodos ou operações. Um objeto executa uma operação, quando
+recebe uma solicitação (ou mensagem) de um cliente. As solicitações são a \emph{única}
+maneira de conseguir que um objeto execute uma operação. As operações são a
+\emph{única} maneira de mudar os dados internos de um objeto. Devido a essas
+restrições, dizemos que o estado interno de um objeto está \emph{encapsulado};
+ele não deve ser acessado diretamente e sua representação é invisível do exterior
+do objeto.}
+
+\paragraph{A parte difícil sobre projeto orientado a objetos é a decomposição 
+de um sistema em objetos. A tarefa é difícil porque muitos fatores entram em 
+jogo: encapsulamento, granulidade, dependência, flexibilidade, desempenho, 
+evolução, reutilização e assim por diante.}
+
+\paragraph{Entram então as metodologias de projeto orientado a objetos, 
+procurando simplificar o processo de decomposição do sistema em objetos através 
+da divisão do processo em atividades, com tarefas a serem executadas em cada 
+atividade.}
+
+\paragraph{A seguir, apresentarei brevemente alguns métodos de desenvolvimento 
+de software orientado a objetos.}
+
+\section{Métodos para desenvolvimento de software orientado a objetos}
+
+\paragraph{Nas últimas décadas houve o aprimoramento constante das técnicas e metodologias
+para a engenharia de software visando acompanhar a evolução natural do conhecimento,
+incluindo a análise e o projeto estruturado, a análise essencial e a Engenharia
+da Informação.}
+
+\paragraph{Métodos orientado a objetos procuram tanto redefinir quanto estender métodos
+existentes. Não obstante sejam comuns no mercado metodologias híbridas combinando
+vários aspectos da orientação a objetos e métodos estruturados, alguns críticos
+têm defendido a posição de que não é possível haver uma continuidade das técnicas
+estruturadas alegando não serem ``objetificáveis''. De qualquer forma, a orientação
+a objetos é fundamentalmente uma nova maneira de se pensar, um novo paradigma,
+e não simplesmente uma linguagem de programação.}
+
+\paragraph{A seguir abordaremos brevemente alguns métodos que surgiram no campo 
+da orientação a objetos.}
+
+\begin{itemize}
+\item BOOCH\\
+%%\begin{quotation}
+``Grady Booch propôs um método que consistia no emprego de técnicas de desenho
+orientado a objetos, apesar de ter sido estendido para contemplar também a análise
+orientada a objetos. Booch descreve um objeto como sendo um modelo do mundo
+real que consiste de dados e habilidades para o tratamento desses dados. Uma
+vez tendo sido localizados e definidos os objetos, esses passam a servir de
+base para os módulos do sistema ou são considerados módulos relacionados. Descreve
+o projeto estruturado e o projeto orientado a objeto como sendo visões ortogonais
+de como um sistema deveria ser criado. Enquanto o projeto orientado a objetos
+estuda o problema com objetos que existem em um domínio de problema, o projeto
+estruturado separa o sistema em módulos. Argumenta que o projeto estruturado
+funciona bem com linguagens de programação estruturada, mas o enfoque estruturado
+direciona a concentração de esforços na lógica do módulo com pouca ênfase no
+uso dos dados. O resultado, de acordo com Booch, é a geração de código adicional
+e menos dados, pois as estruturas são derivadas dos processos e esses necessitam
+interagir com dados. O projeto orientado a objeto é organizado via abstrações
+algorítmicas de forma parecida à programação orientada a objeto. Cada módulo
+representa um objeto ou uma classe de objetos com reutilização e encapsulamento
+ao longo dos processos. Essa estreita relação existente entre desenho e programação
+orientadas a objeto permite aos projetistas tomar decisões de negócio antes
+da criação do código, contribuindo para a melhoria do sistema gerado.'' \cite{FURLAN}
+%%\end{quotation}
+\item OMT\\
+%\begin{quotation}
+``Rumbaugh, com seu método que fora desenvolvido pela GE Corporation, também
+conhecido como Técnica de Modelagem de Objetos (OMT - \emph{Object Modeling
+Technique}). Baseado na modelagem semântica de dados, o método Rumbaugh tornou-se
+um enfoque testado e maduro, cobrindo as diversas fases do desenvolvimento orientado
+a objeto. A notação empregada por Rumbaugh é parecida com a dos métodos estruturados
+e utiliza a notação de modelo de objeto que suporta conceitos de modelagem de
+dados (exemplo: atributos e relacionamento), objetos (composição/agregação)
+e herança. Também é empregada para categorizar classes e instâncias. O ponto
+forte do método Rumbaught é a notação utilizada e o enfoque relativamente conservador
+no uso da teoria de objetos. Por outro lado, um problema apresentado é a falta
+de notação específica para representar a passagem de mensagens de um objeto
+a outro.'' \cite{FURLAN}
+%\end{quotation}
+\item OOSE\\
+%\begin{quotation}
+``Jacobson, com sua técnica, criou as bases para os métodos \emph{Object-Oriented
+Software Engineering} (OOSE) e o Objectory. O que diferencia Jacobson de outros
+métodos orientados a objeto é o seu foco em casos de uso e categorização de
+pessoas e equipamentos dependendo de seu papel no sistema global. A análise
+no método de Jacobson é baseada em modelos de requerimentos e análise de problema
+e de uma descrição da interface do sistema. Seguindo a criação do modelo de
+análise, são gerados diagramas baseados no modelo que também descrevem a comunicação
+entre blocos. O modelo de blocos é então implementado utilizando-se linguagens
+apropriadas e ferramentas orientadas a objeto. Um dos pontos fracos do enfoque
+original da OOSE de Jacobson é a notação simplista usada para objetos de domínio
+(objetos simplesmente são representados como círculos). Por outro lado, o método
+Objectory tem sido adaptado para a engenharia de negócio, onde as idéias são
+usadas para modelar e melhorar processos.'' \cite{FURLAN}
+%\end{quotation}
+\item SHLAER/MELLOR\\
+%\begin{quotation}
+``Sally Shlaer e Stephen Mellor criaram um método orientado a objetos que pode
+utilizar ferramentas tradicionais, ressuscitando até mesmo os diagramas de fluxo
+de dados como técnica de visualização do modelo de comportamento do objeto.'' \cite{FURLAN}
+
+``Trata-se de um método bem definido e disciplinado, orientado para o desenvolvimento
+de software a uma escala industrial. Este método inclui um conjunto de modelos
+de análise orientados a objeto, que podem ser simulados para verificação, e
+uma aproximação inovadora à fase de projeto, denominada \emph{Recursive Design}
+(RD), que produz o projeto do sistema através da tradução dos modelos de análise.
+O modelo de informação de objetos é baseado no modelo relacional dos dados.
+Os modelos de estado são autômatos determinísticos finitos. Os diagramas de
+fluxo de dados mostram a seqüência, podendo cada processo ser definido numa
+linguagem formal. Todos os modelos podem ser construídos utilizando ferramentas
+CASE, sem a necessidade de serem desenhados diretamente pelo analista. Isto
+é especialmente verdade para o modelo de comunicações de objetos, pois este
+modelo mostra as comunicações entre os objetos. Uma vez construídos os modelos
+fundamentais, os modelos restantes podem ser derivados, garantindo a consistência
+entre eles.'' \cite{LOBATO}
+
+``O método Shlaer/Mellor difere da abordagem estruturada ao se utilizar de
+um enfoque de modelagem \emph{bottom-up}. Os métodos estruturados empregam técnicas
+\emph{top-down} que, conforme argumentado por Booch, tendem a criar mais código
+do que o necessário para o desenho orientado a objeto. O enfoque de Shlaer/Mellor
+é uma variação da modelagem de dados, concentrando-se nos dados ou objetos e
+como eles são agrupados. Mensagens passadas de um objeto a outro determinam
+a ordem das operações. Especialistas têm criticado o método Shlaer/Mellor por
+não oferecer um esquema para o tratamento de mensagens e encapsulamento, considerados
+como quesitos fundamentais da teoria de objetos. Seu suporte a conceitos de
+tipo e herança também é pobre, quando comparado a outros métodos.'' \cite{FURLAN}
+%\end{quotation}
+\item COAD/YOURDON\\
+%\begin{quotation}
+``Peter Coad e Ed Yourdon, com seu enfoque simples, porém eficaz, dividiram
+a análise orientada a objetos como sendo classes e objetos. Objetos são abstrações
+de um domínio de problema que reflete a habilidade de um sistema em reter dados,
+interagir com dados e encapsular valores de atributos e serviços. Classe é uma
+coleção de um ou mais objetos com atributos e serviços, abrangendo o entendimento
+de como um novo objeto é criado em uma classe. A técnica para análise orientada
+a objeto de Coad/Yourdon usa quatro elementos adicionais para descrever um sistema:
+estrutura, sujeito, atributo e serviço. Estrutura é uma representação de um
+domínio de problema que está diretamente relacionado às competências do sistema.
+Coad/Yourdon utilizam-se dessa forma em termos de estruturas de generalização/especificação
+ou agregações. Os sujeitos organizam o trabalho baseado nos requerimentos iniciais
+através de um mecanismo de agrupamento de classes e objetos. Atributo é algum
+tipo de dado onde cada objeto possui um valor independente (cada objeto na classe
+possui seu valor próprio). E, finalmente, os serviços são o que o objeto pode
+fazer ou que é de sua responsabilidade fazer. Coad/Yourdon propõem a identificação
+e definição de classes e objetos, estruturas, sujeitos, atributos e serviços
+como passos básicos para a realização da análise orientada a objeto. O diagrama
+que Coad/Yourdon sugerem para representar tais conceitos é basicamente um único
+e a característica significativa de um objeto/classe é definida dentro do símbolo
+do objeto. Para relacionar um objeto a outro, Coad/Yourdon empregam conectores
+e associações - dois ou mais objetos são associados através de conectores. O
+conector ou a associação pode ser uma generalização/especialização, todo/parte,
+instância-a-instância ou uma conexão de mensagem. A conexão de objetos utilizando-se
+das associações de Coad/Yourdon permite estudar como as classes/objetos relacionam-se
+entre si. Essa habilidade em conectar objetos utilizando diferentes associações
+faz do método de Coad/Yourdon algo flexível e capaz de reagir à maioria das
+situações de negócio.'' \cite{FURLAN}
+%\end{quotation}
+\item MARTIN/ODELL\\
+%\begin{quotation}
+``Martin/Odell propuseram, na visão de muitos observadores de mercado, uma
+extensão orientada a objeto da Engenharia da Informação. Ambos os métodos compartilharam
+de várias notações comuns, tais como tipo de objeto e classes que são representados
+pelo mesmo símbolo. O método Martin/Odell procura, evidentemente, capitalizar
+sobre o conhecimento já existente na comunidade de informática, aplicando notações
+similares e confortáveis aos profissionais que empregam a Engenharia da Informação.
+Esse método também utiliza uma notação semelhante à de Coad/Yourdon, pelo menos
+conceitualmente. Possui forte ênfase na modelagem de dados, conforme é notado
+pelo modelo de esquema de objeto. O propósito desse método, que poderíamos denominar
+Engenharia da Informação orientada a objeto, é definir áreas comuns entre dados
+e serviços dos objetos para, conseqüentemente, obter a máxima reutilização possível.
+Apesar de o método Martin/Odell não estar sendo muito utilizado, pode ser empregado
+em certas organizações, em decorrência da popularidade da Engenharia da Informação.'' \cite{FURLAN}
+%\end{quotation}
+\item WIRFS-BROCK\\
+%\begin{quotation}
+``Rebecca Wirfs-Brock propõe uma metodologia dirigida a responsabilidades cujo
+maior diferencial frente aos demais métodos é o uso de cartões CRC - \emph{Class-Responsability-Collaboration},
+desenvolvidos por Ward Cunningham. Tais cartões permitem um mapeamento de classes
+para execução de certas responsabilidades através de colaboração mútua. Wirfs-Brock
+torna explícitos os relacionamentos de herança empregando grafos de hierarquia
+e diagrama de Venn, mas não oferece a possibilidade de modelar associações de
+composição. É satisfatório enquanto que tange a conceitos de contratos e colaboração
+e apresenta bom potencial de reutilização ao propor que atributos de classes
+não serão totalmente conhecidos até a fase de implementação.'' \cite{FURLAN}
+%\end{quotation}
+\item EMBLEY/KURTZ\\
+%\begin{quotation}
+``Embley/Kurtz, da Universidade de Bigham Young, enfatizam uma forte fundamentação
+na modelagem de dados, o que inclui um modelo objeto/relacionamento que suporta
+vários relacionamentos. Também suporta notações para conjunto de relacionamentos
+multidimensionais que podem incluir regras, como é o caso da mútua exclusividade.
+É interessante notar que esse método, além de ser menos popular do que os demais,
+não modela prontamente os atributos dos objetos, fato que o classifica em uma
+categoria própria.'' \cite{FURLAN}
+%\end{quotation}
+\end{itemize}
+
+\paragraph{Não é minha intenção esgotar o assunto neste trabalho, portanto
+apresentei somente alguns, dos vários, métodos orientado a objetos. 
+Lembrando que a proposta é desenvolver uma aplicação para ser acessada via 
+web, utilizando um navegador, pesquisei sobre métodos 
+orientado a objetos para construção de aplicações hipermídia.}
+
+\subsection{Métodos orientado a objetos para aplicações hipermídia\label{sec:oohdm}}
+
+\begin{quotation}
+``Hipermídia é a junção dos tipos de dados da multimídia com os mecanismos
+e semânticas dos hipertextos, ou seja, um sistema ou aplicativo hipertexto que,
+além de texto e gráficos, suporta outros tipos de mídia, tais como desenhos,
+imagem, som e vídeo.'' \cite{CIOCIOLA} 
+\end{quotation}
+
+\paragraph{Aplicações Hipermídia permitem que o usuário da aplicação navegue através de
+``nós de informação'' de maneira intuitiva.}
+
+\begin{itemize}
+\item OOHDM\\
+Gustavo Rossi \cite{ROS96} desenvolveu um Método para Projeto 
+Orientado a Objetos de Aplicações Hipermídia que consiste de uma abordagem 
+baseada em modelos para construção de grandes aplicações hipermídia. Esta 
+metodologia vem sendo utilizada no projeto de diversos tipos de aplicações como: 
+web sites e sistemas de informação, quiosques interativos, apresentações 
+multimídia, etc. OOHDM considera o processo de desenvolvimento da aplicação 
+hipermídia como um processo de quatro atividades, desempenhadas em uma mistura 
+de estilos iterativos e incrementais de desenvolvimento;
+em cada etapa um modelo é construído ou enriquecido. Como foi citado, tratando
+o modelo conceitual, navegacional e de interface como atividades separadas,
+permite que nos concentremos em diferentes interesses de cada vez. 
+Conseqüentemente, obteremos projetos mais reusáveis e modulares. Além do
+modelo de interface facilmente ser mapeado para 
+linguagens ou ambientes que não sejam orientado a objetos (como HTML), 
+deste modo OOHDM pode ser usada independentemente da plataforma alvo ser 
+um ambiente puramente orientado a objetos ou híbrido
+(como usualmente encontramos na Internet).
+\item HDM\\
+%\begin{quotation}
+``HDM é o primeiro modelo amplamente conhecido para o projeto de hipermídia.
+Tem sido usado por mais de 20 grupos de desenvolvimento em seis países diferentes.
+Em HDM há poucas primitivas de modelagem, portanto, o modelo resultante é bastante
+conciso. Contudo, desde modo, muitas decisões de projeto permanecem não documentadas.
+Um esquema hipermídia em HDM é descrito como um conjunto de tipos de entidades
+e de elos; as entidades são constituídas por componentes hierarquicamente estruturados
+e cada componente pode ser visto sob diferentes perspectivas, usando Unidades.
+São usados Elos Estruturais para relacionar diferentes componentes de uma entidade
+ou diferentes perspectivas de uma unidade. São usados, em HDM, estruturas de
+acesso como índices e roteiros guiados para ajudar o autor a simplificar o acesso
+a entidades na aplicação hipermídia. Extensões subseqüentes do modelo de dados
+HDM original (como HDM2) acrescentaram novas primitivas de modelagem, como `slots'
+dando às entidades uma estrutura no estilo dos `frames'. Mais recentemente,
+foi proposto o uso de coleções multimídia como uma forma de organizar melhor
+a estrutura navegacional da aplicação. HDM é uma estrutura em evolução, sendo
+continuamente melhorada.'' \cite{ROS96}
+%\end{quotation}
+\item EORM\\
+%\begin{quotation}
+``O \emph{Enhanced Object Relationship Model} (EORM) é uma abordagem de modelagem
+hipermídia orientada a objetos que utiliza mecanismos de abstração conhecidos
+para a construção de modelos de relacionamentos entre objetos de domínio. Em
+EORM, um esquema conceitual é construído usando as primitivas de OMT, ou seja,
+entidades do mundo real são modeladas como objetos coletados em classes. EORM
+é bastante similar a OOHDM no fato de usar o modelo de orientação a objetos
+como a filosofia central para a descrição de aplicações hipermídia.'' \cite{ROS96}
+%\end{quotation}
+\end{itemize}
+
+\section{O processo de desenvolvimento \label{sec:procdesenv}}
+
+\paragraph{Martin Fowler em \cite{umlessencial}, aborda uma visão geral do
+processo de desenvolvimento de software, ele não define um método, mas dá
+uma visão de alto nível do processo.}
+\paragraph{O processo de desenvolvimento proposto é iterativo
+e incremental. Iterativo porque o software não é implementado em um
+instante no fim do projeto, mas desenvolvido e implementado em partes, e 
+incremental porque o desenvolvimento vai adicionando complexidade aos
+modelos conforme o avanço das fases.}
+\paragraph{Os projetos variam quanto ao volume de \textbf{formalidade},
+onde quanto maior o projeto, mais formalidade é necessária. Projetos com
+pouca formalidade podem ter uma fase de concepção que cabe em uma folha
+de papel e foi feita durante um bate-papo, enquanto que projetos formais
+possuem documentos formais a serem entregues, reuniões formais e 
+encerramentos formais.}
+
+\begin{figure}[h]
+{\centering \resizebox*{0.8\textwidth}{0.1\textheight}{\includegraphics{diagramas/processo_de_desenvolvimento.eps}} \par}
+\caption{Visão geral do processo de desenvolvimento de software.}
+\label{vgpds}
+\end{figure}
+
+\paragraph{Segundo Fowler, as fases de um processo de desenvolvimento são:}
+
+\begin{enumerate}
+\item \textbf{Concepção}\\
+Pode ser feita de várias formas, devendo ser um trabalho
+de poucos dias para considerar se vale a pena continuar o desenvolvimento.
+Desenvolve-se um plano de negócio do projeto --- a grosso modo quanto custará
+e quanto terá de retorno. Talvez seja necessário fazer alguma análise inicial
+para se ter uma idéia do escopo e tamanho do projeto.
+
+\item \textbf{Elaboração}\\
+Nesta fase procura-se uma melhor compreensão do problema.
+\begin{itemize}
+\item O que é que vai ser realmente construído?
+\item Como vai ser construído?
+\end{itemize}
+É feito também o levantamento de riscos do projeto, Fowler comenta três
+tipos de riscos:
+\begin{itemize}
+\item Riscos de requisitos\\
+Levanta-se os requisitos da aplicação para que 
+seja construído um sistema que atenda as necessidades do cliente.
+Se dá pela feitura dos famosos caso de uso da UML, descobrindo-se os casos de 
+uso importantes e arriscados. Pode também ser construído um diagrama de classes,
+feito a partir de uma perspectiva conceitual. Fowler aconselha que seja
+construído um protótipo de todas as partes difíceis dos casos de uso. ``A criação
+de protótipos é uma técnica valiosa para obter uma melhor compreensão de como
+situações mais dinâmicas funcionam.'' \cite{umlessencial}
+\item Riscos Tecnológicos\\
+A construção de protótipos na avaliação dos riscos
+tecnológicos é fundamental para que se experimente as partes da tecnologia que
+está pensando em utilizar. Procure juntar elementos que permitam sua troca com
+relativa facilidade. Pense sobre o que fazer se:
+\begin{itemize}
+\item Uma peça de tecnologia não funcionar.
+\item Não for possível conectar as duas partes do quebra-cabeça.
+\item Algo der errado.
+\end{itemize}
+\item Riscos de Especialização\\
+Tem-se a equipe certa para a construção da
+aplicação? É necessário treinamento? ``Treinamento é um modo de evitar erros, 
+porque os instrutores já cometeram aqueles erros. Errar toma tempo, e tempo
+custa dinheiro''\cite{umlessencial}
+\end{itemize}
+Quando os desenvolvedores forem capazes de estimar o tempo para construção
+de cada caso de uso e todos os riscos significativos já foram devidamente
+identificados significa que esta fase chegou ao fim.
+
+\item \textbf{Projeto} ou \textbf{Construção}\\
+Inicialmente deve ser planejado como o sistema vai ser
+construído, estipulando prazos para desenvolvimento dos casos de uso.
+Assim é possível estar ciente do progresso do desenvolvimento.
+Nesta fase o sistema é construído em uma série de iterações.
+Cada iteração deve ser considerada um miniprojeto onde é feito análise,
+projeto, codificação, teste e integração para os casos de uso designados para
+cada iteração. A iteração termina com uma demonstração para o usuário e com
+a realização de testes de sistema para confirmar que os casos de uso foram
+construídos corretamente. ``Uma característica-chave para o desenvolvimento
+iterativo é que ele é congelado nas datas --- você não pode deixar passar
+nenhuma data.''\cite{umlessencial} Interessante que a única coisa que é 
+possível afirmar sobre
+um plano é que as coisas não vão acontecer de acordo com ele. O gerenciamento
+de um plano tem tudo a ver com a maneira como você lida efetivamente com 
+as mudanças.
+
+\item \textbf{Transição}\\
+Nesta fase não é feito desenvolvimento para acrescentar
+funcionalidade, a não ser que seja pequena e essencial. Este é o momento
+de otimizar o código e corrigir bugs. ``Um exemplo da fase de transição é
+o período entre a versão beta e a versão final do produto.'' \cite{umlessencial}
+\end{enumerate}
+
+\section{Conclusão do capítulo}
+\paragraph{Neste capítulo foi apresentado brevemente várias metodologias para
+o desenvolvimento de aplicações orientada a objetos, além de uma visão geral
+do processo de construção de aplicações.}
+\paragraph{Decidi utilizar OOHDM como método de projeto, já que esta metodologia
+foi a que, na minha opinião, mais se adequá ao que pretendo desenvolver com este
+trabalho. O problema é que, como o próprio nome da metodologia diz, OOHDM é um
+método de projeto e já vimos que o processo de desenvolvimento engloba mais
+do que isso.}
+\paragraph{Dessa forma, neste trabalho vou adicionar a OOHDM as fases de concepção,
+elaboração e transição, proposta por Fowler em \cite{umlessencial}.}
+\paragraph{É importante ressaltar que não estou propondo a extensão do método 
+OOHDM, já que dada a complexidade e a formalidade necessária para isso, foge do 
+escopo desta monografia, portanto estou adicionando as fases de maneira empírica 
+e intuitiva.}
+\paragraph{Convém lembrar que o intuito dessa monografia é modelar o sistema
+de gestão e implementar um protótipo, dessa forma, não atingirei a fase de
+transição porque o protótipo construído não possuirá todas as funcionalidade de
+uma versão beta.}

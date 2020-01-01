@@ -1,0 +1,182 @@
+\chapter{ELABORAÇÃO}
+
+\section{Introdução}
+
+\paragraph{Nesta fase do processo de desenvolvimento do software, são identificados
+os riscos do projeto.}
+\paragraph{Conforme a classificação proposta na Seção \ref{sec:procdesenv}, os riscos de projeto
+são:}
+\begin{itemize}
+\item \textbf{Riscos de Requisitos}, compreende uma análise de requisitos
+apoiada principalmente em casos de uso e num modelo de domínio conceitual.
+\item \textbf{Riscos Tecnológicos}, escolhe-se as ferramentas que serão utilizadas
+no desenvolvimento do projeto. 
+\item \textbf{Riscos de Especialização}, seleciona-se a mão-de-obra para trabalhar
+no projeto.
+\end{itemize}
+
+\section{A gestão do ciclo produtivo de um pomar de pessegueiros modelada em casos 
+de uso de negócio}
+
+\begin{quotation}
+``A modelagem de casos de uso é uma técnica utilizada para descrever a funcionalidade
+de um sistema através de atores externos interagindo com casos de uso. Atores
+representam um papel e iniciam o caso de uso que, por sua vez, deve entregar
+um valor tangível de retorno ao ator. Atores e casos de uso estão conectados
+através de associações e podem ter relacionamentos.'' \cite{FURLAN}
+\end{quotation}
+
+\paragraph{Casos de uso também fornecem a base da comunicação entre clientes e 
+desenvolvedores, porque servem para captar as interações que os 
+usuários tem com o sistema afim de atingir um objetivo.}
+
+\paragraph{Conforme \cite{umlessencial} os casos de uso quando centrados nas
+interações do usuário com o software são chamados de ``caso de uso de 
+sistema'', enquanto que, quando centrados nas respostas do sistema ao cliente
+ou a um evento externo são chamados de ``casos de uso de negócios''.}
+
+\paragraph{Um detalhe interessante é que casos de uso não precisam ser 
+detalhados, um texto curto (de um a três parágrafos) que seja suficientemente 
+específico para que os usuários entendam a idéia básica e que os desenvolvedores
+tenham uma visão do que está escondido por dentro é o ideal. \cite{umlessencial}}
+
+
+\subsection{Sistema de gestão do ciclo produtivo para pomares de pessegueiro}
+
+\paragraph{A gestão do ciclo produtivo se dá através do planejamento, registro 
+de tarefas executadas e apuração de resultados sobre os recursos disponíveis 
+no pomar.
+Para maior reutilização e flexibilidade do sistema, o cadastramento de recursos
+deve ser feito pelos próprios usuários. O sistema deve ainda auxiliar no planejamento
+para cada fase do ciclo produtivo através da geração de estimativas de custos
+com base em gestões anteriores, corrigidas monetariamente e/ou pela variação
+dos preços no mercado. O registro de tarefas se dá por ocasião da execução das
+mesmas para realizar cada trato cultural. Enquanto que a apuração de resultados 
+é realizada automaticamente pelo sistema, através da mineração de informações 
+ou comparando dados estimados com aqueles realmente executados.}
+
+\paragraph{O desenho do caso de uso de negócios do Sistema de Gestão do Pomar 
+se deu, primeiramente, identificando os atores que interagem com o sistema. Foi 
+identificado dois atores: o proprietário e o capataz do pomar. Definiu-se que o 
+proprietário teria acesso irrestrito ao sistema e caberia a ele a manutenção dos
+processos críticos, enquanto que, o capataz teria acesso restrito ao 
+cadastramento de recursos e registro de execução das tarefas. O diagrama está
+representado na Figura \ref{fcun}.}
+
+\begin{figure}[!b]
+{\centering \resizebox*{0.6\textwidth}{0.2\textheight}{\includegraphics{diagramas/casodeuso.eps}} \par}
+\caption{Caso de uso de negócios da aplicação de gestão do ciclo produtivo para pomares de pessegueiro}
+\label{fcun}
+\end{figure}
+
+
+\subsection{Caso de uso: Cadastrar recursos}
+
+\paragraph{A identificação e classificação dos recursos que o pomar dispõe para 
+realização das tarefas é uma tarefa crucial para uma eficaz gestão. Visto que a 
+estimativa, registro e apuração de resultados é baseada nos recursos cadastrados.}
+\paragraph{Este cadastramento deve ser flexível o suficiente para permitir que
+o usuário do sistema possa fazê-lo e extendê-lo, se necessário.}
+\paragraph{Como citado anteriormente, os recursos podem ser humanos, materiais, 
+naturais e financeiros.}
+
+\subsection{Caso de uso: Planejamento de tarefas}
+
+\paragraph{O planejamento para execução das tarefas tem tamanha importância
+na gestão do pomar. Com o planejamento é possível estimar a necessidade de 
+recursos financeiros, criar um cronograma de tarefas através do
+agendamento das mesmas e, ainda, racionalizar a utilização de recursos.}
+\paragraph{Criado o cronograma, o sistema deve confeccionar as planilhas
+para acompanhamento, a campo, da execução das tarefas.}
+
+\subsection{Caso de uso: Registro das tarefas executadas}
+
+\paragraph{O registro das tarefas executas no pomar se faz necessário para 
+possibilitar a apuração de resultados, servir de base para estimativas 
+futuras e manter um registro histórico dos acontecimentos. Este registro 
+deve ser feito diariamente, relacionando todas tarefas que foram executadas 
+em cada lote do pomar.}
+
+\subsection{Caso de uso: Apuração de resultados}
+
+\paragraph{O sistema deve responder ao final do ciclo produtivo, no mínimo, as seguintes
+perguntas:}
+\begin{itemize}
+\item
+Quanto foi gasto em transporte, empregados, encargos sociais, juros, reforma
+de máquinas e implementos?
+\item
+Quanto foi o total colhido por ciclo, cultivar e lote?
+\item
+Relatório de vendas da safra (para quem foi vendido, data de entrega, por qual 
+valor e qual é a previsão de recebimentos)
+\item
+Qual foi o resultado final por ciclo, lote e cultivar?
+\end{itemize}
+
+\section{Modelo de domínio da aplicação de gestão para pomares de pessegueiro}
+
+\begin{quotation}
+``Modelo de domínio descreve qualquer modelo, cujo sujeito primário
+seja o mundo que o sistema de computação está suportando, qualquer que seja o
+estado do processo de desenvolvimento em que se esteja.'' \cite{umlessencial}
+\end{quotation}
+
+\paragraph{Neste trabalho a técnica utilizada para gerar o modelo de domínio 
+foi o diagrama de classes, feito a partir de uma perspectiva conceitual.
+Saliento que foi utilizado uma notação mínima. Já que não procurou-se
+captar cada detalhe, este diagrama serve apenas para dar uma idéia global
+do sistema que está sendo construído.}
+
+\paragraph{Baseado na descrição textual do capítulo 4 e em primitivas de 
+modelagem orientada a objetos, foi desenhado o modelo de domínio da
+aplicação na Figura \ref{fmda}.}
+
+\begin{figure}[!b]
+{\centering \resizebox*{0.8\textwidth}{0.3\textheight}{\includegraphics{diagramas/modelo_de_dominio.eps}} \par}
+\caption{Modelo de domínio da aplicação de gestão para pomares de pessegueiro.}
+\label{fmda}
+\end{figure}
+
+\section{Plataforma de hardware}
+
+\paragraph{No desenvolvimento desse projeto, utilizarei a plataforma de hardware 
+PC, baseada na arquitetura Intel x86, devido ao seu custo inferior comparado ao
+de outras plataformas, facilidade de manutenção/suporte, abundância de software
+livre e popularidade.}
+
+\section{Plataforma de software}
+
+\paragraph{Nesta seção tratarei a respeito dos componentes de software
+que pretendo utilizar no desenvolvimento/implementação deste trabalho.}
+\begin{itemize}
+\item Tecnologia de Sistema Operacional\\
+GNU/Linux \cite{linux} me parece uma opção acertada por possuir vasta 
+documentação disponível, ser estável e servir de plataforma de desenvolvimento 
+para a maioria das outras ferramentas que utilizarei neste projeto. A 
+distribuição utilizada será Red Hat \cite{redhat} porque é a distribuição que 
+tenho mais experiência.
+\item Tecnologia de Banco de dados\\
+PostgreSQL \cite{pgsql}, por ser o único banco de dados híbrido livre, 
+suportando parcialmente a orientação a objetos.
+\item Tecnologia de Servidor web\\
+Apache é o servidor escolhido. Robusto, veloz, extensível (suporta PHP) e de 
+fácil configuração, o tornam uma boa opção para utilização 
+neste projeto.
+\item Tecnologia de Geração dinâmica de páginas web\\
+PHP \cite{php} é a ferramenta eleita por possuir suporte a orientação a 
+objetos, PostgreSQL, Apache e por ser desenvolvido primeiramente sobre GNU/Linux.
+\item Tecnologia para Desenho de modelos\\
+O software Dia \cite{dia} foi a melhor opção encontrada, já que suporta a 
+notação Unified Modeling Language (UML\footnote{%
+\textbf{Unified Modeling Language} é um padrão notacional para aplicações 
+orientada a objetos.}) e é um software livre.
+\end{itemize}
+
+\section{Mão-de-obra para desenvolvimento/implementação deste trabalho}
+
+\paragraph{No desenvolvimento deste trabalho estou procurando consultoria de 
+pessoas que conheçam profundamente o assunto que estou enfrentando dificuldades
+de aprendizado.}
+\paragraph{Na implementação, a princípio, não
+será utilizado qualquer mão-de-obra externa.}

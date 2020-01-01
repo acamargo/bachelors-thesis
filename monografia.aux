@@ -1,0 +1,611 @@
+\relax 
+\catcode`"\active
+\select@language{english}
+\@writefile{toc}{\select@language{english}}
+\@writefile{lof}{\select@language{english}}
+\@writefile{lot}{\select@language{english}}
+\select@language{brazil}
+\@writefile{toc}{\select@language{brazil}}
+\@writefile{lof}{\select@language{brazil}}
+\@writefile{lot}{\select@language{brazil}}
+\@writefile{toc}{\contentsline {chapter}{\MakeUppercase  {Lista de Figuras}}{VI}}
+\select@language{brazil}
+\@writefile{toc}{\select@language{brazil}}
+\@writefile{lof}{\select@language{brazil}}
+\@writefile{lot}{\select@language{brazil}}
+\@writefile{toc}{\contentsline {chapter}{\MakeUppercase  {Resumo}}{VII}}
+\@writefile{toc}{\contentsline {paragraph}{Este trabalho apresenta a modelagem de um sistema de gest\~ao para pomares de pessegueiros, para rodar via WWW, baseado inteiramente em software livre. Para isso, foi feito um estudo sobre software livre e o estado da arte em ferramentas distribu\IeC {\'\i }das dessa forma. Foi utilizado como objeto de estudo o Pomar de Pessegueiros Arroio das Pedras, situado em Cangu\c cu-RS. A modelagem da aplica\c c\~ao foi feita utilizando-se o m\'etodo para projeto de aplica\c c\~oes hiperm\IeC {\'\i }dia OOHDM. Tamb\'em foi implementado um prot\'otipo a fim de assegurar que esta especifica\c c\~ao \'e pass\IeC {\'\i }vel de constru\c c\~ao.}{VII}}
+\@writefile{toc}{\contentsline {paragraph}{Este estudo tem como meta contribuir com a comunidade de software livre e fornecer meios para o desenvolvimento regional, visto que nossa regi\~ao \'e grande produtora de p\^essegos e n\~ao h\'a muitas ferramentas que ap\'oiem os agricultores na gest\~ao de seu pomar.}{VII}}
+\@writefile{toc}{\contentsline {paragraph}{\textbf  {Palavras-chave:} sistema de gest\~ao, pessegueiro, WWW, software livre, OOHDM}{VII}}
+\select@language{english}
+\@writefile{toc}{\select@language{english}}
+\@writefile{lof}{\select@language{english}}
+\@writefile{lot}{\select@language{english}}
+\@writefile{toc}{\contentsline {chapter}{\MakeUppercase  {Abstract}}{VIII}}
+\@writefile{toc}{\contentsline {paragraph}{This work presents the modeling of a web peach tree orchard management system, based totally in free software. To do this work, it was made a study about free software and the state of the art in free software tools. Our case study was the Arroio das Pedras peach tree orchard, situated in Cangu\c cu-RS-Brazil. In the application modeling was used the Object-Oriented Hypermedia Design Method (OOHDM). Also, it was implemented a prototype to assert that this specification can to be built.}{VIII}}
+\@writefile{toc}{\contentsline {paragraph}{This study aims to contribute with free software community and to provide ways to regional growth, inasmuch as our region is a big peach producer and there aren't many tools that aid the farmers in the management of your orchard.}{VIII}}
+\@writefile{toc}{\contentsline {paragraph}{\textbf  {Keywords:} management system, peach tree, WWW, free software, OOHDM}{VIII}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {1}INTRODU\c C\~AO}{1}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {paragraph}{Quando estudei geografia no primeiro grau (hoje ensino fundamental), a professora ensinou-me que a regi\~ao sul do Brasil (constitu\IeC {\'\i }da pelos estados do Paran\'a, Santa Catarina e Rio Grande do Sul) era considerada como a ``regi\~ao-celeiro'' deste pa\IeC {\'\i }s, devido a sua grande produ\c c\~ao no setor prim\'ario (agropecu\'aria). Com o passar do tempo, minha voca\c c\~ao n\~ao despertou para o lado agropecu\'ario, tomando o rumo da inform\'atica. Mesmo assim, n\~ao esqueci-me disso e tendo v\'arios familiares que tiram seu sustento da terra, percebi um mercado pouco desenvolvido dentro da minha \'area: o mercado da inform\'atica aplicada ao setor agropecu\'ario.}{1}}
+\@writefile{toc}{\contentsline {paragraph}{O Sr. Adelci Camargo, que \'e meu pai, \'e propriet\'ario de um pomar de pessegueiros no munic\IeC {\'\i }pio de Cangu\c cu-RS. J\'a que atualmente nada est\'a informatizado, toda a gest\~ao do pomar \'e feita manualmente, utilizando-se um caderno. Como o pomar est\'a em fase de expans\~ao, ele est\'a procurando novas formas para gerenciamento de custos.}{1}}
+\@writefile{toc}{\contentsline {paragraph}{Devido ao nosso estreito relacionamento, ele veio a mim e pediu para que eu desenvolvesse um sistema de gest\~ao para o pomar. A necessidade dele caiu como uma luva no que eu estava procurando desenvolver como projeto. Propus a ele a id\'eia de desenvolver um sistema de gest\~ao para pomares de pessegueiros como meu projeto de gradua\c c\~ao e ele aceitou o desafio de tornar-se minha principal ``cobaia''. Como nossa regi\~ao \'e produtora de p\^essegos e meu pai tem um \'otimo relacionamento com outros produtores, a id\'eia inicial foi ampliada para que desenvolv\^essemos um sistema baseado tamb\'em nas necessidades de outros pomares.}{1}}
+\@writefile{toc}{\contentsline {paragraph}{O problema foi definir uma maneira de disponibilizar facilmente este sistema de forma que atingisse o maior n\'umero de produtores, independente da localiza\c c\~ao do propriet\'ario do pomar. Foi a\IeC {\'\i } que surgiu a id\'eia de hospedar a aplica\c c\~ao na Internet, para ser acessada atrav\'es da web.}{1}}
+\@writefile{toc}{\contentsline {paragraph}{Atualmente, com a populariza\c c\~ao da Internet, todas as aten\c c\~oes est\~ao voltadas para o com\'ercio eletr\^onico. Isto me despertou um interesse muito grande por esta \'area. Al\'em disso, tamb\'em sou um apaixonado pelo movimento de software livre e como existem \'otimas ferramentas para web disponibilizadas livremente, proponho desenvolver esta aplica\c c\~ao utilizando somente "free software" e, \'e claro, licenciar o aplicativo atrav\'es da licen\c ca de software livre GNU General Public License (GNU GPL), uma c\'opia traduzida para o portugu\^es da licen\c ca \'e apresentada no ANEXO A. Conv\'em lembrar, que essa forma de distribui\c c\~ao tamb\'em beneficiaria produtores de pequeno porte, j\'a que solu\c c\~oes baseadas em software livre possuem um custo reduzido quando comparado a solu\c c\~oes propriet\'arias.}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.1}Objetivos e contribui\c c\~oes}{2}}
+\@writefile{toc}{\contentsline {paragraph}{O objetivo deste trabalho \'e modelar um sistema de gest\~ao para pomares de pessegueiros de forma que possa ser acessado via web. Feito isso, estudar a viabilidade de implementa\c c\~ao deste modelo utilizando somente software livre. E disponibilizar o sistema na web compartilhando o conhecimento adquirido com a comunidade, al\'em de, contribuir com o desenvolvimento da nossa regi\~ao sul do estado do Rio Grande do Sul.}{2}}
+\@writefile{toc}{\contentsline {paragraph}{Este trabalho tem como objetivos espec\IeC {\'\i }ficos:}{2}}
+\@writefile{toc}{\contentsline {paragraph}{Em minha universidade, todos os projetos de gradua\c c\~ao devem ter necessariamente tr\^es tipos de contribui\c c\~oes b\'asicas, a saber:}{3}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.2}Organiza\c c\~ao do trabalho}{3}}
+\@writefile{toc}{\contentsline {paragraph}{O cap\IeC {\'\i }tulo 2 desta monografia apresenta a filosofia GNU, o movimento de software livre e o cuidado que se deve ter com a licen\c ca sob a qual o software que utilizamos \'e distribu\IeC {\'\i }do.}{3}}
+\@writefile{toc}{\contentsline {paragraph}{No cap\IeC {\'\i }tulo 3, focalizarei o estado da arte em software livre em algumas \'areas espec\IeC {\'\i }ficas da inform\'atica.}{3}}
+\@writefile{toc}{\contentsline {paragraph}{Feito o estudo das ferramentas, o cap\IeC {\'\i }tulo 4 trata sobre o modelo de desenvolvimento orientado a objetos. Abordarei o processo de desenvolvimento de software, algumas metodologias orientada a objetos e apresentarei o tipo de aplica\c c\~ao que este trabalho prop\~oe construir.}{3}}
+\@writefile{toc}{\contentsline {paragraph}{O cap\IeC {\'\i }tulo 5 apresenta um estudo de caso sobre o pomar de pessegueiros ``Arroio das Pedras'', focalizando desde a hist\'oria do pessegueiro at\'e os processos desenvolvidos no cultivo agr\IeC {\'\i }cola.}{4}}
+\@writefile{toc}{\contentsline {paragraph}{No cap\IeC {\'\i }tulo 6 come\c ca a formaliza\c c\~ao do processo de desenvolvimento de software com a realiza\c c\~ao da fase de elabora\c c\~ao, onde \'e feito a modelagem em caso de usos da aplica\c c\~ao e o levantamento dos riscos de projeto.}{4}}
+\@writefile{toc}{\contentsline {paragraph}{O cap\IeC {\'\i }tulo 7 \'e o resultado da fase de projeto. Nesta fase utilizei a OOHDM como m\'etodo de apoio para a constru\c c\~ao da aplica\c c\~ao de gest\~ao para pomar de pessegueiros. Neste cap\IeC {\'\i }tulo \'e feito um estudo sobre o m\'etodo de projeto utilizado, bem como, a especifica\c c\~ao da aplica\c c\~ao atrav\'es da utiliza\c c\~ao do m\'etodo.}{4}}
+\@writefile{toc}{\contentsline {paragraph}{Por fim, o cap\IeC {\'\i }tulo 8 apresenta a conclus\~ao do trabalho, o cap\IeC {\'\i }tulo 9 cont\'em os anexos e o cap\IeC {\'\i }tulo 10 as refer\^encias bibliogr\'aficas.}{4}}
+\citation{AURELIO}
+\citation{GASS2000}
+\@writefile{toc}{\contentsline {chapter}{\numberline {2}SOFTWARE LIVRE}{5}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}Introdu\c c\~ao}{5}}
+\@writefile{toc}{\contentsline {paragraph}{O termo \textbf  {free software} (em ingl\^es free = livre ou gr\'atis) \`as vezes \'e mal interpretado --- n\~ao tem nada a ver com o pre\c co. E sim com liberdade. A Free Software Foundation define que um software \'e livre, quando sua licen\c ca contempla as quatro condi\c c\~oes abaixo:}{5}}
+\@writefile{toc}{\contentsline {paragraph}{Como ``free'' (livre) refere-se a ``freedom'' (liberdade) e n\~ao a pre\c co, n\~ao existe contradi\c c\~ao entre a venda de c\'opias e o software livre. De fato, a liberdade para vender c\'opias \'e crucial para obten\c c\~ao de fundos para o desenvolvimento de software livre.}{5}}
+\@writefile{toc}{\contentsline {paragraph}{Se um programa \'e software livre quando deixa as m\~aos de seu autor, isto n\~ao significa que ser\'a software livre para qualquer um que tenha uma c\'opia dele. Por exemplo, o software de dom\IeC {\'\i }nio p\'ublico (software que n\~ao est\'a sujeito aos direitos autorais de qualquer pessoa) \'e software livre; mas qualquer um pode fazer uma vers\~ao modificada propriet\'aria dele. Igualmente, s\~ao registrados muitos programas livres mas distribu\IeC {\'\i }dos por meio de licen\c cas simples que permitem vers\~oes modificadas propriet\'arias.}{6}}
+\@writefile{toc}{\contentsline {paragraph}{Por causa da ambig\"uidade da palavra ``free'', as pessoas a muito t\^em procurado uma alternativa, mas ningu\'em encontrou um outro termo apropriado. O idioma ingl\^es tem mais palavras e nuances que qualquer outro, mas falta uma palavra simples, n\~ao amb\IeC {\'\i }gua, palavra que signifique ``free'' (livre), como em ``freedom'' (liberdade) - ``unfettered'' (sem correntes) e a palavra que mais entra no \IeC {\'\i }ntimo significando. Outras alternativas como ``liberated'' (liberado), ``freedom'' (liberdade) e ``open'' (aberto) t\^em o significado errado ou alguma outra desvantagem.}{6}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}A opini\~ao da Free Software Foundation sobre licen\c cas livres}{6}}
+\@writefile{toc}{\contentsline {paragraph}{A Free Software Foundation (FSF) \'e uma organiza\c c\~ao dedicada a eliminar restri\c c\~oes na c\'opia, redistribui\c c\~ao, entendimento e modifica\c c\~oes de programas de computador. Isso \'e feito atrav\'es da promo\c c\~ao do desenvolvimento e uso de software livre em todas as \'areas da computa\c c\~ao - particularmente, ajudando no desenvolvimento do Sistema Operacional GNU. }{6}}
+\@writefile{toc}{\contentsline {paragraph}{Conforme a FSF, h\'a duas categorias de licen\c cas de software, que s\~ao: \textbf  {copyleft} e \textbf  {n\~ao copyleft}. Licen\c cas copyleft s\~ao como a GNU GPL, insistem que vers\~oes modificadas de um programa devem continuar sendo livres. Licen\c cas n\~ao copyleft n\~ao fazem quest\~ao disso.}{6}}
+\@writefile{toc}{\contentsline {paragraph}{A FSF classifica as licen\c cas livres de acordo com alguns princ\IeC {\'\i }pios b\'asicos, que s\~ao: }{6}}
+\citation{GNU2000}
+\@writefile{toc}{\contentsline {paragraph}{Segue uma lista de observa\c c\~oes sobre licen\c ca, conforme \cite  {GNU2000}: }{7}}
+\citation{GNU2000}
+\citation{GASS2000}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}O Projeto GNU}{10}}
+\@writefile{toc}{\contentsline {paragraph}{Como desenvolvedor de sistema operacional, Richard M. Stallman tinha as habilidades apropriadas para esta tarefa. Ent\~ao decidiu fazer com que o sistema fosse compat\IeC {\'\i }vel com Unix porque deste modo seria port\'avel, e assim aqueles usu\'arios de Unix poderiam migrar para ele com facilidade. O nome GNU foi escolhido seguindo uma tradi\c c\~ao hacker, como acr\^onimo recursivo para ``Gnu is Not Unix'' (GNU n\~ao \'e Unix).}{10}}
+\@writefile{toc}{\contentsline {paragraph}{O objetivo do Projeto GNU \'e dar liberdade aos usu\'arios. Em fun\c c\~ao disso procurou-se criar condi\c c\~oes de distribui\c c\~ao que prevenissem que o software GNU pudesse vir a se tornar propriet\'ario.}{10}}
+\@writefile{toc}{\contentsline {paragraph}{O m\'etodo utilizado foi denominado \textbf  {``copyleft''}. O copyleft usa a lei protegida por direitos autorais, mas d\'a a volta para servir ao oposto de seu prop\'osito habitual: em vez de ser um meio de privatizar o software, se torna um meio de manter livre o software. A id\'eia central do copyleft \'e dar a qualquer um permiss\~ao para executar o programa, copiar o programa, modificar o programa e redistribuir vers\~oes modificadas - sem permitir que o usu\'ario adicione restri\c c\~oes de sua propriedade. Deste modo, as liberdades cruciais que definem o ``software livre'' s\~ao garantidas a qualquer um que tenha uma c\'opia; elas tornam-se direitos inalien\'aveis.}{11}}
+\@writefile{toc}{\contentsline {paragraph}{Para um copyleft efetivo, as vers\~oes modificadas tamb\'em devem ser livres. Isto assegura que todo o trabalho baseado em software livre fica dispon\IeC {\'\i }vel para nossa comunidade se \'e publicado. Quando os desenvolvedores trabalham como programadores volunt\'arios para melhorar o software GNU, \'e o copyleft que impede que os empregadores digam: ``n\~ao pode compartilhar essas mudan\c cas, porque n\'os queremos us\'a-las para fazer nossa vers\~ao propriet\'aria do programa''.}{11}}
+\@writefile{toc}{\contentsline {paragraph}{A exig\^encia de que as mudan\c cas devem ser livres \'e essencial se n\'os quisermos assegurar a liberdade para cada usu\'ario do programa.}{11}}
+\@writefile{toc}{\contentsline {paragraph}{Um t\'opico relacionado trata a combina\c c\~ao de um programa livre com um de c\'odigo n\~ao livre. Tal combina\c c\~ao ser\'a inevitavelmente n\~ao livre; qualquer liberdade que perdeu a parte n\~ao livre, tamb\'em perder\'a o todo. Permitir tais combina\c c\~oes abriria um buraco grande o suficiente para afundar um navio. Para isto, \'e uma exig\^encia crucial ao copyleft tapar este buraco: qualquer coisa somada ou combinada com um programa copyleft deve ser de tal forma que a vers\~ao total combinada tamb\'em seja livre e copyleft.}{11}}
+\@writefile{toc}{\contentsline {paragraph}{A implementa\c c\~ao espec\IeC {\'\i }fica de copyleft que \'e usada na maioria do software GNU \'e o ``GNU General Public License'' (Licen\c ca P\'ublica Geral GNU) ou GNU GPL para abreviar. H\'a outros tipos de copyleft que s\~ao usados em circunst\^ancias espec\IeC {\'\i }ficas. Manuais GNU tamb\'em s\~ao copyleft, mas usam um copyleft muito mais simples, porque a complexidade da GNU GPL n\~ao \'e necess\'aria para manuais.}{11}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.4}Conclus\~ao do cap\IeC {\'\i }tulo}{11}}
+\@writefile{toc}{\contentsline {paragraph}{A escolha da utiliza\c c\~ao de software livre neste trabalho n\~ao \'e acaso. Ap\'os compreender realmente o que significa o termo ``free software'' e verificar que ele \'e capaz de criar um comunidade cooperativa de usu\'arios e desenvolvedores, n\~ao tem como resistir a esta ``nova'' forma de constru\c c\~ao/distribui\c c\~ao de software.}{11}}
+\@writefile{toc}{\contentsline {paragraph}{S\'o n\~ao sei at\'e quando software livre conseguir\'a manter a gratuidade de sua distribui\c c\~ao, vejo que \'e necess\'ario que os membros da comunidade contribuam (doa\c c\~oes?) com o movimento. Vejo empresas migrando para software livre devido ao seu baixo custo, preferencialmente, custo zero \'e o que eles querem.}{12}}
+\@writefile{toc}{\contentsline {paragraph}{\'E importante ficar atento ao surgimento de uma nova classe de gigol\^os. Os ``gigol\^os de software livre'' s\~ao aquelas pessoas ou empresas que est\~ao interessadas em tirar vantagem, extraindo dinheiro f\'acil na implanta\c c\~ao de software livre sem que retorne um ``tost\~ao furado'' para os desenvolvedores. Minha sugest\~ao \'e que as contribui\c c\~oes sejam dentro das condi\c c\~oes do usu\'ario, me parece \'obvio que uma empresa multinacional possa contribuir com mais do que um estabelecimento comercial do meu munic\IeC {\'\i }pio Cangu\c cu.}{12}}
+\@writefile{toc}{\contentsline {paragraph}{Vivemos em um mundo capitalista em que diariamente convivemos com contrastes sociais enormes, uma sociedade que n\~ao d\'a oportunidade \`aqueles que n\~ao possuem recursos financeiros para pagar (geralmente um pre\c co alto) por sa\'ude, moradia, educa\c c\~ao, etc. Acredito que o software livre \'e capaz de socializar o acesso ao software e ao conhecimento nele empregado. Possibilitando que com estudo e dedica\c c\~ao, alcancemos nosso ``lugar ao sol'' na \'area da inform\'atica.}{12}}
+\citation{appwatch}
+\citation{fresmeat}
+\citation{freeos}
+\citation{freebsd}
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}ESTADO DA ARTE EM SOFTWARE LIVRE}{13}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Introdu\c c\~ao}{13}}
+\@writefile{toc}{\contentsline {paragraph}{No desenvolvimento desse projeto, procurarei utilizar somente ferramentas cuja licen\c ca seja livre. Sendo assim, inicialmente pesquisei at\'e obter uma suite de ferramentas pass\IeC {\'\i }veis de serem utilizadas na implementa\c c\~ao do estudo de caso proposto neste trabalho.}{13}}
+\@writefile{toc}{\contentsline {paragraph}{A pesquisa sobre as ferramentas citadas nesta se\c c\~ao s\~ao frutos de pesquisa nos sites \emph  {AppWatch} \cite  {appwatch}, \emph  {freshmeat} \cite  {fresmeat} e \emph  {FreeOS} \cite  {freeos}.}{13}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Sistemas operacionais livres}{13}}
+\@writefile{toc}{\contentsline {paragraph}{Sistemas operacionais s\~ao necess\'arios para possibilitar a opera\c c\~ao de qualquer sistema computacional ou de alguns dispositivos.}{13}}
+\@writefile{toc}{\contentsline {paragraph}{Alguns sistemas operacionais populares s\~ao Windows, MacOS, Unix, GNU/Linux e Solaris. Dos casos citados, GNU/Linux \'e um sistema operacional livre, enquanto que os demais n\~ao.}{13}}
+\@writefile{toc}{\contentsline {paragraph}{Sistemas operacionais livres s\~ao sistema operacionais que podem ser copiados, redistribu\IeC {\'\i }dos e que ainda oferecem o c\'odigo fonte para que o usu\'ario possa adapt\'a-lo as suas necessidades.}{13}}
+\@writefile{toc}{\contentsline {paragraph}{A seguir, abordaremos brevemente alguns sistemas operacionais livre existentes para plataforma PC, j\'a que esta \'e a \'unica plataforma que tenho acesso para implementar este trabalho.}{13}}
+\citation{linux}
+\citation{alliance}
+\citation{freedos}
+\citation{eros}
+\citation{hurd}
+\citation{minix}
+\citation{netbsd}
+\citation{openbsd}
+\citation{sqlserver}
+\citation{lago}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Banco de dados}{16}}
+\@writefile{toc}{\contentsline {paragraph}{Sistemas gerenciadores de banco de dados ser\~ao utilizados para armazenar eficaz e eficientemente todos os dados que a aplica\c c\~ao do estudo de caso deste trabalho utilizar\'a.}{16}}
+\@writefile{toc}{\contentsline {paragraph}{A seguir, apresentaremos alguns bancos de dados livres.}{16}}
+\citation{interbase}
+\citation{leap}
+\citation{pgsql}
+\citation{mysql}
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}Ferramentas de desenvolvimento para Internet}{18}}
+\@writefile{toc}{\contentsline {paragraph}{Como a proposta deste trabalho \'e modelar e parcialmente implementar uma aplica\c c\~ao para web, esta se\c c\~ao ilustra algumas ferramentas que poder\~ao ser utilizadas na implementa\c c\~ao do estudo de caso proposto.}{18}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}Common Gateway Interface}{18}}
+\@writefile{toc}{\contentsline {paragraph}{A Common Gateway Interface (CGI) \'e um padr\~ao para interfaceamento de aplica\c c\~oes externas com servidores web. Um documento HTML que um servidor web entrega \'e est\'atico, o que significa que existe em um estado constante: um arquivo de texto que n\~ao se altera. Um programa CGI, \'e executado em tempo real, ent\~ao ele pode criar informa\c c\~ao (p\'aginas web) dinamicamente.}{18}}
+\@writefile{toc}{\contentsline {paragraph}{Um programa CGI pode ser escrito utilizando qualquer linguagem que pode ser executada no sistema, como:}{18}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}Pr\'e-processadores}{18}}
+\citation{hb}
+\citation{php}
+\citation{midgard}
+\@writefile{toc}{\contentsline {paragraph}{Pr\'e-processadores basicamente s\~ao programas que executam scripts que podem ou n\~ao estar embutidos no c\'odigo HTML de p\'aginas web. S\~ao estes pr\'e-processadores que geram a parte din\^amica das p\'aginas. Dependendo do pr\'e-processador, \'e poss\IeC {\'\i }vel executar as mais diversas opera\c c\~oes como: acesso a bases de dados e/ou recursos do sistema.}{19}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.3}Servidores de aplica\c c\~oes}{19}}
+\@writefile{toc}{\contentsline {paragraph}{Servidores de Aplica\c c\~oes oferecem um ambiente completo para o desenvolvimento de aplica\c c\~oes, ``facilitando'' o processo de constru\c c\~ao de sites din\^amicos atrav\'es de m\'odulos pr\'e-programados.}{19}}
+\@writefile{toc}{\contentsline {paragraph}{A seguir, brevemente introduzirei alguns servidores de aplica\c c\~oes de distribui\c c\~ao livre.}{19}}
+\citation{zope}
+\citation{GNUJSP}
+\citation{resin}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.4}Java Server Pages (JSP)}{20}}
+\@writefile{toc}{\contentsline {paragraph}{Java Server Pages \'e uma tecnologia desenvolvida pela Sun Microsystems que permite embutir c\'odigo escrito na linguagem Java em p\'aginas HTML, \'e poss\IeC {\'\i }vel tamb\'em fazer com que o c\'odigo Java das p\'aginas HTML executem servlets\SF@gobble@opt  {\textbf  {Servlets} s\~ao componentes de software escritos em Java.} no lado do servidor web.}{20}}
+\citation{tomcat}
+\citation{apache}
+\citation{polyjsp}
+\citation{apache}
+\citation{ghttpd}
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}Servidor de HTTP}{21}}
+\@writefile{toc}{\contentsline {paragraph}{Servidor de HTTP\SF@gobble@opt  {\textbf  {Servidores de HTTP} tamb\'em podem ser chamados de ``servidores web''} \'e um programa que utilizando o modelo cliente/servidor e o protocolo HTTP, serve a requisi\c c\~oes de p\'aginas de usu\'arios da World Wide Web.}{21}}
+\@writefile{toc}{\contentsline {paragraph}{A seguir, brevemente e sem inten\c c\~ao de esgotar o assunto, apresentarei alguns servidores de HTTP que pesquisei.}{21}}
+\citation{xitami}
+\citation{thttpd}
+\citation{kaffe}
+\citation{japhar}
+\citation{japhar}
+\@writefile{toc}{\contentsline {section}{\numberline {3.6}Implementa\c c\~oes de M\'aquina Virtual Java}{22}}
+\@writefile{toc}{\contentsline {paragraph}{Uma M\'aquina Virtual Java \'e uma suite de ferramentas, que formam um ambiente capaz de interpretar e executar programas escritos na linguagem Java.}{22}}
+\citation{amaya}
+\citation{armadillo}
+\citation{chimera}
+\citation{galeon}
+\citation{gnome}
+\@writefile{toc}{\contentsline {section}{\numberline {3.7}Navegadores Web}{23}}
+\@writefile{toc}{\contentsline {paragraph}{Navegadores Web s\~ao programas que permitem a visualiza\c c\~ao de p\'aginas web.}{23}}
+\@writefile{toc}{\contentsline {paragraph}{Estes programas poder\~ao ser utilizados pelos usu\'arios da aplica\c c\~ao que este trabalho pretende construir.}{23}}
+\citation{konqueror}
+\citation{kde}
+\citation{mozilla}
+\citation{skatebrowser}
+\@writefile{toc}{\contentsline {section}{\numberline {3.8}Conclus\~ao do cap\IeC {\'\i }tulo}{24}}
+\@writefile{toc}{\contentsline {paragraph}{Como pode ser visto no decorrer deste cap\IeC {\'\i }tulo, op\c c\~oes de ferramentas livres \'e o que n\~ao falta. Concordo que algumas s\~ao de manuseio bem mais complicado do que outras (principalmente se considerarmos solu\c c\~oes propriet\'arias), mas acredito que com o aumento da comunidade usu\'aria, os desenvolvedores acabar\~ao procurando facilitar a utiliza\c c\~ao de seus produtos (atrav\'es de front-ends gr\'aficos, etc), sempre mantendo a filosofia do software livre e encorajando os usu\'arios a utilizarem seus c\'erebros.}{24}}
+\citation{COX1990}
+\citation{FURLAN}
+\citation{BERARD}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}METODOLOGIA DE ENGENHARIA DE SOFTWARE}{25}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Introdu\c c\~ao}{25}}
+\@writefile{toc}{\contentsline {paragraph}{Conforme vou adquirindo maior conhecimento sobre engenharia de software e trabalhando no desenvolvimento de aplica\c c\~oes, concordo com a defini\c c\~ao de software apresentada acima e concluo que a utiliza\c c\~ao de um m\'etodo para desenvolvimento de software \'e um fator indispens\'avel para constru\c c\~ao de sistemas. Quando o desenvolvimento \'e feito por uma s\'o pessoa e o ambiente a ser informatizado \'e simples, talvez a utiliza\c c\~ao de uma metodologia at\'e possa ser dispensada. Mas quando uma equipe composta por v\'arias pessoas com fun\c c\~oes diversas se unem no desenvolvimento de uma aplica\c c\~ao acredito ser indispens\'avel a utiliza\c c\~ao de um m\'etodo de engenharia de software. Neste caso, o m\'etodo principalmente organiza os processos de desenvolvimento, permitindo um gerenciamento mais eficaz atrav\'es de uma distribui\c c\~ao de tarefas mais elaborada e bem definida. Al\'em de facilitar a comunica\c c\~ao entre os componentes da equipe. O principal problema que vejo na ado\c c\~ao de uma metodologia \'e principalmente com treinamento, visto que cada componente da equipe possui uma curva de aprendizado pr\'opria e o custo com consultoria pode ser elevado. Mesmo assim, acredito que se a equipe for composta pelas pessoas certas, o investimento vale a pena e se paga rapidamente. ``O problema est\'a deixando de ser o software e o hardware - cada dia mais poderosos do que no dia anterior - para se tornar os m\'etodos de trabalho que empregamos no uso dessa tecnologia, bem como seu alvo de utiliza\c c\~ao.'' \cite  {FURLAN}}{25}}
+\@writefile{toc}{\contentsline {paragraph}{Segundo \cite  {BERARD} as melhores t\'ecnicas para engenharia de software seriam aquelas que:}{25}}
+\citation{pizzol}
+\@writefile{toc}{\contentsline {paragraph}{A seguir, apresentarei brevemente algumas metodologias que utilizam uma abordagem orientada a objetos para a constru\c c\~ao de software. A escolha por esta abordagem, e n\~ao outra, se deu devido ao referencial te\'orico citar, que atualmente, a orienta\c c\~ao a objetos \'e a abordagem estado da arte no desenvolvimento de aplica\c c\~oes.}{26}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Abordagem para desenvolvimento de software orientado a objetos}{26}}
+\@writefile{toc}{\contentsline {paragraph}{O enfoque tradicional de modelagem para a constru\c c\~ao de sistemas de informa\c c\~ao baseia-se na compreens\~ao desse sistema como um conjunto de programas que, por sua vez, executam processos sobre dados. O enfoque da modelagem por objetos, v\^e o mundo como uma colet\^anea de objetos que interagem entre si, apresentam caracter\IeC {\'\i }sticas pr\'oprias que s\~ao representadas pelos seus atributos (dados) e opera\c c\~oes (processos).}{26}}
+\@writefile{toc}{\contentsline {paragraph}{Essa abordagem Orientada a Objetos \'e justificada pelo fato de que objetos existem na natureza muito antes de haver qualquer tipo de aplica\c c\~ao deles pelo neg\'ocio: equipamentos, pessoas, minerais, petr\'oleo etc., existem por si s\'o, apresentam caracter\IeC {\'\i }sticas peculiares representadas pelos seus atributos e, adiante, pelo seu comportamento no mundo real. Essa abordagem oferece como principais benef\IeC {\'\i }cios:}{26}}
+\@writefile{toc}{\contentsline {paragraph}{Programas orientados a objetos s\~ao feitos de objetos. Estes objetos empacotam tanto os dados como os procedimentos que operam sobre esses dados. Os procedimentos s\~ao chamados de m\'etodos ou opera\c c\~oes. Um objeto executa uma opera\c c\~ao, quando recebe uma solicita\c c\~ao (ou mensagem) de um cliente. As solicita\c c\~oes s\~ao a \emph  {\'unica} maneira de conseguir que um objeto execute uma opera\c c\~ao. As opera\c c\~oes s\~ao a \emph  {\'unica} maneira de mudar os dados internos de um objeto. Devido a essas restri\c c\~oes, dizemos que o estado interno de um objeto est\'a \emph  {encapsulado}; ele n\~ao deve ser acessado diretamente e sua representa\c c\~ao \'e invis\IeC {\'\i }vel do exterior do objeto.}{27}}
+\@writefile{toc}{\contentsline {paragraph}{A parte dif\IeC {\'\i }cil sobre projeto orientado a objetos \'e a decomposi\c c\~ao de um sistema em objetos. A tarefa \'e dif\IeC {\'\i }cil porque muitos fatores entram em jogo: encapsulamento, granulidade, depend\^encia, flexibilidade, desempenho, evolu\c c\~ao, reutiliza\c c\~ao e assim por diante.}{27}}
+\@writefile{toc}{\contentsline {paragraph}{Entram ent\~ao as metodologias de projeto orientado a objetos, procurando simplificar o processo de decomposi\c c\~ao do sistema em objetos atrav\'es da divis\~ao do processo em atividades, com tarefas a serem executadas em cada atividade.}{27}}
+\@writefile{toc}{\contentsline {paragraph}{A seguir, apresentarei brevemente alguns m\'etodos de desenvolvimento de software orientado a objetos.}{27}}
+\citation{FURLAN}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}M\'etodos para desenvolvimento de software orientado a objetos}{28}}
+\@writefile{toc}{\contentsline {paragraph}{Nas \'ultimas d\'ecadas houve o aprimoramento constante das t\'ecnicas e metodologias para a engenharia de software visando acompanhar a evolu\c c\~ao natural do conhecimento, incluindo a an\'alise e o projeto estruturado, a an\'alise essencial e a Engenharia da Informa\c c\~ao.}{28}}
+\@writefile{toc}{\contentsline {paragraph}{M\'etodos orientado a objetos procuram tanto redefinir quanto estender m\'etodos existentes. N\~ao obstante sejam comuns no mercado metodologias h\IeC {\'\i }bridas combinando v\'arios aspectos da orienta\c c\~ao a objetos e m\'etodos estruturados, alguns cr\IeC {\'\i }ticos t\^em defendido a posi\c c\~ao de que n\~ao \'e poss\IeC {\'\i }vel haver uma continuidade das t\'ecnicas estruturadas alegando n\~ao serem ``objetific\'aveis''. De qualquer forma, a orienta\c c\~ao a objetos \'e fundamentalmente uma nova maneira de se pensar, um novo paradigma, e n\~ao simplesmente uma linguagem de programa\c c\~ao.}{28}}
+\@writefile{toc}{\contentsline {paragraph}{A seguir abordaremos brevemente alguns m\'etodos que surgiram no campo da orienta\c c\~ao a objetos.}{28}}
+\citation{FURLAN}
+\citation{FURLAN}
+\citation{FURLAN}
+\citation{LOBATO}
+\citation{FURLAN}
+\citation{FURLAN}
+\citation{FURLAN}
+\citation{FURLAN}
+\citation{FURLAN}
+\citation{CIOCIOLA}
+\@writefile{toc}{\contentsline {paragraph}{N\~ao \'e minha inten\c c\~ao esgotar o assunto neste trabalho, portanto apresentei somente alguns, dos v\'arios, m\'etodos orientado a objetos. Lembrando que a proposta \'e desenvolver uma aplica\c c\~ao para ser acessada via web, utilizando um navegador, pesquisei sobre m\'etodos orientado a objetos para constru\c c\~ao de aplica\c c\~oes hiperm\IeC {\'\i }dia.}{32}}
+\citation{ROS96}
+\citation{ROS96}
+\newlabel{sec:oohdm}{{4.3.1}{33}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}M\'etodos orientado a objetos para aplica\c c\~oes hiperm\IeC {\'\i }dia}{33}}
+\@writefile{toc}{\contentsline {paragraph}{Aplica\c c\~oes Hiperm\IeC {\'\i }dia permitem que o usu\'ario da aplica\c c\~ao navegue atrav\'es de ``n\'os de informa\c c\~ao'' de maneira intuitiva.}{33}}
+\citation{ROS96}
+\citation{umlessencial}
+\newlabel{sec:procdesenv}{{4.4}{34}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}O processo de desenvolvimento }{34}}
+\@writefile{toc}{\contentsline {paragraph}{Martin Fowler em \cite  {umlessencial}, aborda uma vis\~ao geral do processo de desenvolvimento de software, ele n\~ao define um m\'etodo, mas d\'a uma vis\~ao de alto n\IeC {\'\i }vel do processo.}{34}}
+\@writefile{toc}{\contentsline {paragraph}{O processo de desenvolvimento proposto \'e iterativo e incremental. Iterativo porque o software n\~ao \'e implementado em um instante no fim do projeto, mas desenvolvido e implementado em partes, e incremental porque o desenvolvimento vai adicionando complexidade aos modelos conforme o avan\c co das fases.}{34}}
+\@writefile{toc}{\contentsline {paragraph}{Os projetos variam quanto ao volume de \textbf  {formalidade}, onde quanto maior o projeto, mais formalidade \'e necess\'aria. Projetos com pouca formalidade podem ter uma fase de concep\c c\~ao que cabe em uma folha de papel e foi feita durante um bate-papo, enquanto que projetos formais possuem documentos formais a serem entregues, reuni\~oes formais e encerramentos formais.}{34}}
+\citation{umlessencial}
+\@writefile{lof}{\contentsline {figure}{Figura~\numberline {1}{\ignorespaces Vis\~ao geral do processo de desenvolvimento de software.}}{35}}
+\newlabel{vgpds}{{1}{35}}
+\@writefile{toc}{\contentsline {paragraph}{Segundo Fowler, as fases de um processo de desenvolvimento s\~ao:}{35}}
+\citation{umlessencial}
+\citation{umlessencial}
+\citation{umlessencial}
+\citation{umlessencial}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}Conclus\~ao do cap\IeC {\'\i }tulo}{37}}
+\@writefile{toc}{\contentsline {paragraph}{Neste cap\IeC {\'\i }tulo foi apresentado brevemente v\'arias metodologias para o desenvolvimento de aplica\c c\~oes orientada a objetos, al\'em de uma vis\~ao geral do processo de constru\c c\~ao de aplica\c c\~oes.}{37}}
+\@writefile{toc}{\contentsline {paragraph}{Decidi utilizar OOHDM como m\'etodo de projeto, j\'a que esta metodologia foi a que, na minha opini\~ao, mais se adequ\'a ao que pretendo desenvolver com este trabalho. O problema \'e que, como o pr\'oprio nome da metodologia diz, OOHDM \'e um m\'etodo de projeto e j\'a vimos que o processo de desenvolvimento engloba mais do que isso.}{37}}
+\@writefile{toc}{\contentsline {paragraph}{Dessa forma, neste trabalho vou adicionar a OOHDM as fases de concep\c c\~ao, elabora\c c\~ao e transi\c c\~ao, proposta por Fowler em \cite  {umlessencial}.}{37}}
+\@writefile{toc}{\contentsline {paragraph}{\'E importante ressaltar que n\~ao estou propondo a extens\~ao do m\'etodo OOHDM, j\'a que dada a complexidade e a formalidade necess\'aria para isso, foge do escopo desta monografia, portanto estou adicionando as fases de maneira emp\IeC {\'\i }rica e intuitiva.}{37}}
+\@writefile{toc}{\contentsline {paragraph}{Conv\'em lembrar que o intuito dessa monografia \'e modelar o sistema de gest\~ao e implementar um prot\'otipo, dessa forma, n\~ao atingirei a fase de transi\c c\~ao porque o prot\'otipo constru\IeC {\'\i }do n\~ao possuir\'a todas as funcionalidade de uma vers\~ao beta.}{37}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}ESTUDO DE CASO}{38}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Introdu\c c\~ao}{38}}
+\@writefile{toc}{\contentsline {paragraph}{O estudo de caso desenvolvido neste trabalho \'e a modelagem de um sistema de gest\~ao para pomares de pessegueiros, sendo este cap\IeC {\'\i }tulo o resultado de v\'arias reuni\~oes que buscaram formalizar e definir o escopo deste sistema. Foi feito um levantamento de requisitos baseado na vis\~ao do cliente sobre o que seria o seu neg\'ocio.}{38}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Objeto de estudo}{38}}
+\@writefile{toc}{\contentsline {paragraph}{Nosso objeto de estudo \'e o pomar de pessegueiros \emph  {``Arroio das Pedras''}, de propriedade do Sr. Adelci dos Santos Camargo, localizado no 5\ensuremath  {\IeC {\textordmasculine }} distrito do munic\IeC {\'\i }pio de Cangu\c cu-RS. Enquanto esta monografia estava sendo escrita, o pomar Arroio das Pedras possu\IeC {\'\i }a em torno de 47.000 plantas distribu\IeC {\'\i }das em 58 hectares de pomar.}{38}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}O pessegueiro}{38}}
+\@writefile{toc}{\contentsline {paragraph}{Esta monografia estaria incompleta sem um hist\'orico da planta que \'e o principal motivo deste trabalho existir.}{38}}
+\citation{PESSEGUEIRO}
+\citation{AURELIO}
+\@writefile{toc}{\contentsline {paragraph}{Em 2000 verificamos a perman\^encia na atividade de apenas 12 ind\'ustrias na regi\~ao, por\'em, tendo sua capacidade instalada ampliada, com a renova\c c\~ao do parque de m\'aquinas.}{40}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}O pomar de pessegueiros}{40}}
+\@writefile{toc}{\contentsline {paragraph}{Durante v\'arias reuni\~oes com o Sr. Adelci, procuramos formalizar o que seria um pomar de pessegueiros. Deste processo surgiu a descri\c c\~ao textual que \'e citada abaixo.}{40}}
+\@writefile{toc}{\contentsline {paragraph}{Segundo \cite  {AURELIO}, um pomar \'e um conjunto de plantas frut\IeC {\'\i }feras.}{40}}
+\@writefile{toc}{\contentsline {paragraph}{O Sr. Adelci decidiu cultivar pessegueiros, definindo um pomar de pessegueiros como \emph  {``um conjunto de plantas frut\IeC {\'\i }feras (pessegueiros), explorado economicamente''}.}{40}}
+\@writefile{toc}{\contentsline {paragraph}{Esse conjunto de plantas ficam distribu\IeC {\'\i }das em lotes ou talh\~oes.}{40}}
+\@writefile{toc}{\contentsline {paragraph}{Esses lotes podem ser identificados pela sua localiza\c c\~ao, \'area (mensurada em hectares), n\'umero de plantas, idade e um cultivar (tamb\'em chamado por ``variedade'').}{40}}
+\@writefile{toc}{\contentsline {paragraph}{Cultivar \'e uma variedade de p\^essego com caracter\IeC {\'\i }sticas pr\'oprias. Dessas caracter\IeC {\'\i }sticas pr\'oprias a que mais nos interessa para gest\~ao do pomar \'e o \textbf  {ciclo produtivo do cultivar}.}{40}}
+\@writefile{toc}{\contentsline {paragraph}{O ciclo produtivo do cultivar envolve uma cole\c c\~ao de fases onde s\~ao realizados uma s\'erie de ``tratos culturais''\SF@gobble@opt  {\textbf  {Tratos Culturais} s\~ao atividades desenvolvidas no cultivo agr\IeC {\'\i }cola.}.}{40}}
+\@writefile{toc}{\contentsline {paragraph}{Esses tratos culturais, atrav\'es de tarefas, utilizam um ou mais recursos para sua realiza\c c\~ao.}{40}}
+\@writefile{toc}{\contentsline {paragraph}{Para facilidade de compreens\~ao, planejamento e utiliza\c c\~ao, estes recursos s\~ao identificados, codificados, quantificados e, ainda, classificados.}{40}}
+\@writefile{toc}{\contentsline {paragraph}{Os recursos podem ser classificados como:}{41}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.5}O ciclo produtivo de um pomar de pessegueiros}{41}}
+\@writefile{toc}{\contentsline {paragraph}{Conversando sobre o ciclo produtivo do pessegueiro e sobre atividades executadas no pomar, conclu\IeC {\'\i }mos que o ciclo produtivo do pomar \'e composto das seguintes fases:}{41}}
+\@writefile{toc}{\contentsline {paragraph}{Embora a \'epoca de in\IeC {\'\i }cio da dorm\^encia seja semelhante, independente do cultivar, a fase de flora\c c\~ao e matura\c c\~ao diferem influindo diretamente na \'epoca de realiza\c c\~ao das outras fases. Sendo que podemos classificar, quanto a \'epoca de matura\c c\~ao, em cultivar de ciclo:}{41}}
+\@writefile{toc}{\contentsline {paragraph}{A seguir detalharei cada fase do ciclo produtivo do pomar.}{42}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.1}A fase de dorm\^encia}{42}}
+\@writefile{toc}{\contentsline {paragraph}{A fase de Dorm\^encia, tamb\'em conhecida por ``repouso'', corresponde ao per\IeC {\'\i }odo em que diminui a atividade vegetativa do pessegueiro com a conseq\"uente queda das folhas.}{42}}
+\@writefile{toc}{\contentsline {paragraph}{Na fase de Dorm\^encia desenrola-se os seguintes tratos culturais:}{42}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.2}A fase de flora\c c\~ao}{42}}
+\@writefile{toc}{\contentsline {paragraph}{Esta fase corresponde ao in\IeC {\'\i }cio da atividade vegetativa do pessegueiro com o desenvolvimento de bot\~oes florais, desabrojar das flores at\'e a queda das p\'etalas.}{42}}
+\@writefile{toc}{\contentsline {paragraph}{A fase de Flora\c c\~ao possui os seguintes tratos culturais:}{43}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.3}A fase de frutifica\c c\~ao}{43}}
+\@writefile{toc}{\contentsline {paragraph}{Esta fase inicia com a queda da ``\emph  {corola}`` at\'e a completa forma\c c\~ao do fruto.}{43}}
+\@writefile{toc}{\contentsline {paragraph}{Na fase de Frutifica\c c\~ao s\~ao executados os seguintes tratos culturais:}{43}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.4}A fase de matura\c c\~ao}{44}}
+\@writefile{toc}{\contentsline {paragraph}{Esta fase d\'a com o desenvolvimento da polpa do fruto, adquirindo textura, sabor e cor caracter\IeC {\'\i }stica do cultivar.}{44}}
+\@writefile{toc}{\contentsline {paragraph}{A fase de Matura\c c\~ao compreende o seguinte trato cultural:}{44}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.5}A fase de colheita}{44}}
+\@writefile{toc}{\contentsline {paragraph}{Esta fase corresponde a coleta dos frutos com matura\c c\~ao completa.}{44}}
+\@writefile{toc}{\contentsline {paragraph}{Na fase de Colheita s\~ao realizadas as seguintes atividades:}{44}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.6}A fase de comercializa\c c\~ao}{45}}
+\@writefile{toc}{\contentsline {paragraph}{A fase de Comercializa\c c\~ao consiste na entrega dos frutos embalados para a ind\'ustria, ou para o com\'ercio \emph  {in natura} em feiras e supermercados. A atividade executada nessa fase seria compostos pelo registro de venda de frutos com emiss\~ao de notas fiscais e o agendamento dos recebimentos, quando a prazo.}{45}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.7}A fase de entresafra}{45}}
+\@writefile{toc}{\contentsline {paragraph}{Entresafra \'e a fase em que a planta, ap\'os a produ\c c\~ao dos frutos recomp\~oe-se, acumulando reservas em suas gemas, ra\IeC {\'\i }zes e ramos para a produ\c c\~ao na pr\'oxima safra.}{45}}
+\@writefile{toc}{\contentsline {paragraph}{A fase de Entresafra possui os seguintes tratos culturais:}{45}}
+\newlabel{sec:decomposicao}{{5.6}{46}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.6}A decomposi\c c\~ao dos tratos culturais em tarefas}{46}}
+\@writefile{toc}{\contentsline {paragraph}{A execu\c c\~ao de um trato cultural, \'e considerado uma ou mais tarefas que utilizam recursos no pomar.}{46}}
+\@writefile{toc}{\contentsline {paragraph}{Baseado na descri\c c\~ao detalhada dos tratos culturais no ciclo produtivo do pomar, observei que muitos recursos s\~ao utilizados repetidamente, em fases diferentes e com caracter\IeC {\'\i }sticas diferentes, recebendo inclusive, denomina\c c\~oes diferentes. Mas para efeito de gest\~ao, notei a possibilidade de agrupar estes tratos culturais, facilitando deste modo, a compreens\~ao, modelagem e futura implementa\c c\~ao da aplica\c c\~ao proposta neste trabalho.}{46}}
+\@writefile{toc}{\contentsline {paragraph}{Note, por exemplo, que o trato cultural denominado ``poda'' pode ocorrer 2 ou mais vezes no ciclo produtivo: poda hibernal (fase de dorm\^encia) e poda verde (fase de frutifica\c c\~ao e entresafra).}{46}}
+\@writefile{toc}{\contentsline {paragraph}{S\~ao efetuadas v\'arias aduba\c c\~oes no decorrer do ciclo produtivo (Aduba\c c\~ao de Base, fase de Flora\c c\~ao; Aduba\c c\~ao de Cobertura, fases de Frutifica\c c\~ao e Entresafra; Aduba\c c\~ao Org\^anica, fase de Entresafra). Conv\'em ressaltar que o trato cultural de Calagem possui forma de aplica\c c\~ao semelhante a uma aduba\c c\~ao, logo, para efeito de gest\~ao do pomar, podemos tratar como tal.}{46}}
+\@writefile{toc}{\contentsline {paragraph}{Tamb\'em \'e poss\IeC {\'\i }vel agrupar as v\'arias pulveriza\c c\~oes desenvolvidas nos tratamentos (de Inverno, fase de Dorm\^encia; da Flor, fase de Flora\c c\~ao; do Fruto, fase de Matura\c c\~ao) e combate a pragas (em qualquer fase).}{46}}
+\@writefile{toc}{\contentsline {paragraph}{Nas fases de colheita e comercializa\c c\~ao s\~ao executadas tarefas que tamb\'em merecem gerenciamento, apesar de n\~ao fazerem parte do ciclo produtivo do pessegueiro (como classifica\c c\~ao, transporte, etc).}{46}}
+\@writefile{toc}{\contentsline {paragraph}{Considerando a similaridade de recursos utilizados e objetivos de cada trato cultural foi poss\IeC {\'\i }vel identificar as seguintes tarefas:}{46}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.7}A gest\~ao completa do pomar}{48}}
+\@writefile{toc}{\contentsline {paragraph}{At\'e o presente momento focalizamos apenas o ciclo produtivo do pomar. Conv\'em lembrar que a gest\~ao completa abrange mais do que isso, como por exemplo:}{48}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.8}Conclus\~ao do cap\IeC {\'\i }tulo}{48}}
+\@writefile{toc}{\contentsline {paragraph}{Dado a complexidade do ambiente a ser modelado e a restri\c c\~ao de tempo dispon\IeC {\'\i }vel para execu\c c\~ao deste trabalho, decidi modelar e implementar a gest\~ao do ciclo produtivo, deixando os t\'opicos da se\c c\~ao acima para um trabalho futuro.}{48}}
+\@writefile{toc}{\contentsline {paragraph}{Um fato interessante que merece ser ressaltado, \'e que a confec\c c\~ao deste cap\IeC {\'\i }tulo propiciou ao propriet\'ario do pomar momentos onde ele pode refletir profundamente sobre detalhes do seu neg\'ocio, normalmente ele n\~ao encontra ``tempo'' para fazer isso.}{48}}
+\citation{FURLAN}
+\citation{umlessencial}
+\citation{umlessencial}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}ELABORA\c C\~AO}{49}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Introdu\c c\~ao}{49}}
+\@writefile{toc}{\contentsline {paragraph}{Nesta fase do processo de desenvolvimento do software, s\~ao identificados os riscos do projeto.}{49}}
+\@writefile{toc}{\contentsline {paragraph}{Conforme a classifica\c c\~ao proposta na Se\c c\~ao \ref  {sec:procdesenv}, os riscos de projeto s\~ao:}{49}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}A gest\~ao do ciclo produtivo de um pomar de pessegueiros modelada em casos de uso de neg\'ocio}{49}}
+\@writefile{toc}{\contentsline {paragraph}{Casos de uso tamb\'em fornecem a base da comunica\c c\~ao entre clientes e desenvolvedores, porque servem para captar as intera\c c\~oes que os usu\'arios tem com o sistema afim de atingir um objetivo.}{49}}
+\@writefile{toc}{\contentsline {paragraph}{Conforme \cite  {umlessencial} os casos de uso quando centrados nas intera\c c\~oes do usu\'ario com o software s\~ao chamados de ``caso de uso de sistema'', enquanto que, quando centrados nas respostas do sistema ao cliente ou a um evento externo s\~ao chamados de ``casos de uso de neg\'ocios''.}{49}}
+\@writefile{toc}{\contentsline {paragraph}{Um detalhe interessante \'e que casos de uso n\~ao precisam ser detalhados, um texto curto (de um a tr\^es par\'agrafos) que seja suficientemente espec\IeC {\'\i }fico para que os usu\'arios entendam a id\'eia b\'asica e que os desenvolvedores tenham uma vis\~ao do que est\'a escondido por dentro \'e o ideal. \cite  {umlessencial}}{50}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.1}Sistema de gest\~ao do ciclo produtivo para pomares de pessegueiro}{50}}
+\@writefile{toc}{\contentsline {paragraph}{A gest\~ao do ciclo produtivo se d\'a atrav\'es do planejamento, registro de tarefas executadas e apura\c c\~ao de resultados sobre os recursos dispon\IeC {\'\i }veis no pomar. Para maior reutiliza\c c\~ao e flexibilidade do sistema, o cadastramento de recursos deve ser feito pelos pr\'oprios usu\'arios. O sistema deve ainda auxiliar no planejamento para cada fase do ciclo produtivo atrav\'es da gera\c c\~ao de estimativas de custos com base em gest\~oes anteriores, corrigidas monetariamente e/ou pela varia\c c\~ao dos pre\c cos no mercado. O registro de tarefas se d\'a por ocasi\~ao da execu\c c\~ao das mesmas para realizar cada trato cultural. Enquanto que a apura\c c\~ao de resultados \'e realizada automaticamente pelo sistema, atrav\'es da minera\c c\~ao de informa\c c\~oes ou comparando dados estimados com aqueles realmente executados.}{50}}
+\@writefile{toc}{\contentsline {paragraph}{O desenho do caso de uso de neg\'ocios do Sistema de Gest\~ao do Pomar se deu, primeiramente, identificando os atores que interagem com o sistema. Foi identificado dois atores: o propriet\'ario e o capataz do pomar. Definiu-se que o propriet\'ario teria acesso irrestrito ao sistema e caberia a ele a manuten\c c\~ao dos processos cr\IeC {\'\i }ticos, enquanto que, o capataz teria acesso restrito ao cadastramento de recursos e registro de execu\c c\~ao das tarefas. O diagrama est\'a representado na Figura \ref  {fcun}.}{50}}
+\@writefile{lof}{\contentsline {figure}{Figura~\numberline {2}{\ignorespaces Caso de uso de neg\'ocios da aplica\c c\~ao de gest\~ao do ciclo produtivo para pomares de pessegueiro}}{50}}
+\newlabel{fcun}{{2}{50}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.2}Caso de uso: Cadastrar recursos}{51}}
+\@writefile{toc}{\contentsline {paragraph}{A identifica\c c\~ao e classifica\c c\~ao dos recursos que o pomar disp\~oe para realiza\c c\~ao das tarefas \'e uma tarefa crucial para uma eficaz gest\~ao. Visto que a estimativa, registro e apura\c c\~ao de resultados \'e baseada nos recursos cadastrados.}{51}}
+\@writefile{toc}{\contentsline {paragraph}{Este cadastramento deve ser flex\IeC {\'\i }vel o suficiente para permitir que o usu\'ario do sistema possa faz\^e-lo e extend\^e-lo, se necess\'ario.}{51}}
+\@writefile{toc}{\contentsline {paragraph}{Como citado anteriormente, os recursos podem ser humanos, materiais, naturais e financeiros.}{51}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.3}Caso de uso: Planejamento de tarefas}{51}}
+\@writefile{toc}{\contentsline {paragraph}{O planejamento para execu\c c\~ao das tarefas tem tamanha import\^ancia na gest\~ao do pomar. Com o planejamento \'e poss\IeC {\'\i }vel estimar a necessidade de recursos financeiros, criar um cronograma de tarefas atrav\'es do agendamento das mesmas e, ainda, racionalizar a utiliza\c c\~ao de recursos.}{51}}
+\@writefile{toc}{\contentsline {paragraph}{Criado o cronograma, o sistema deve confeccionar as planilhas para acompanhamento, a campo, da execu\c c\~ao das tarefas.}{51}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.4}Caso de uso: Registro das tarefas executadas}{51}}
+\@writefile{toc}{\contentsline {paragraph}{O registro das tarefas executas no pomar se faz necess\'ario para possibilitar a apura\c c\~ao de resultados, servir de base para estimativas futuras e manter um registro hist\'orico dos acontecimentos. Este registro deve ser feito diariamente, relacionando todas tarefas que foram executadas em cada lote do pomar.}{51}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.5}Caso de uso: Apura\c c\~ao de resultados}{51}}
+\@writefile{toc}{\contentsline {paragraph}{O sistema deve responder ao final do ciclo produtivo, no m\IeC {\'\i }nimo, as seguintes perguntas:}{51}}
+\citation{umlessencial}
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}Modelo de dom\IeC {\'\i }nio da aplica\c c\~ao de gest\~ao para pomares de pessegueiro}{52}}
+\@writefile{toc}{\contentsline {paragraph}{Neste trabalho a t\'ecnica utilizada para gerar o modelo de dom\IeC {\'\i }nio foi o diagrama de classes, feito a partir de uma perspectiva conceitual. Saliento que foi utilizado uma nota\c c\~ao m\IeC {\'\i }nima. J\'a que n\~ao procurou-se captar cada detalhe, este diagrama serve apenas para dar uma id\'eia global do sistema que est\'a sendo constru\IeC {\'\i }do.}{52}}
+\@writefile{toc}{\contentsline {paragraph}{Baseado na descri\c c\~ao textual do cap\IeC {\'\i }tulo 4 e em primitivas de modelagem orientada a objetos, foi desenhado o modelo de dom\IeC {\'\i }nio da aplica\c c\~ao na Figura \ref  {fmda}.}{52}}
+\@writefile{lof}{\contentsline {figure}{Figura~\numberline {3}{\ignorespaces Modelo de dom\IeC {\'\i }nio da aplica\c c\~ao de gest\~ao para pomares de pessegueiro.}}{52}}
+\newlabel{fmda}{{3}{52}}
+\citation{linux}
+\citation{redhat}
+\citation{pgsql}
+\citation{php}
+\citation{dia}
+\@writefile{toc}{\contentsline {section}{\numberline {6.4}Plataforma de hardware}{53}}
+\@writefile{toc}{\contentsline {paragraph}{No desenvolvimento desse projeto, utilizarei a plataforma de hardware PC, baseada na arquitetura Intel x86, devido ao seu custo inferior comparado ao de outras plataformas, facilidade de manuten\c c\~ao/suporte, abund\^ancia de software livre e popularidade.}{53}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.5}Plataforma de software}{53}}
+\@writefile{toc}{\contentsline {paragraph}{Nesta se\c c\~ao tratarei a respeito dos componentes de software que pretendo utilizar no desenvolvimento/implementa\c c\~ao deste trabalho.}{53}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.6}M\~ao-de-obra para desenvolvimento/implementa\c c\~ao deste trabalho}{54}}
+\@writefile{toc}{\contentsline {paragraph}{No desenvolvimento deste trabalho estou procurando consultoria de pessoas que conhe\c cam profundamente o assunto que estou enfrentando dificuldades de aprendizado.}{54}}
+\@writefile{toc}{\contentsline {paragraph}{Na implementa\c c\~ao, a princ\IeC {\'\i }pio, n\~ao ser\'a utilizado qualquer m\~ao-de-obra externa.}{54}}
+\citation{patricia}
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}PROJETO}{55}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {7.1}Introdu\c c\~ao}{55}}
+\@writefile{toc}{\contentsline {paragraph}{\'E nesta fase do processo de desenvolvimento que a aplica\c c\~ao vai come\c car a ser constru\IeC {\'\i }da e implementada em fases iterativas e incrementais.}{55}}
+\@writefile{toc}{\contentsline {paragraph}{Primeiramente ser\~ao desenhados os casos de uso de sistema da aplica\c c\~ao, baseado no caso de uso de neg\'ocio apresentado na fase de elabora\c c\~ao. Feito isso, partirei para a execu\c c\~ao das fases utilizando a OOHDM.}{55}}
+\@writefile{toc}{\contentsline {paragraph}{A pr\'oxima se\c c\~ao aborda rapidamente o m\'etodo de projeto que utilizarei na constru\c c\~ao deste sistema.}{55}}
+\@writefile{toc}{\contentsline {paragraph}{Na se\c c\~ao subseq\"uente teremos o projeto da aplica\c c\~ao proposta com este trabalho.}{55}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.2}Object-Oriented Hypermedia Design Method}{55}}
+\@writefile{toc}{\contentsline {paragraph}{Como foi colocado na Se\c c\~ao \ref  {sec:oohdm}, a OOHDM \'e um m\'etodo de projeto para aplica\c c\~oes hiperm\IeC {\'\i }dia que divide a constru\c c\~ao do sistema em 4 atividades.}{55}}
+\@writefile{toc}{\contentsline {paragraph}{A seguir, explanarei de forma resumida, cada uma das atividades desenvolvidas em um projeto OOHDM.}{55}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2.1}Modelagem conceitual}{55}}
+\@writefile{toc}{\contentsline {paragraph}{A modelagem conceitual compreende a primeira atividade do m\'etodo OOHDM, sendo respons\'avel pela an\'alise do dom\IeC {\'\i }nio da aplica\c c\~ao, englobando assim todo o universo de informa\c c\~oes relevantes para a aplica\c c\~ao em quest\~ao. \cite  {patricia}}{55}}
+\citation{UID}
+\citation{ROS96}
+\citation{DHAUO}
+\citation{ROS96}
+\@writefile{toc}{\contentsline {paragraph}{Durante a modelagem conceitual \'e constru\IeC {\'\i }do um modelo de dom\IeC {\'\i }nio da aplica\c c\~ao utilizando princ\IeC {\'\i }pios de modelagem orientada a objetos. A OOHDM n\~ao prescreve nenhuma nota\c c\~ao em particular para produzir este esquema conceitual, podendo ser empregado UML, OMT, OOSE ou qualquer outra. Neste trabalho utilizarei a UML por acreditar que, atualmente, esta linguagem de modelagem \'e de fato um padr\~ao notacional para modelagem de aplica\c c\~oes orientada a objetos.}{56}}
+\@writefile{toc}{\contentsline {paragraph}{A finalidade desta atividade \'e capturar a sem\^antica do dom\IeC {\'\i }nio da aplica\c c\~ao. Para isso, utiliza-se formalismos de modelagem orientada a objetos como classes, relacionamentos e casos de uso. Produz-se um esquema conceitual composto de classes, subsistemas, relacionamentos e perspectivas de atributos baseados em mecanismos como classifica\c c\~ao, agrega\c c\~ao, generaliza\c c\~ao e especializa\c c\~ao.}{56}}
+\@writefile{toc}{\contentsline {paragraph}{As informa\c c\~oes necess\'arias para cria\c c\~ao do esquema conceitual foram extra\IeC {\'\i }das dos casos de uso definidos na se\c c\~ao anterior. Para facilitar a tarefa de mapeamento de casos de uso para o esquema conceitual, existe uma ferramenta chamada User Interaction Diagram (UID) que descreve a troca de informa\c c\~oes entre o sistema e o usu\'ario em um alto n\IeC {\'\i }vel de abstra\c c\~ao. Maiores informa\c c\~oes sobre UID s\~ao descritas em \cite  {UID}.}{56}}
+\@writefile{toc}{\contentsline {paragraph}{Devido a restri\c c\~ao de tempo para desenvolvimento deste trabalho, n\~ao foi poss\IeC {\'\i }vel aplicar a ferramenta de UID nos casos de uso desta aplica\c c\~ao, sendo que o mapeamento se deu de maneira emp\IeC {\'\i }rica e intuitiva.}{56}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2.2}Projeto navegacional}{56}}
+\@writefile{toc}{\contentsline {paragraph}{Segundo \cite  {ROS96} ``Os aplicativos de hiperm\IeC {\'\i }dia s\~ao projetados para efetuar navega\c c\~ao atrav\'es de um espa\c co de informa\c c\~oes''.}{56}}
+\@writefile{toc}{\contentsline {paragraph}{Em OOHDM, uma aplica\c c\~ao \'e vista como um conjunto de vis\~oes navegacionais \textbf  {derivadas} do modelo conceitual constru\IeC {\'\i }do na atividade anterior. ``Esta \'e uma das maiores inova\c c\~oes da OOHDM, j\'a que reconhece objetos que o usu\'ario navega \textbf  {n\~ao} como objetos conceituais, mas sim, outros tipos de objetos que s\~ao ``constru\IeC {\'\i }dos'' de um ou mais objetos conceituais'' \cite  {DHAUO}. Logo, o modelo conceitual funcionar\'a como um reposit\'orio compartilhado de modelagem, a partir do qual construiremos diferentes vis\~oes navegacionais do dom\IeC {\'\i }nio do problema, baseado nos usu\'arios que utilizar\~ao a aplica\c c\~ao e as tarefas que realizar\~ao nele \cite  {ROS96}.}{56}}
+\citation{ROS96}
+\citation{ROS96}
+\citation{patricia}
+\@writefile{toc}{\contentsline {subsubsection}{O esquema de classes navegacionais da aplica\c c\~ao}{57}}
+\@writefile{toc}{\contentsline {paragraph}{Em OOHDM h\'a um conjunto de tipos pr\'e-definidos de classes navegacionais como: n\'os, links, \^ancoras e estruturas de acesso. A sem\^antica dos n\'os, links e \^ancoras s\~ao as mesmas utilizadas em aplica\c c\~oes hiperm\IeC {\'\i }dia usuais, enquanto que estruturas de acesso representam as poss\IeC {\'\i }veis maneiras de acessar n\'os.}{57}}
+\@writefile{toc}{\contentsline {subsubsection}{O diagrama de contextos}{57}}
+\@writefile{toc}{\contentsline {paragraph}{Os contextos de navega\c c\~ao da aplica\c c\~ao ficam documentados em cart\~oes pr\'oprios e s\~ao representados graficamente no diagrama de contextos.}{57}}
+\@writefile{toc}{\contentsline {paragraph}{Os contextos possuem formas pr\'e-definidas de acesso e de navega\c c\~ao entre seus elementos, bem como restri\c c\~oes de acesso a usu\'arios.}{57}}
+\citation{IWHD}
+\@writefile{toc}{\contentsline {paragraph}{H\'a um tipo de contexto de navega\c c\~ao chamado \textbf  {estrutura de acesso} que age como \IeC {\'\i }ndice para outros contextos. Em cada estrutura de acesso s\~ao especificados atributos ``seletores'', que s\~ao os objetos que ativam a navega\c c\~ao a outros contextos.}{58}}
+\@writefile{toc}{\contentsline {subsubsection}{Classes em contexto}{58}}
+\@writefile{toc}{\contentsline {paragraph}{Classes em contexto s\~ao artif\IeC {\'\i }cios utilizados para acrescentar caracter\IeC {\'\i }sticas a n\'os conforme o contexto em que est\~ao sendo acessados. Estas classes em contexto s\'o se fazem necess\'arias caso o n\'o deva possuir uma apar\^encia diferente e \^ancoras distintas no contexto em quest\~ao.}{58}}
+\@writefile{toc}{\contentsline {paragraph}{Quando um n\'o possui atributos com m\'ultiplas perspectivas, \'e um ind\IeC {\'\i }cio para utiliza\c c\~ao de classes em contexto.}{58}}
+\@writefile{toc}{\contentsline {paragraph}{Na representa\c c\~ao de classes em contexto utiliza-se a mesma nota\c c\~ao de classes da UML, diferenciando-se apenas pela adi\c c\~ao de um compartimento onde \'e especificado os contextos nos quais a classe em contexto participa.}{58}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2.3}Projeto de interface abstrata}{58}}
+\@writefile{toc}{\contentsline {paragraph}{A atividade de Projeto de Interface Abstrata compreende uma abordagem para especificar a interface de usu\'ario para aplica\c c\~oes hiperm\IeC {\'\i }dia. Esta atividade deve ser desenvolvida antes de iniciar a atividade de implementa\c c\~ao, de forma que seja independente do ambiente onde se pretende efetivamente construir o aplicativo, sempre procurando manter uma coer\^encia com o ambiente de implementa\c c\~ao (por exemplo, de nada adianta especificar algo que o ambiente de implementa\c c\~ao n\~ao suporta).}{58}}
+\@writefile{toc}{\contentsline {paragraph}{Na especifica\c c\~ao da interface abstrata utilizamos o conceito de Abstract Data Views (ADVs). ADVs s\~ao objetos que especificam a organiza\c c\~ao e procedimentos da interface, s\~ao abstratos porque sua real apar\^encia f\IeC {\'\i }sica \'e feita na fase de implementa\c c\~ao. ADVs possuem um estado e uma interface, onde a interface \'e utilizada para entrada e/ou sa\IeC {\'\i }da de eventos externos gerados pelo usu\'ario.}{58}}
+\@writefile{toc}{\contentsline {paragraph}{OOHDM tamb\'em utiliza Abstract Data Objects (ADOs), que similarmente aos ADVs s\~ao objetos, s\'o que n\~ao suportam eventos externos gerados pelo usu\'ario.}{58}}
+\citation{IWHD}
+\citation{patricia}
+\citation{patricia}
+\@writefile{toc}{\contentsline {paragraph}{``No contexto da OOHDM, os objetos navegacionais (n\'os, elos, classes em contexto e estruturas de acesso) agir\~ao como ADOs e estar\~ao associados a ADVs que ser\~ao usados para especificar a sua apar\^encia para o usu\'ario.'' \cite  {IWHD}}{59}}
+\@writefile{toc}{\contentsline {paragraph}{Utilizamos tamb\'em uma vari\'avel chamada ``ContextoPerceptivo'' para indicar os objetos que s\~ao percept\IeC {\'\i }veis num dado momento. Todo e qualquer objeto que vier a se tornar vis\IeC {\'\i }vel \'e acrescido a ``ContextoPerceptivo'', enquanto que todos aqueles que forem exclu\IeC {\'\i }dos da vari\'avel deixam de ser percept\IeC {\'\i }veis.}{59}}
+\@writefile{toc}{\contentsline {subsubsection}{Diagramas de Configura\c c\~ao}{59}}
+\@writefile{toc}{\contentsline {paragraph}{Nesta fase constr\'oi-se Diagramas de Configura\c c\~ao, que s\~ao utilizados para representar os relacionamentos entre os objetos de interface e os objetos navegacionais. \cite  {patricia}}{59}}
+\@writefile{toc}{\contentsline {paragraph}{Al\'em de representarem os objetos de interface (ADVs), os diagramas de configura\c c\~ao especificam outras caracter\IeC {\'\i }sticas da interface abstrata da aplica\c c\~ao, que conforme \cite  {patricia} s\~ao:}{59}}
+\newlabel{sec:advcharts}{{7.2.3}{59}}
+\@writefile{toc}{\contentsline {subsubsection}{ADVcharts}{59}}
+\@writefile{toc}{\contentsline {paragraph}{Outro diagrama tamb\'em \'e constru\IeC {\'\i }do nesta fase, os ADVcharts. Estes procuram apresentar as transforma\c c\~oes ocorridas nos ADVs, sendo que cada ADVchart est\'a relacionado com uma tela da interface.}{59}}
+\@writefile{toc}{\contentsline {paragraph}{Enquanto que os Diagramas de Configura\c c\~ao representam a estrutura est\'atica da interface, utilizamos ADVcharts para representar a estrutura din\^amica.}{59}}
+\citation{pizzol}
+\citation{pizzol}
+\citation{pizzol}
+\citation{isabela}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2.4}Implementa\c c\~ao}{60}}
+\@writefile{toc}{\contentsline {paragraph}{A atividade de Implementa\c c\~ao \'e a \'ultima etapa de uma itera\c c\~ao em OOHDM, sendo que agora \'e o momento de transformarmos os artefatos abstratos produzidos nas fases anteriores em artefatos concretos de software.}{60}}
+\@writefile{toc}{\contentsline {paragraph}{Para feitura deste mapeamento utilizaria-se ferramentas que suportassem a nota\c c\~ao OOHDM, bem como um framework\SF@gobble@opt  {Segundo \cite  {pizzol} ``um \textbf  {framework} \'e o esqueleto de uma aplica\c c\~ao que pode ser customizada por um desenvolvedor de aplica\c c\~ao''.} que possibilitasse a implementa\c c\~ao de uma especifica\c c\~ao OOHDM da maneira menos traum\'atica poss\IeC {\'\i }vel.}{60}}
+\@writefile{toc}{\contentsline {paragraph}{Infelizmente n\~ao h\'a ferramentas para desenho dos diagramas, fazendo necess\'ario a adapta\c c\~ao das ferramentas existentes a nota\c c\~ao da metodologia.}{60}}
+\@writefile{toc}{\contentsline {paragraph}{Quanto aos frameworks, existem atualmente duas op\c c\~oes que abordo brevemente a seguir.}{60}}
+\@writefile{toc}{\contentsline {paragraph}{Acredito ser esta a atividade mais delicada da OOHDM na atualidade, a falta de um framework para implementa\c c\~ao faz o desenvolvedor pensar duas vezes antes de utilizar um m\'etodo, porque \'e sabido que todo o trabalho feito nas atividades anteriores n\~ao \'e mapeado de forma direta para artefatos concretos de software.}{61}}
+\@writefile{toc}{\contentsline {paragraph}{Como n\~ao existe um framework para PHP, decidi criar um para poder implementar o prot\'otipo deste trabalho.}{61}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.3}Casos de uso de sistema}{61}}
+\@writefile{toc}{\contentsline {paragraph}{Nesta se\c c\~ao vamos refinar os casos de uso de neg\'ocio propostos na fase anterior em casos de uso de sistema.}{61}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.4}A constru\c c\~ao do caso de uso ``Cadastrar recursos''}{61}}
+\@writefile{lof}{\contentsline {figure}{Figura~\numberline {4}{\ignorespaces Caso de uso de ``Cadastrar recursos''}}{61}}
+\newlabel{fcr}{{4}{61}}
+\@writefile{toc}{\contentsline {paragraph}{Nesta se\c c\~ao ser\'a constru\IeC {\'\i }do o caso de uso ``Cadastrar recursos'', sendo que este caso de uso \'e utilizado tanto pelo propriet\'ario como pelo capataz do pomar. Na Figura \ref  {fcr} procurei diagramar o caso de uso proposto nesta se\c c\~ao.}{62}}
+\@writefile{toc}{\contentsline {paragraph}{Os ``casos de uso de sistema'' (confesso que a especifica\c c\~ao mais parece um dicion\'ario de dados do que a formaliza\c c\~ao de casos de uso) est\~ao textualizados abaixo:}{62}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.4.1}Modelagem conceitual}{65}}
+\@writefile{toc}{\contentsline {paragraph}{O esquema conceitual do caso de uso de neg\'ocio ``Cadastrar recursos'' est\'a representado na Figura \ref  {feccr}.}{65}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.4.2}Projeto navegacional}{65}}
+\@writefile{toc}{\contentsline {paragraph}{O produto da atividade de projeto navegacional do caso de uso ``Cadastrar recursos'' est\'a documentado atrav\'es de seu esquema navegacional (Figura \ref  {fencr}) e diagrama de contextos (Figura \ref  {fdccr}).}{65}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.4.3}Projeto de interface abstrata}{65}}
+\@writefile{toc}{\contentsline {paragraph}{A defini\c c\~ao dos ADVs principais da aplica\c c\~ao, bem como, os ADVs do caso de uso em estudo est\~ao representados na Figura \ref  {fadvcr}.}{65}}
+\@writefile{toc}{\contentsline {paragraph}{Conv\'em lembrar que alguns ADVs foram omitidos, dado que pretendo ilustrar com a Figura \ref  {fadvcr} a forma como \'e criado os ADVs e n\~ao especificar todas possibilidades.}{65}}
+\@writefile{lof}{\contentsline {figure}{Figura~\numberline {5}{\ignorespaces Esquema conceitual do caso de uso de ``Cadastrar recursos''}}{66}}
+\newlabel{feccr}{{5}{66}}
+\@writefile{lof}{\contentsline {figure}{Figura~\numberline {6}{\ignorespaces Esquema navegacional do caso de uso de ``Cadastrar recursos''}}{67}}
+\newlabel{fencr}{{6}{67}}
+\@writefile{lof}{\contentsline {figure}{Figura~\numberline {7}{\ignorespaces Diagrama de Contextos do caso de uso de ``Cadastrar recursos''}}{68}}
+\newlabel{fdccr}{{7}{68}}
+\@writefile{lof}{\contentsline {figure}{Figura~\numberline {8}{\ignorespaces Abstract Data Views do caso de uso ``Cadastrar recursos''}}{69}}
+\newlabel{fadvcr}{{8}{69}}
+\citation{livropgsql}
+\citation{patricia}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.4.4}Implementa\c c\~ao}{70}}
+\@writefile{toc}{\contentsline {paragraph}{Neste trabalho implementarei um prot\'otipo do cadastro de recursos humanos deste caso de uso, devido a restri\c c\~ao de tempo.}{70}}
+\@writefile{toc}{\contentsline {paragraph}{A plataforma de software utilizada foi:}{70}}
+\@writefile{toc}{\contentsline {paragraph}{A plataforma de hardware utilizada no desenvolvimento foi:}{70}}
+\@writefile{toc}{\contentsline {paragraph}{O diagrama de classes produzido na atividade de Modelagem Conceitual foi traduzido para cl\'ausulas SQL. J\'a que o PostgreSQL possui heran\c ca, utilizei esse recurso quando necess\'ario. As rela\c c\~oes entre classes foram mapeadas para campos que cont\'em o Object Identification Number (OID\SF@gobble@opt  {\textbf  {Object Identification Number}: conforme \cite  {livropgsql} cada registro no banco de dados PostgreSQL recebe um identificador \'unico chamado OID.}) do objeto ao qual se relaciona. Maiores informa\c c\~oes sobre como mapear o esquema conceitual para uma base de dados podem ser encontradas em \cite  {patricia}.}{70}}
+\citation{IWHD}
+\citation{isabela}
+\@writefile{toc}{\contentsline {paragraph}{No Projeto Navegacional, o framework suporta a defini\c c\~ao de ``n\'os'' para a implementa\c c\~ao do Esquema de Classes Navegacionais; Contextos e Estruturas de Acesso (\IeC {\'\i }ndices simples e din\^amicos) para implementa\c c\~ao do Esquema de Contextos Navegacionais.}{71}}
+\@writefile{toc}{\contentsline {paragraph}{Classes ADV definidas no framework d\~ao suporte a implementa\c c\~ao do Projeto de Interface Abstrata, sendo que as met\'aforas de interface s\~ao definidas em HTML. Apesar de n\~ao ter especificado \emph  {ADVcharts}\SF@gobble@opt  {\textbf  {ADVcharts} s\~ao diagramas que buscam formalizar o comportamento da interface da aplica\c c\~ao frente a est\IeC {\'\i }mulos externos (como cliques do mouse, etc.) Maiores informa\c c\~oes podem ser obtidas na se\c c\~ao \ref  {sec:advcharts} e \cite  {IWHD}.} neste trabalho, foi necess\'ario implementar o comportamento da interface em PHP (dentro dos Contextos e Estruturas de Acesso) e Java Script (dentro dos ADVs).}{71}}
+\@writefile{toc}{\contentsline {paragraph}{O framework n\~ao suporta completamente a OOHDM, at\'e mesmo porque n\~ao \'e o objeto de estudo prim\'ario deste trabalho. Baseado nas defini\c c\~oes encontradas em \cite  {isabela} considero o framework desenvolvido como sendo do tipo ``caixa-branca'', exigindo bom conhecimento da estrutura interna do framework para utiliza\c c\~ao do mesmo.}{71}}
+\@writefile{toc}{\contentsline {paragraph}{A Figura \ref  {filogin} apresenta a interface para usu\'ario do ADV LOGIN. N\~ao esque\c ca que os ADVs s\~ao aninhados, logo, o ADV LOGIN est\'a contido no ADV APLICA\c C\~AO.}{71}}
+\@writefile{toc}{\contentsline {paragraph}{A Figura \ref  {fimenuprincipal} apresenta a interface para usu\'ario do ADV IDX MENU PRINCIPAL.}{71}}
+\@writefile{toc}{\contentsline {paragraph}{A interface para o usu\'ario do ADV CTX CRIA HUMANO \'e apresentado na Figura \ref  {ficriahumano}.}{71}}
+\@writefile{toc}{\contentsline {paragraph}{Conv\'em lembrar que os ADVs s\~ao objetos abstratos, sendo que a especifica\c c\~ao de sua interface (em HTML) \'e armazenada em arquivos separados que s\~ao chamados de ``met\'aforas de interface''. O desenvolvedor deve carregar a met\'afora do ADV em quest\~ao, instanciar os ADVs aninhados e tornar percept\IeC {\'\i }veis aqueles que o contexto da aplica\c c\~ao requere. Feito isso, o framework substitui as refer\^encias dos ADVs aninhados por suas respectivas met\'aforas.}{71}}
+\@writefile{lof}{\contentsline {figure}{Figura~\numberline {9}{\ignorespaces Interface para o usu\'ario do ADV LOGIN}}{72}}
+\newlabel{filogin}{{9}{72}}
+\@writefile{lof}{\contentsline {figure}{Figura~\numberline {10}{\ignorespaces Interface para o usu\'ario do ADV IDX MENU PRINCIPAL}}{72}}
+\newlabel{fimenuprincipal}{{10}{72}}
+\@writefile{lof}{\contentsline {figure}{Figura~\numberline {11}{\ignorespaces Implementa\c c\~ao do ADV CTX CRIA HUMANO}}{73}}
+\newlabel{ficriahumano}{{11}{73}}
+\@writefile{toc}{\contentsline {paragraph}{A seguir apresento a especifica\c c\~ao em HTML da met\'afora de interface do ADV HUMANO (este ADV \'e utilizado sempre quando se deseja mostrar todos os dados sobre um Recurso Humano). Note que h\'a ADVs aninhados (cujo nome est\'a entre um par de pontos de interroga\c c\~ao). O resultado visual desta especifica\c c\~ao \'e mostrado na figura \ref  {fmetafora}.}{73}}
+\@writefile{lof}{\contentsline {figure}{Figura~\numberline {12}{\ignorespaces Met\'afora de interface para o ADV HUMANO}}{74}}
+\newlabel{fmetafora}{{12}{74}}
+\@writefile{toc}{\contentsline {paragraph}{Note que como a OOHDM pede, h\'a uma separa\c c\~ao entre a parte l\'ogica e a parte visual da aplica\c c\~ao. A implementa\c c\~ao deste modelo em PHP orientado a objetos, foi muito prejudicado devido a m\'a implementa\c c\~ao de polimorfismo nesta ferramenta. Acredito que a implementa\c c\~ao com Java Server Pages seja mais tranq\"uila, at\'e mesmo porque, JSP trabalha com esse conceito de separar a apresenta\c c\~ao da implementa\c c\~ao.}{74}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.5}A constru\c c\~ao do caso de uso ``Planejar tratos culturais''}{74}}
+\@writefile{toc}{\contentsline {paragraph}{O planejamento de tratos culturais se d\'a atrav\'es da estimativa de custo para realiza\c c\~ao do mesmo. A Figura \ref  {fcuptc} ilustra os casos de uso de sistema que o caso de uso de neg\'ocio ``Planejar tratos culturais'' possui.}{74}}
+\@writefile{toc}{\contentsline {paragraph}{Considera\c c\~oes:}{74}}
+\@writefile{lof}{\contentsline {figure}{Figura~\numberline {13}{\ignorespaces Caso de uso de ``Planejar tratos culturais''}}{75}}
+\newlabel{fcuptc}{{13}{75}}
+\@writefile{toc}{\contentsline {paragraph}{Os casos de uso de sistema est\~ao textualizados abaixo:}{75}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.5.1}Modelagem conceitual}{77}}
+\@writefile{toc}{\contentsline {paragraph}{A modelagem conceitual do caso de uso ``Planejar Tratos Culturais'' produziu o diagrama de classes conceituais da Figura \ref  {fmcptc}.}{77}}
+\@writefile{lof}{\contentsline {figure}{Figura~\numberline {14}{\ignorespaces Modelo conceitual do caso de uso ``Planejar Tratos Culturais''}}{78}}
+\newlabel{fmcptc}{{14}{78}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.5.2}Projeto navegacional}{79}}
+\@writefile{toc}{\contentsline {paragraph}{Por ser um caso de uso simples, a navega\c c\~ao \'e pouca, como pode se demonstrado no seu esquema navegacional (Figura \ref  {fenptc}) e diagrama de contextos (Figura \ref  {fdcptc}).}{79}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.5.3}Projeto de interface abstrata}{79}}
+\@writefile{toc}{\contentsline {paragraph}{Os ADVs do caso de uso ``Planejar Tratos Culturais'' encontram-se documentados na Figura \ref  {fadvptc}.}{79}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.6}A constru\c c\~ao do caso de uso ``Registrar tarefas''}{79}}
+\@writefile{toc}{\contentsline {paragraph}{A execu\c c\~ao de tratos culturais se d\'a atrav\'es de tarefas que utilizam recursos do pomar. Conforme pode ser visto na Se\c c\~ao \ref  {sec:decomposicao}, decompus os tratos culturais em tarefas para facilitar a constru\c c\~ao da aplica\c c\~ao e o registro das mesmas por parte dos usu\'arios. A Figura \ref  {fcurt} ilustra os casos de uso de sistema que o caso de uso de neg\'ocio ``Registrar tarefas''.}{79}}
+\@writefile{toc}{\contentsline {paragraph}{Considera\c c\~oes:}{79}}
+\@writefile{toc}{\contentsline {paragraph}{Os casos de uso de sistema est\~ao textualizados abaixo:}{79}}
+\@writefile{lof}{\contentsline {figure}{Figura~\numberline {15}{\ignorespaces Esquema navegacional do caso de uso ``Planejar Tratos Culturais''}}{80}}
+\newlabel{fenptc}{{15}{80}}
+\@writefile{lof}{\contentsline {figure}{Figura~\numberline {16}{\ignorespaces Diagrama de contextos do caso de uso ``Planejar Tratos Culturais''}}{81}}
+\newlabel{fdcptc}{{16}{81}}
+\@writefile{lof}{\contentsline {figure}{Figura~\numberline {17}{\ignorespaces Abstract Data Views do caso de uso ``Planejar Tratos Culturais''}}{82}}
+\newlabel{fadvptc}{{17}{82}}
+\@writefile{lof}{\contentsline {figure}{Figura~\numberline {18}{\ignorespaces Caso de uso de ``Registrar tarefas''}}{83}}
+\newlabel{fcurt}{{18}{83}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.6.1}Modelagem conceitual}{85}}
+\@writefile{toc}{\contentsline {paragraph}{O modelo conceitual do caso de uso de neg\'ocio ``Registrar Tarefas'' est\'a representado na Figura \ref  {fmcrt}.}{85}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.6.2}Projeto navegacional}{85}}
+\@writefile{toc}{\contentsline {paragraph}{Baseado no modelo conceitual proposto anteriormente, foi criado o esquema navegacional da Figura \ref  {fenrt} e o diagrama de contextos da Figura \ref  {fdcrt}.}{85}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.6.3}Projeto de interface abstrata}{85}}
+\@writefile{toc}{\contentsline {paragraph}{A Figura \ref  {fadvrt} ilustra os Abstract Data Views deste caso de uso.}{85}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.7}A constru\c c\~ao do caso de uso ``Apurar Resultados''}{85}}
+\@writefile{toc}{\contentsline {paragraph}{Apurar resultados \'e o \'ultimo caso de neg\'ocio deste sistema de gest\~ao para pomar de pessegueiros.}{85}}
+\@writefile{toc}{\contentsline {paragraph}{Em conversa com o Sr. Adelci, ficou decidido que a necessidade prim\'aria \'e obter relat\'orios que mostrem:}{85}}
+\@writefile{lof}{\contentsline {figure}{Figura~\numberline {19}{\ignorespaces Modelo conceitual do caso de uso de ``Registrar Tarefas''}}{86}}
+\newlabel{fmcrt}{{19}{86}}
+\@writefile{lof}{\contentsline {figure}{Figura~\numberline {20}{\ignorespaces Esquema navegacional do caso de uso de ``Registrar Tarefas''}}{87}}
+\newlabel{fenrt}{{20}{87}}
+\@writefile{lof}{\contentsline {figure}{Figura~\numberline {21}{\ignorespaces Diagrama de contextos do caso de uso de ``Registrar Tarefas''}}{87}}
+\newlabel{fdcrt}{{21}{87}}
+\@writefile{lof}{\contentsline {figure}{Figura~\numberline {22}{\ignorespaces ADVs do caso de uso de ``Registrar Tarefas''}}{88}}
+\newlabel{fadvrt}{{22}{88}}
+\@writefile{toc}{\contentsline {paragraph}{A Figura \ref  {fcuar} ilustra o caso de uso de neg\'ocio estudado nesta se\c c\~ao.}{88}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.7.1}Modelagem conceitual}{88}}
+\@writefile{toc}{\contentsline {paragraph}{Por este caso de uso exclusivamente gerar informa\c c\~ao baseada nos dados j\'a cadastrados no sistema, o modelo conceitual deste caso de uso \'e o modelo conceitual da aplica\c c\~ao.}{88}}
+\@writefile{lof}{\contentsline {figure}{Figura~\numberline {23}{\ignorespaces Caso de uso de neg\'ocio ``Apurar resultados''}}{89}}
+\newlabel{fcuar}{{23}{89}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.7.2}Projeto navegacional}{89}}
+\@writefile{toc}{\contentsline {paragraph}{O esquema navegacional usado \'e o mesmo esquema navegacional da aplica\c c\~ao.}{89}}
+\@writefile{toc}{\contentsline {paragraph}{O diagrama de contexto est\'a representado na Figura \ref  {fdcar}.}{89}}
+\@writefile{lof}{\contentsline {figure}{Figura~\numberline {24}{\ignorespaces Diagrama de contextos do caso de uso de neg\'ocio ``Apurar resultados''}}{89}}
+\newlabel{fdcar}{{24}{89}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.7.3}Projeto de interface abstrata}{90}}
+\@writefile{toc}{\contentsline {paragraph}{Os ADVs dos relat\'orios deste caso de uso, est\~ao representados na Figura \ref  {fadvar}.}{90}}
+\@writefile{lof}{\contentsline {figure}{Figura~\numberline {25}{\ignorespaces ADVs do caso de uso de neg\'ocio ``Apurar resultados''}}{90}}
+\newlabel{fadvar}{{25}{90}}
+\citation{cac}
+\@writefile{toc}{\contentsline {chapter}{\numberline {8}CONCLUS\~AO}{91}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {paragraph}{Considerando que o desenvolvimento deste trabalho come\c cou em Abril do ano de 2000, esta monografia \'e o resultado de 8 meses de estudo em diversas \'areas do saber. Essa diversidade de mat\'erias estudadas s\'o foi poss\IeC {\'\i }vel dado a forma como a disciplina de Projeto de Gradua\c c\~ao \'e conduzida. Acredito que o grande m\'erito desta disciplina seja a possibilidade do aluno poder escolher o tema do seu projeto, tema esse que deve possuir um cunho inovador e foco direcionado para a comunidade local. Essas duas exig\^encias estabelecem um desafio interessante para a escolha do tema, j\'a que a avalia\c c\~ao \'e baseada na capacidade do aluno de desenvolver racioc\IeC {\'\i }nio, integrar conceitos adquiridos ao longo do curso e realizar contribui\c c\~ao para ensino, pesquisa e extens\~ao \cite  {cac}.}{91}}
+\@writefile{toc}{\contentsline {paragraph}{Para o desenvolvimento deste trabalho a Internet provou ser realmente uma grande biblioteca, basta verificar as refer\^encias bibliogr\'aficas e concluir que 80\% do referencial te\'orico utilizado neste trabalho provem de Universal Resource Locators (URL\SF@gobble@opt  {\textbf  {Universal Resource Locator} \'e a forma de representa\c c\~ao para endere\c co de informa\c c\~oes na Internet. \'E disposta na forma \emph  {servi\c co}://\emph  {servidor}/\emph  {arquivo}. Um exemplo de URL seria http://projetoacanguacu.yi.org/index.php, onde o servi\c co \'e \emph  {http}, o servidor \'e \emph  {projetoacanguacu.yi.org} e o arquivo \emph  {index.php}.}). Al\'em de conte\'udo est\'atico, ainda foi poss\IeC {\'\i }vel entrar em contato com os autores de v\'arios dos artigos utilizados, para esclarecimento de d\'uvidas e/ou troca de id\'eias, de forma barata e r\'apida. Sem essa ferramenta, certamente o desenvolvimento deste trabalho seria bem mais complicado e incompleto. \'E interessante ressaltar que o software livre somente conseguiu atingir o n\IeC {\'\i }vel que est\'a hoje gra\c cas a essa forma independente, ``indisciplinada'' e sem fronteiras para dissemina\c c\~ao do conhecimento humano.}{91}}
+\@writefile{toc}{\contentsline {paragraph}{Quando fui escrever este trabalho surgiu a primeira dificuldade. Como o pretendido era somente utilizar software livre, que ferramenta eu iria utilizar para escrever esta monografia? Pesquisei alguns processadores de texto gr\'aficos, mas infelizmente n\~ao encontrei uma ferramenta visual completa que atendesse aos requisitos tipogr\'aficos que esta monografia exige. Foi ent\~ao que descobri o \textlatin  {\LaTeX  }{} e posso dizer que foi ``amor a primeira compila\c c\~ao''. Como o \textlatin  {\LaTeX  }{} \'e baseado em classes de documento e at\'e ent\~ao n\~ao existia uma classe de documento para monografias da ESIN, resolvi criar uma. N\~ao sou perito em \textlatin  {\LaTeX  }{} mas tive que estudar mais profundamente a linguagem para conseguir criar a classe que utilizei para escrever o documento que est\'as lendo. Disponibilizarei a classe na Internet para que futuros formandos da ESIN possam usufruir dessa facilidade caso prefiram utilizar \textlatin  {\LaTeX  }{} como ferramenta para escritura de sua monografia.}{92}}
+\@writefile{toc}{\contentsline {paragraph}{Outra dificuldade encontrada foi a fraca implementa\c c\~ao do modelo orientado a objetos nas ferramentas que utilizei na constru\c c\~ao do prot\'otipo da aplica\c c\~ao de gest\~ao para pomar de pessegueiros, principalmente na implementa\c c\~ao do PHP.}{92}}
+\@writefile{toc}{\contentsline {paragraph}{Possuir um propriet\'ario de pomar de pessegueiros em casa \'e uma facilidade que merece ser ressaltada. Isso possibilitou uma resposta mais r\'apida e objetiva frente aos questionamentos e demonstra\c c\~oes que precisei efetuar.}{92}}
+\@writefile{toc}{\contentsline {paragraph}{Pretendo entrar em contato com \'org\~aos que lidam com os produtores de p\^essego, como EMBRAPA e EMATER, procurando buscar uma forma de viabilizar o di\'alogo entre estas entidades e os produtores, atrav\'es da publica\c c\~ao de informa\c c\~oes e at\'e consultas virtuais (lembre-se que a Internet possibilita isso).}{92}}
+\@writefile{toc}{\contentsline {paragraph}{Paralelamente a este trabalho, motivado pela filosofia do software livre e por um grande senso de ``querer fazer as coisas acontecerem'' criei uma proposta para democratiza\c c\~ao da inform\'atica na cidade onde resido, chamada ``Projeto Acangua\c cu''. Uma c\'opia desta proposta \'e apresentada no ANEXO B.}{92}}
+\@writefile{toc}{\contentsline {paragraph}{Ap\'os obter o t\IeC {\'\i }tulo de bacharel em An\'alise de Sistemas, pretendo finalmente implantar o projeto, disseminando assim o software livre por lugares que ainda n\~ao tem id\'eia dos benef\IeC {\'\i }cios que a filosofia GNU junto da consci\^encia civil dos cidad\~aos podem proporcionar a regi\~ao onde vivo.}{92}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {9}ANEXOS}{93}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {9.1}ANEXO A}{93}}
+\@writefile{toc}{\contentsline {section}{\numberline {9.2}ANEXO B}{102}}
+\select@language{brazil}
+\@writefile{toc}{\select@language{brazil}}
+\@writefile{lof}{\select@language{brazil}}
+\@writefile{lot}{\select@language{brazil}}
+\bibcite{ALD93}{Ald 00}
+\bibcite{alliance}{ALL 00}
+\bibcite{amaya}{AMA 00}
+\bibcite{apache}{APA 00}
+\bibcite{appwatch}{APP 00}
+\bibcite{armadillo}{ARM 00}
+\bibcite{BAR s.d.}{Bar s.d.}
+\bibcite{BBC00}{BBC et al. 00}
+\bibcite{BECK89}{BCu 89}
+\bibcite{BERARD}{Ber 00}
+\bibcite{natacha}{BSc 98}
+\@writefile{toc}{\contentsline {chapter}{\numberline {10}\MakeUppercase  {Refer\^encias Bibliogr\'aficas}}{108}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\bibcite{freebsd}{BSD 00}
+\bibcite{chimera}{CHI 00}
+\bibcite{COELHO}{Coe 00}
+\bibcite{cac}{Cos 99}
+\bibcite{COUGO}{Cou 97}
+\bibcite{COX1990}{Cox 90}
+\bibcite{COADYOURDON}{CYo 93}
+\bibcite{CIOCIOLA}{CZL 00}
+\bibcite{dia}{DIA 00}
+\bibcite{freedos}{DOS 00}
+\bibcite{BIBITEX}{EBi 00}
+\bibcite{eros}{ERO 00}
+\bibcite{AURELIO}{Fer 93}
+\bibcite{freeos}{FOS 00}
+\bibcite{TOOAD}{Fow 00}
+\bibcite{umlessencial}{Fow 00a}
+\bibcite{fresmeat}{FRE 00}
+\bibcite{FURLAN}{Fur 98}
+\bibcite{galeon}{GAL 00}
+\bibcite{GASS2000}{Gas 00}
+\bibcite{PADROESPROJETO}{GHJ et al 00}
+\bibcite{ghttpd}{GHT 00}
+\bibcite{GNUJSP}{GJS 00}
+\bibcite{gnome}{GNO 00}
+\bibcite{GNU2000}{GNU 00}
+\bibcite{hb}{HB 00}
+\bibcite{hurd}{HUR 00}
+\bibcite{interbase}{INT 00}
+\bibcite{japhar}{JAP 00}
+\bibcite{kaffe}{KAF 00}
+\bibcite{kde}{KDE 00}
+\bibcite{KENT}{Ken 89}
+\bibcite{konqueror}{KON 00}
+\bibcite{lago}{LAG 00}
+\bibcite{LOBATO}{LAl 97}
+\bibcite{leap}{LEA 00}
+\bibcite{linux}{LNX 00}
+\bibcite{LOH}{Loh 96}
+\bibcite{midgard}{MID 00}
+\bibcite{minix}{MNX 00}
+\bibcite{livropgsql}{MOM 00}
+\bibcite{isabela}{MOU 98}
+\bibcite{mozilla}{MOZ 00}
+\bibcite{PESSEGUEIRO}{MRa 98}
+\bibcite{mysql}{MYS 00}
+\bibcite{netbsd}{NET 00}
+\bibcite{openbsd}{OPE 00}
+\bibcite{DINHEIROPARAQUEMPRECISA}{PCD et al 00}
+\bibcite{pgsql}{PGS 00}
+\bibcite{php}{PHP 00}
+\bibcite{pizzol}{Piz 98}
+\bibcite{polyjsp}{POL 00}
+\bibcite{UMLNOTATION}{RAT 97}
+\bibcite{UMLSUMMARY}{RAT 97a}
+\bibcite{redhat}{RED 00}
+\bibcite{resin}{RES 00}
+\bibcite{PFECA}{RLS 00}
+\bibcite{ROS96}{Ros 96}
+\bibcite{IWHD}{RSL et al 95}
+\bibcite{WAMAMTCM}{RSL 99}
+\bibcite{ARMWAM}{RSL 00}
+\bibcite{OOPROJMAN}{Sch 91}
+\bibcite{ACUCAMWIS}{Sch 99}
+\bibcite{JUSTADDWATER}{Sch 99}
+\bibcite{projnav}{SGu 00}
+\bibcite{skatebrowser}{SK8 00}
+\bibcite{oohdmweb}{SPo 98}
+\bibcite{WDF}{SRE et al. 00}
+\bibcite{DHAUO}{SRo 98}
+\bibcite{CLIENTESCOM}{Sey 00}
+\bibcite{PROJLEI}{SOF 00}
+\bibcite{sqlserver}{SQL 00}
+\bibcite{jspisthebestone}{Sun 00}
+\bibcite{patricia}{SVi 99}
+\bibcite{thttpd}{THT 00}
+\bibcite{tomcat}{TOM 00}
+\bibcite{VENETIANER}{Ven 99}
+\bibcite{UID}{VSS 00}
+\bibcite{xitami}{XIT 00}
+\bibcite{zope}{ZOP 00}

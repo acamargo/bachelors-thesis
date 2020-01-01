@@ -1,0 +1,662 @@
+\chapter{PROJETO}
+
+\section{Introdução}
+
+\paragraph{É nesta fase do processo de desenvolvimento que a aplicação vai 
+começar
+a ser construída e implementada em fases iterativas e incrementais.}
+\paragraph{Primeiramente serão desenhados os casos de uso de sistema da 
+aplicação,
+baseado no caso de uso de negócio apresentado na fase de elaboração. Feito isso, 
+partirei para a execução das fases utilizando a OOHDM.}
+\paragraph{A próxima seção aborda rapidamente o método de projeto que utilizarei
+na construção deste sistema.}
+\paragraph{Na seção subseqüente teremos o projeto da aplicação proposta com
+este trabalho.}
+
+\input{oohdm.tex}
+
+\section{Casos de uso de sistema}
+
+\paragraph{Nesta seção vamos refinar os casos de uso de negócio propostos
+na fase anterior em casos de uso de sistema.}
+
+\section{A construção do caso de uso ``Cadastrar recursos''}
+\paragraph{Nesta seção será construído o caso de uso ``Cadastrar
+recursos'', sendo que este caso de uso é utilizado tanto pelo proprietário
+como pelo capataz do pomar. Na Figura \ref{fcr} procurei diagramar o caso de uso
+proposto nesta seção.}
+
+\begin{figure}[h]
+{\centering \resizebox*{0.9\textwidth}{0.2\textheight}{\includegraphics{diagramas/casodeusocadastrarrecursos.eps}} \par}
+\caption{Caso de uso de ``Cadastrar recursos''}
+\label{fcr}
+\end{figure}
+
+\paragraph{Os ``casos de uso de sistema'' (confesso que a especificação mais 
+parece um dicionário de dados do que a formalização de casos de uso) estão 
+textualizados abaixo:}
+
+\begin{itemize}
+
+\item \textbf{Cadastrar Recursos Humanos}\\
+O cadastro da mão-de-obra empregada no pomar, deve ser feita cadastrando dados
+como:
+\begin{itemize}
+\item Nome completo do empregado
+\item Apelido
+\item CPF
+\item RG
+\item Estado civil
+\item Sexo
+\item Forma de Pagamento (diarista, mensalista, empreiteiro, horista)
+\item Salário
+\item Dependentes (grau de dependência, nome e data de nascimento)
+\item Observações (data, comentário)
+\end{itemize}
+
+\item \textbf{Cadastrar Recursos Máquinas}\\
+O cadastro de recursos materiais da classe máquinas agrícolas, compreende os 
+aparelhos capazes de produzir energia que pode ser
+utilizada na execução de tarefas agrícolas.\\
+Ex.: trator, moto-serra,
+motor estacionário (elétrico ou a combustão), etc.\\
+O cadastro desses aparelhos deve conter dados como:
+\begin{itemize}
+	\item Código
+	\item Fabricante
+	\item Modelo
+	\item Número de Série
+	\item Cor
+	\item Número do Chassi
+	\item Ano de Fabricação
+	\item Classe
+	\begin{itemize}
+		\item Trator
+		\item Moto-serra
+		\item motor estacionário
+	\end{itemize}
+\end{itemize}
+
+\item \textbf{Cadastrar Recursos Implementos}\\
+Todos aqueles aparelhos que acoplados a uma máquina são capazes de
+executar tarefas agrícolas devem ser cadastrados como recursos materiais da
+classe implemento.\\
+Ex.: pulverizador, semeadeira, arado, carreta, etc.\\
+Desses implementos são armazenados os seguintes dados:
+\begin{itemize}
+	\item Código
+	\item Marca
+	\item Ano de Fabricação
+	\item Número de Fábrica
+	\item Classe
+	\begin{itemize}
+		\item grade
+		\begin{itemize}
+			\item número de discos
+		\end{itemize}
+		\item arado
+		\begin{itemize}
+			\item número de discos
+		\end{itemize}
+		\item semeadeira
+		\begin{itemize}
+			\item forma de distribuição: a lanço, 2, 3, 4, 5, 20 linhas, etc.
+		\end{itemize}
+		\item pulverizador
+		\begin{itemize}
+			\item turbina, barra, pistola, etc.
+		\end{itemize}
+		\item carreta
+		\begin{itemize}
+			\item número de rodas
+			\item capacidade (em toneladas)
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+
+\item \textbf{Cadastrar Recursos Insumos}\\
+Os insumos compreendem aqueles produtos que se usa no desenvolver de um trato 
+cultural no período de uma safra.\\
+Ex.: fungicidas, inseticidas, adubo, etc.\\
+Os seguintes dados fazem parte do cadastro de insumos:
+\begin{itemize}
+	\item Código
+	\item Nome do Produto
+	\item Tipo
+	\begin{itemize}
+		\item Fungicida
+		\item Inseticida
+		\item Herbicida
+		\item Adubo (Fórmula)
+	\end{itemize}
+	\item Fabricante
+	\item Unidade
+\end{itemize}
+
+\item \textbf{Cadastrar Recursos Utensílios}\\
+O cadastro dos recursos materiais da classe utensílios se dá relacionando 
+todas pequenas ferramentas manuais utilizadas na execução de tarefas
+no pomar.\\
+Ex.: tesouras, serrotes, pulverizadores costal, enxada, etc.\\
+Os seguintes dados fazem parte do cadastro de utensílios:
+\begin{itemize}
+\item Nome do Utensílio
+\item Marca
+\item Modelo
+\item Classe (tesoura de poda, serrote de poda, serrote comum, enxada, etc)
+\end{itemize}
+
+\item \textbf{Cadastrar Recurso Lote}\\
+O cadastro dos lotes é feito agrupado os talhões ou lavouras por cultivar e 
+época de implantação.\\
+Para cadastro dos lotes considera-se os seguintes dados:
+\begin{itemize}
+\item Área (em hectares)
+\item Número de plantas
+\item Localização
+\item Cultivar
+\end{itemize}
+
+\item \textbf{Cadastrar Recurso Reservatório d'Água}\\
+Dos reservatórios d'água instalados no pomar, cadastra-se os seguintes dados.
+\begin{itemize}
+\item Localização
+\item Capacidade (em \( m^{3} \))
+\item Classe
+	\begin{itemize}
+	\item Açude
+	\item Barragem
+	\item Tanque
+	\item Poço Artesiano
+	\end{itemize}
+\end{itemize}
+%\item \textbf{Cadastrar recursos cultivar}\\
+%Neste cadastro relaciona-se os cultivares que são/serão utilizados no pomar. 
+%Ex.: ágata, diamante, precocinho, etc.\\
+%Para cadastro dos cultivares, deve-se considerar os seguintes dados:
+%\begin{itemize}
+%\item Nome
+%\item Origem histórica
+%\item Descrição da Planta
+%\item Descrição do Fruto
+%\item Observações
+%\item Fotografia
+%\end{itemize}
+
+\end{itemize}
+
+\subsection{Modelagem conceitual}
+
+\paragraph{O esquema conceitual do caso de uso de negócio ``Cadastrar recursos''
+está representado na Figura \ref{feccr}.}
+
+\begin{figure}[!h]
+{\centering \resizebox*{\textwidth}{0.9\textheight}{\includegraphics{diagramas/cad_rec_modelo_conceitual.eps}} \par}
+\caption{Esquema conceitual do caso de uso de ``Cadastrar recursos''}
+\label{feccr}
+\end{figure}
+
+\subsection{Projeto navegacional}
+
+\paragraph{O produto da atividade de projeto navegacional do caso de uso 
+``Cadastrar recursos'' está documentado através de seu esquema navegacional
+(Figura \ref{fencr}) e diagrama de contextos (Figura \ref{fdccr}).}
+
+\begin{figure}[!h]
+{\centering \resizebox*{\textwidth}{0.9\textheight}{\includegraphics{diagramas/cad_rec_esquema_navegacional.eps}} \par}
+\caption{Esquema navegacional do caso de uso de ``Cadastrar recursos''}
+\label{fencr}
+\end{figure}
+
+\begin{figure}[!h]
+{\centering \resizebox*{\textwidth}{0.9\textheight}{\includegraphics{diagramas/cad_rec_diag_contextos.eps}} \par}
+\caption{Diagrama de Contextos do caso de uso de ``Cadastrar recursos''}
+\label{fdccr}
+\end{figure}
+
+\subsection{Projeto de interface abstrata}
+
+\paragraph{A definição dos ADVs principais da aplicação, bem como, os ADVs do 
+caso de uso em estudo estão representados na Figura \ref{fadvcr}.}
+\paragraph{Convém lembrar que alguns ADVs foram omitidos, dado que pretendo
+ilustrar com a Figura \ref{fadvcr} a forma como é criado os ADVs e não especificar
+todas possibilidades.}
+
+\begin{figure}[!h]
+{\centering \resizebox*{\textwidth}{0.9\textheight}{\includegraphics{diagramas/cad_rec_adv.eps}} \par}
+\caption{Abstract Data Views do caso de uso ``Cadastrar recursos''}
+\label{fadvcr}
+\end{figure}
+
+\subsection{Implementação}
+
+\paragraph{Neste trabalho implementarei um protótipo do cadastro de recursos
+humanos deste caso de uso, devido a restrição de tempo.}
+\paragraph{A plataforma de software utilizada foi:}
+\begin{itemize}
+\item Distribuição Red Hat Linux 6.2
+\item PostgreSQL 7.0.2
+\item PHP 4.0.1pl3
+\item Navegador Mozilla M18
+\end{itemize}
+\paragraph{A plataforma de hardware utilizada no desenvolvimento foi:}
+\begin{itemize}
+\item Processador: AMD K6-II 333 Mhz
+\item Memória RAM: 128 Mb
+\item HD: Maxtor 91303D (13Gb) e QUANTUM FIREBALLlct10 (10Gb)
+\item Drive CD-ROM: Hewlett-Packard CD-Writer Plus 8100
+\item Modem: USRobotics Sportster Voice 33.6 External
+\item Placa de Vídeo: Diamond Stealth 6400 2 Mb (Chipset S3) 
+\item Monitor de Vídeo: LG Studioworks 550M
+\end{itemize}
+
+\paragraph{O diagrama de classes produzido na atividade de Modelagem Conceitual
+foi traduzido para cláusulas SQL. Já que o PostgreSQL possui herança, utilizei
+esse recurso quando necessário. As relações entre classes foram mapeadas para 
+campos que contém o Object Identification Number (OID\footnote{%
+\textbf{Object Identification Number}: 
+conforme \cite{livropgsql} cada registro no banco de dados PostgreSQL recebe 
+um identificador único chamado OID.}) do objeto ao qual se relaciona. Maiores
+informações sobre como mapear o esquema conceitual para uma base de dados
+podem ser encontradas em \cite{patricia}.}
+\paragraph{No Projeto Navegacional, o framework suporta a definição de
+``nós'' para a implementação do Esquema de Classes Navegacionais; Contextos
+e Estruturas de Acesso (índices simples e dinâmicos) para implementação
+do Esquema de Contextos Navegacionais.}
+\paragraph{Classes ADV definidas no framework dão suporte a implementação
+do Projeto de Interface Abstrata, sendo que as metáforas de interface são
+definidas em HTML. Apesar de não ter especificado \emph{ADVcharts}\footnote{%
+\textbf{ADVcharts} são diagramas que buscam formalizar o comportamento da 
+interface
+da aplicação frente a estímulos externos (como cliques do mouse, etc.)
+Maiores informações podem ser obtidas na seção \ref{sec:advcharts} e
+\cite{IWHD}.} neste trabalho,
+foi necessário implementar o comportamento da interface em PHP (dentro dos
+Contextos e Estruturas de Acesso) e Java Script (dentro dos ADVs).}
+\paragraph{O framework não suporta completamente a OOHDM, até mesmo porque
+não é o objeto de estudo primário deste trabalho. Baseado nas definições
+encontradas em \cite{isabela} considero o framework desenvolvido como
+sendo do tipo ``caixa-branca'', exigindo bom conhecimento da estrutura
+interna do framework para utilização do mesmo.}
+\paragraph{A Figura \ref{filogin} apresenta a interface para usuário do
+ADV LOGIN. Não esqueça que os ADVs são aninhados, logo, o ADV LOGIN
+está contido no ADV APLICAÇÃO.}
+
+\paragraph{A Figura \ref{fimenuprincipal} apresenta a interface para usuário
+do ADV IDX MENU PRINCIPAL.}
+
+\begin{figure}[!h]
+{\centering \resizebox*{\textwidth}{0.4\textheight}{\includegraphics{diagramas/ilust_adv_login.eps}} \par}
+\caption{Interface para o usuário do ADV LOGIN}
+\label{filogin}
+\end{figure}
+
+\begin{figure}[!h]
+{\centering \resizebox*{\textwidth}{0.45\textheight}{\includegraphics{diagramas/ilust_adv_idx_menu_principal.eps}} \par}
+\caption{Interface para o usuário do ADV IDX MENU PRINCIPAL}
+\label{fimenuprincipal}
+\end{figure}
+
+\paragraph{A interface para o usuário do ADV CTX CRIA HUMANO é apresentado na
+Figura \ref{ficriahumano}.}
+
+\begin{figure}[!h]
+{\centering \resizebox*{\textwidth}{0.8\textheight}{\includegraphics{diagramas/ilust_adv_ctx_cria_humano.eps}} \par}
+\caption{Implementação do ADV CTX CRIA HUMANO}
+\label{ficriahumano}
+\end{figure}
+
+\paragraph{Convém lembrar que os ADVs são objetos abstratos, sendo que a
+especificação de sua interface (em HTML) é armazenada em arquivos
+separados que são chamados de ``metáforas de interface''. O desenvolvedor
+deve carregar a metáfora do ADV em questão, instanciar os ADVs aninhados e 
+tornar perceptíveis aqueles que o contexto da aplicação requere. Feito isso,
+o framework substitui as referências dos ADVs aninhados
+por suas respectivas metáforas.}
+\paragraph{A seguir apresento a especificação
+em HTML da metáfora de interface do ADV HUMANO (este ADV é utilizado
+sempre quando se deseja mostrar todos os dados sobre um Recurso Humano).
+Note que há ADVs aninhados (cujo nome está entre um par de pontos de 
+interrogação). O resultado visual desta especificação é mostrado na figura 
+\ref{fmetafora}.}
+
+\verbatiminput{adv_humano.html}
+
+\begin{figure}[!h]
+{\centering \resizebox*{0.7\textwidth}{0.4\textheight}{\includegraphics{diagramas/adv_humano.eps}} \par}
+\caption{Metáfora de interface para o ADV HUMANO}
+\label{fmetafora}
+\end{figure}
+
+\paragraph{Note que como a OOHDM pede, há uma separação entre a parte lógica
+e a parte visual da aplicação. A implementação deste modelo em PHP orientado
+a objetos, foi muito prejudicado devido a má implementação de polimorfismo
+nesta ferramenta. Acredito que a implementação com Java Server Pages seja
+mais tranqüila, até mesmo porque, JSP trabalha com esse conceito de separar
+a apresentação da implementação.}
+
+\section{A construção do caso de uso ``Planejar tratos culturais''}
+
+\paragraph{O planejamento de tratos culturais se dá através da estimativa
+de custo para realização do mesmo. 
+A Figura \ref{fcuptc} ilustra os casos de uso de sistema que o caso de uso 
+de negócio ``Planejar tratos culturais'' possui.}
+
+\begin{figure}[!h]
+{\centering \resizebox*{0.7\textwidth}{0.5\textheight}{\includegraphics{diagramas/casodeusoplanejartratosculturais.eps}} \par}
+\caption{Caso de uso de ``Planejar tratos culturais''}
+\label{fcuptc}
+\end{figure}
+
+\paragraph{Considerações:}
+\begin{itemize}
+\item Toda estimativa de trato cultural é feita por lote.
+\item O custo estimado do recurso máquina é feito multiplicando-se a quantidade de horas de
+serviço necessárias para execução da tarefa pelo valor da hora de serviço 
+estipulada pelo proprietário do pomar.
+\item O custo estimado de recursos humanos (mão-de-obra) é feito multiplicando-se a quantidade
+de horas de serviço necessárias para execução da tarefa pelo valor da hora de
+mão-de-obra.
+\item O custo estimado de recurso insumo é feito multiplicando-se a dosagem do insumo por hectare
+pelo custo unitário de aquisição do mesmo (em kg ou l).
+\item Optou-se por não estimar Recursos materiais da classe utensílios.
+\end{itemize}
+
+\paragraph{Os casos de uso de sistema estão textualizados abaixo:}
+
+\begin{itemize}
+
+\item \textbf{Planejar Roçada}\\
+A estimativa de custo de Roçada Manual é feito calculando-se o
+custo com recursos humanos.\\
+A estimativa de custo de Roçada Mecânica é feito somando o custo com
+recurso máquina e humano.
+
+\item \textbf{Planejar Raleio}\\
+Estima-se Raleio calculando a utilização de recursos
+humanos necessários para execução do trato cultural.
+
+\item \textbf{Planejar Tratamentos}\\
+A estimativa do custo de Tratamento é feito multiplicando-se o número
+de aplicações planejadas pelo custo por hectare de uma aplicação. O custo de 
+uma aplicação é a soma do custo de distribuição e o custo com insumos. O 
+custo de distribuição é a soma do custo da distribuição manual com o custo da 
+distribuição mecanizada.
+A distribuição manual é feita com recursos humanos, enquanto que, distribuição
+tratorizada utiliza recurso trator. O custo com insumos é feito multiplicando-se
+a área do lote pelo somatório do custo de cada insumo (calda) por hectare. O custo de 
+cada insumo é o custo de cada recurso insumo utilizado por hectare. Na 
+pulverização, o somatório do custo de cada insumo poderia ser chamado de custo 
+da calda.
+
+\item \textbf{Planejar Adubação}\\
+Planejado da mesma forma de um Tratamento.
+
+\item \textbf{Planejar Poda}\\
+A poda é um trato cultural executado de forma manual, é estimado conforme
+a utilização de recursos humanos para efetuá-la.
+
+\item \textbf{Planejar Capina}\\
+Capina manual planeja-se conforme a necessidade de recursos humanos para efetuá-la, 
+enquanto que, na capina mecânica estima-se a utilização de recursos
+humanos e maquinários, já o planejamento da capina química segue os moldes da
+estimativa de um tratamento.
+
+\item \textbf{Planejar Combate a Pragas}\\
+O planejamento do combate a pragas é semelhante a estimativa de um tratamento.
+
+\item \textbf{Planejar Irrigação}\\
+A estimativa do custo de Irrigação é o somatório dos custos estimados de água,
+bombeamento, recursos humanos e reposição de peças/manutenção de equipamentos.
+Para estimarmos o custo d'água e bombeamento é preciso definir previamente a
+necessidade d'água do lote. Esta necessidade d'água do lote é o produto da necessidade
+diária de água por planta (em \( m^{3} \)) pelo número de plantas do lote.
+Assim, o custo estimado com água é a necessidade d'água do lote multiplicado
+pelo valor do \( m^{3} \) d'água (obs.: caso a água seja comprada, se não for,
+não há custo com água). O custo estimado de bombeamento é feito multiplicando-se
+o tempo de bombeamento pelo valor da hora de bombeamento. O tempo de bombeamento
+(em horas) é o quociente da necessidade d'água do lote (em \( m^{3} \)) pela
+capacidade de recalque d'água da bomba (\( m^{3} \)/h). A estimativa do custo
+com reposição de peças/manutenção de equipamentos é uma porcentagem calculada
+sobre o somatório dos custo de bombeamento e recursos humanos, a porcentagem 
+padrão para cálculo é de 5\%, podendo ser modificada.
+
+\item \textbf{Planejar Apanha}\\
+O custo estimado de apanha é o produto da produtividade média 
+estimada por hectare, multiplicada pelo valor de apanha/kg.
+
+\item \textbf{Planejar Transporte Interno}\\
+O custo estimado de transporte interno é a soma da expectativa de
+uso de recursos materiais  com a expectativa de uso de recursos humanos por 
+hectare multiplicado pela área a ser colhida.
+
+\item \textbf{Planejar Classificação}\\
+O custo estimado de classificação é obtido pelo produto
+da produção bruta estimada (em kg) pelo custo de classificação por
+kg.
+
+\item \textbf{Planejar Comercialização}\\
+A estimativa de comercialização é o produto da expectativa
+de produção a ser vendida às indústrias e/ou comércio \emph{in natura} pelo 
+preço de mercado da fruta com base na safra anterior e às possíveis variações
+que possam vir a ocorrer em função de alterações de oferta e procura ou mesmo 
+na variação monetária.
+
+\end{itemize}
+
+\subsection{Modelagem conceitual}
+
+\paragraph{A modelagem conceitual do caso de uso ``Planejar Tratos Culturais''
+produziu o diagrama de classes conceituais da Figura \ref{fmcptc}.}
+
+\begin{figure}[!h]
+{\centering \resizebox*{\textwidth}{0.9\textheight}{\includegraphics{diagramas/plan_rec_modelo_conceitual.eps}} \par}
+\caption{Modelo conceitual do caso de uso ``Planejar Tratos Culturais''}
+\label{fmcptc}
+\end{figure}
+
+\subsection{Projeto navegacional}
+
+\paragraph{Por ser um caso de uso simples, a navegação é pouca, como pode se 
+demonstrado no seu esquema navegacional (Figura \ref{fenptc}) e diagrama de contextos
+(Figura \ref{fdcptc}).}
+
+\begin{figure}[!h]
+{\centering \resizebox*{\textwidth}{0.9\textheight}{\includegraphics{diagramas/plan_rec_esquema_navegacional.eps}} \par}
+\caption{Esquema navegacional do caso de uso ``Planejar Tratos Culturais''}
+\label{fenptc}
+\end{figure}
+
+\begin{figure}[!h]
+{\centering \resizebox*{\textwidth}{0.9\textheight}{\includegraphics{diagramas/plan_rec_diag_contextos.eps}} \par}
+\caption{Diagrama de contextos do caso de uso ``Planejar Tratos Culturais''}
+\label{fdcptc}
+\end{figure}
+
+\subsection{Projeto de interface abstrata}
+\paragraph{Os ADVs do caso de uso ``Planejar Tratos Culturais'' encontram-se
+documentados na Figura \ref{fadvptc}.}
+
+\begin{figure}[!h]
+{\centering \resizebox*{\textwidth}{0.9\textheight}{\includegraphics{diagramas/plan_rec_adv.eps}} \par}
+\caption{Abstract Data Views do caso de uso ``Planejar Tratos Culturais''}
+\label{fadvptc}
+\end{figure}
+
+\section{A construção do caso de uso ``Registrar tarefas''}
+\paragraph{A execução de tratos culturais se dá através de tarefas que 
+utilizam recursos do pomar. Conforme pode ser visto na Seção 
+\ref{sec:decomposicao}, decompus
+os tratos culturais em tarefas para facilitar a construção da aplicação e o 
+registro das mesmas por parte dos usuários.
+A Figura \ref{fcurt} ilustra os casos de uso de sistema que o caso de uso
+de negócio ``Registrar tarefas''.}
+
+\begin{figure}[!h]
+{\centering \resizebox*{\textwidth}{0.6\textheight}{\includegraphics{diagramas/casodeusoregistrartarefas.eps}} \par}
+\caption{Caso de uso de ``Registrar tarefas''}
+\label{fcurt}
+\end{figure}
+
+\paragraph{Considerações:}
+\begin{itemize}
+\item O registro do uso de recursos humanos é feito documentando-se o 
+tempo ocupado (em horas), o valor da hora trabalhada (hora normal 
+e hora extra) com ou sem insalubridade e/ou periculosidade.
+\item O registro do uso de um recurso material máquina é feito anotando-se 
+o tempo, em horas, e o valor da hora trabalhada.
+\item O registro do recurso insumo é feito especificando-se o nome do 
+insumo, e a quantidade utilizada.
+\item O registro de uso do recurso material utensílio e implemento não é feito.
+\end{itemize}
+
+\paragraph{Os casos de uso de sistema estão textualizados abaixo:}
+
+\begin{itemize}
+\item \textbf{Registrar Capina Manual}\\
+Registra-se o uso de recursos humanos;
+\item \textbf{Registrar Capina Mecânica}\\
+Registra-se a utilização de recursos humanos e máquinas;
+\item \textbf{Registrar Capina Química}\\
+Registra-se o uso de recursos humanos, máquinas e insumos;
+\item \textbf{Registrar Roçada Manual}\\
+Registra-se a utilização de recursos humanos;
+\item \textbf{Registrar Roçada Mecânica}\\
+Registra-se o uso de recursos humanos e máquinas;
+\item \textbf{Registrar Tratamento Manual}\\
+Registra-se a utilização de recursos humanos;
+\item \textbf{Registrar Tratamento Mecânico}\\
+Registra-se o uso de recursos humanos, máquinas e insumos;
+\item \textbf{Registrar Adubação Manual}\\
+Registra-se a utilização de recursos humanos e insumos;
+\item \textbf{Registrar Adubação Mecânica}\\
+Registra-se o uso de recursos humanos, máquinas e insumos;
+\item \textbf{Registrar Combate a Pragas Manual}\\
+Registra-se a utilização de recursos humanos e insumos;
+\item \textbf{Registrar Combate a Pragas Mecânica}\\
+Registra-se o uso de recursos humanos, máquinas e insumos;
+\item \textbf{Registrar Poda}\\
+Registra-se a utilização de recursos humanos;
+\item \textbf{Registrar Raleio}\\
+Registra-se o uso de recursos humanos;
+\item \textbf{Registrar Irrigação}\\
+Registra-se a utilização de recursos humanos e máquinas;
+\item \textbf{Registrar Apanha}\\
+O registro da apanha de fruto é feito anotando-se o tempo (em horas)
+e a quantidade (em kg) que cada peão conseguiu apanhar.
+\item \textbf{Registrar Transporte}\\
+O registro do transporte interno da colheita é feito anotando-se
+a quantidade transportada por lote e o tempo (em horas) utilizado
+dos recursos trator e humano.
+\item \textbf{Registrar Classificação Manual}\\
+O registro da tarefa de classificação manual é feito anotando-se o tempo
+(em horas) trabalhado por cada recurso humano e a quantidade (em kg)
+classificada nesse tempo.
+\item \textbf{Registrar Classificação Mecânica}\\
+Registra-se a utilização de recursos humanos, o tempo de trabalho da máquina
+e a quantidade (em kg) classificada.
+\item \textbf{Registrar Comercialização}\\
+O registro da comercialização da produção é feito anotando-se a
+quantidade (em kg) entregue, o valor unitário,
+o comprador, o responsável pela entrega, os dados do transportador (nome, placa do caminhão)
+e os vencimentos (data e valor).
+\end{itemize}
+
+\subsection{Modelagem conceitual}
+
+\paragraph{O modelo conceitual do caso de uso de negócio ``Registrar Tarefas''
+está representado na Figura \ref{fmcrt}.}
+
+\begin{figure}[!h]
+{\centering \resizebox*{\textwidth}{0.9\textheight}{\includegraphics{diagramas/reg_tar_modelo_conceitual.eps}} \par}
+\caption{Modelo conceitual do caso de uso de ``Registrar Tarefas''}
+\label{fmcrt}
+\end{figure}
+
+\subsection{Projeto navegacional}
+
+\paragraph{Baseado no modelo conceitual proposto anteriormente, foi criado 
+o esquema navegacional da Figura \ref{fenrt} e o diagrama de contextos da 
+Figura \ref{fdcrt}.}
+
+\begin{figure}[!h]
+{\centering \resizebox*{\textwidth}{0.5\textheight}{\includegraphics{diagramas/reg_tar_esquema_navegacional.eps}} \par}
+\caption{Esquema navegacional do caso de uso de ``Registrar Tarefas''}
+\label{fenrt}
+\end{figure}
+
+\begin{figure}[!h]
+{\centering \resizebox*{\textwidth}{0.3\textheight}{\includegraphics{diagramas/reg_tar_diag_contextos.eps}} \par}
+\caption{Diagrama de contextos do caso de uso de ``Registrar Tarefas''}
+\label{fdcrt}
+\end{figure}
+
+\subsection{Projeto de interface abstrata}
+
+\paragraph{A Figura \ref{fadvrt} ilustra os Abstract Data Views deste caso de 
+uso.}
+
+\begin{figure}[!h]
+{\centering \resizebox*{\textwidth}{0.3\textheight}{\includegraphics{diagramas/reg_tar_adv.eps}} \par}
+\caption{ADVs do caso de uso de ``Registrar Tarefas''}
+\label{fadvrt}
+\end{figure}
+
+\section{A construção do caso de uso ``Apurar Resultados''}
+
+\paragraph{Apurar resultados é o último caso de negócio deste sistema de
+gestão para pomar de pessegueiros.}
+\paragraph{Em conversa com o Sr. Adelci, ficou decidido que a necessidade
+primária é obter relatórios que mostrem:}
+\begin{itemize}
+\item Quanto foi gasto por recurso?\\O sistema deve ser capaz de gerar
+extratos de quanto foi gasto por recursos dentro de um período de tempo
+especificado pelo usuário.
+\item Qual foi o total colhido?\\O sistema deve ser capaz de gerar
+relatório descriminados do total colhido por ciclo, cultivar e lote.
+\item Relatório de vendas da safra\\O sistema deve ser capaz de gerar
+relatório de vendas dentro de um período especificado pelo usuário. Neste
+relatório deveria conter dados como: para quem foi vendido, data da entrega,
+por quanto foi entregue e qual é a previsão de recebimentos.
+\item Qual foi o resultado final?\\O sistema deve ser capaz de gerar
+o relatório de resultado final por ciclo, lote e cultivar. Este relatório
+consiste de um balanço relacionando o valor da produção com o valor gasto
+para produzir.
+\item De quanto foi as perdas entre apanha e comercialização?\\
+O sistema deve ser capaz de apontar quanto do pêssego apanhado
+é rejeitado até a colheita.
+\end{itemize}
+\paragraph{A Figura \ref{fcuar} ilustra o caso de uso de negócio estudado nesta seção.}
+
+\begin{figure}[!h]
+{\centering \resizebox*{\textwidth}{0.3\textheight}{\includegraphics{diagramas/apu_res_caso_uso.eps}} \par}
+\caption{Caso de uso de negócio ``Apurar resultados''}
+\label{fcuar}
+\end{figure}
+
+\subsection{Modelagem conceitual}
+\paragraph{Por este caso de uso exclusivamente gerar informação baseada nos 
+dados já cadastrados no sistema, o modelo conceitual deste caso de uso
+é o modelo conceitual da aplicação.}
+
+\subsection{Projeto navegacional}
+\paragraph{O esquema navegacional usado é o mesmo esquema navegacional da
+aplicação.}
+\paragraph{O diagrama de contexto está representado na Figura \ref{fdcar}.}
+
+\begin{figure}[!b]
+{\centering \resizebox*{\textwidth}{0.4\textheight}{\includegraphics{diagramas/apu_res_diag_contextos.eps}} \par}
+\caption{Diagrama de contextos do caso de uso de negócio ``Apurar resultados''}
+\label{fdcar}
+\end{figure}
+
+\subsection{Projeto de interface abstrata}
+\paragraph{Os ADVs dos relatórios deste caso de uso, estão representados na
+Figura \ref{fadvar}.}
+
+\begin{figure}[!b]
+{\centering \resizebox*{\textwidth}{0.85\textheight}{\includegraphics{diagramas/apu_res_adv.eps}} \par}
+\caption{ADVs do caso de uso de negócio ``Apurar resultados''}
+\label{fadvar}
+\end{figure}

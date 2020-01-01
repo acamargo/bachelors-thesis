@@ -1,0 +1,378 @@
+\chapter{ESTUDO DE CASO}
+
+\section{Introdução}
+
+\paragraph{O estudo de caso desenvolvido neste trabalho é a modelagem de um 
+sistema de gestão para pomares de pessegueiros, sendo este capítulo o 
+resultado de várias reuniões que buscaram
+formalizar e definir o escopo deste sistema. Foi feito um levantamento
+de requisitos baseado na visão do cliente sobre o que seria o seu negócio.}
+
+\section{Objeto de estudo}
+
+\paragraph{Nosso objeto de estudo é o pomar de
+pessegueiros \emph{``Arroio das Pedras''}, de propriedade do Sr. Adelci dos 
+Santos Camargo, localizado no 5\ensuremath{º}
+distrito do município de Canguçu-RS. 
+Enquanto esta monografia estava sendo escrita, o pomar Arroio das Pedras
+possuía em torno de 47.000 plantas distribuídas em 58 hectares de pomar.}
+
+\section{O pessegueiro}
+
+\paragraph{Esta monografia estaria incompleta sem um histórico da planta que é o principal
+motivo deste trabalho existir.}
+
+\begin{quotation}
+``O pessegueiro é uma espécie nativa da China, tendo sido encontradas referências
+na literatura chinesa de 20 séculos a.C. O nome, entretanto, é originário da
+Pérsia, que foi erroneamente tomada como país de origem dessa espécie. O pessegueiro
+era também conhecido no mundo greco-romano, no século que antecedeu a Cristo.
+Provavelmente, teria sido levado da China à Pérsia e daí espalhado pela Europa.
+No Brasil, o pessegueiro foi introduzido em 1532 por Martin Afonso de Souza,
+por meio de mudas trazidas da Ilha da Madeira e plantadas em São Vicente, São
+Paulo.
+
+Atualmente, em nosso País, o cultivo do pessegueiro ocupa área superior a 20
+mil hectares, com produção anual que ultrapassa 100 mil toneladas.
+
+Na região Sul e, em particular, no Rio Grande do Sul, a cultura do pessegueiro
+só passou a ter maior importância a partir da década de 60. Antes disso, mais
+de 80\% do pêssego consumido era importado, sobretudo, da Argentina. Foi, provavelmente,
+na década de 50 que um agricultor notou que a planta de pessegueiro oriunda
+de caroços jogados ao solo apresentava boa adaptação e produção. Essa planta
+foi multiplicada, recebendo o nome de ``Aldrighi'', cultivar que deu grande
+impulso à expansão da espécie.
+
+No início dos anos 50, Orlando Rigitano iniciou, em São Paulo, um programa de
+melhoramento genético de fruteiras de clima temperado, visando a obter adaptação
+às condições de inverno ameno. Poucos anos depois, um programa semelhante era
+iniciado em Taquari/RS, na Estação Fitotécnica, por Sérgio Sachs. Em 1962, esse
+programa foi transferido para a Estação Experimental de Pelotas, hoje parte
+do Centro de Pesquisa Agropecuária de Clima Temperado-CPACT, da Embrapa.
+
+Esses programas deram grande estímulo à cultura, chegando a haver, só no Rio
+Grande do Sul, mais de 2.500 produtores e mais de 100 indústrias de conserva,
+que tinham, no processamento do pêssego, a principal atividade.
+
+Atualmente, o quadro é pouco distinto. Existem ainda, na região, pouco mais
+de 22 indústrias, que empregam cerca de 12 mil pessoas, na época de safra, as
+quais têm no pêssego a principal e, em alguns casos, a única atividade. Persistem
+ainda, no sul do RS, aproximadamente, 1.500 pequenos produtores. Observa-se,
+entretanto, que essa cultura começa a expandir-se para áreas tradicionalmente
+cultivadas com soja, trigo e fumo, ou exploradas com a criação de gado.
+
+O consumo de pêssegos no Brasil ainda é muito pequeno; segundo dados da Associação
+Gaúcha dos Produtores de Maçã - apenas 0,85 kg por habitante/ano. Esse baixo
+consumo é explicado, em grande parte, pelo reduzido poder aquisitivo da população
+e também pela falta de investimentos em propaganda e em esclarecimentos ao consumidor,
+que considera o pêssego ainda como sobremesa, quando deveria considerá-lo um
+complemento alimentar.
+
+Análises realizadas nos laboratórios do Centro de Pesquisa Agropecuária de Clima
+Temperado-CPACT, em algumas cultivares locais, comprovam que o teor de vitamina
+C, no fruto fresco, está entre 26,6 a 30,0 mg/100g. A quantidade dessa vitamina
+recomendada pelo Conselho Nacional de Pesquisa dos Estados Unidos é de 45 mg/dia,
+o que significa que duas frutas são suficientes para suprir as necessidades
+diárias do organismo humano. Além da vitamina C, o pêssego de polpa amarela
+é também rico em carotenóides, importantes por serem antioxidantes, estimuladores
+das funções imunológicas e protetores de determinados tipos de câncer.
+
+Portanto, o pêssego alia à sua beleza, ao sabor delicado e aroma agradável um
+alto valor nutritivo, ainda não devidamente conhecido.
+
+A produção de pêssegos, no Brasil, é considerada suficiente para atender à atual
+demanda; entretanto, com a melhoria do poder aquisitivo e com investimentos
+em marketing e publicidade, certamente, em pouco tempo, a produção estaria muito
+aquém do necessário.'' \cite{PESSEGUEIRO}
+\end{quotation}
+
+\paragraph{Em 2000 verificamos a permanência na atividade de apenas 12 indústrias
+na região, porém, tendo sua capacidade instalada ampliada, com a renovação
+do parque de máquinas.}
+
+\section{O pomar de pessegueiros}
+
+\paragraph{Durante várias reuniões com o Sr. Adelci, procuramos formalizar o que seria
+um pomar de pessegueiros. Deste processo surgiu a descrição textual que é citada
+abaixo.}
+
+\paragraph{Segundo \cite{AURELIO}, um pomar é um conjunto de plantas frutíferas.}
+
+\paragraph{O Sr. Adelci decidiu cultivar pessegueiros, definindo um pomar de pessegueiros
+como \emph{``um conjunto de plantas frutíferas (pessegueiros), explorado economicamente''}.}
+
+\paragraph{Esse conjunto de plantas ficam distribuídas em lotes ou talhões.}
+
+\paragraph{Esses lotes podem ser identificados pela sua localização, área 
+(mensurada em hectares), número de plantas, idade e um cultivar 
+(também chamado por ``variedade'').}
+
+\paragraph{Cultivar é uma variedade de pêssego com características próprias. Dessas características
+próprias a que mais nos interessa para gestão do pomar é o \textbf{ciclo produtivo do cultivar}.}
+
+\paragraph{O ciclo produtivo do cultivar envolve uma coleção de fases onde são realizados uma série
+de ``tratos culturais''\footnote{\textbf{Tratos Culturais} são atividades desenvolvidas no cultivo agrícola.}.}
+
+\paragraph{Esses tratos culturais, através de tarefas, utilizam um ou mais recursos para sua realização.}
+
+\paragraph{Para facilidade de compreensão, planejamento e utilização, estes 
+recursos são identificados, codificados, quantificados e, ainda, classificados.}
+
+\paragraph{Os recursos podem ser classificados como:}
+
+\begin{itemize}
+\item \textbf{Humanos}: Os recursos humanos compreendem cada pessoa que trabalha no pomar 
+(mão-de-obra utilizada na execução das tarefas).
+\item \textbf{Materiais}: Recursos materiais são identificados por cada máquina,
+implemento, utensílio, insumo, etc, que pode ser utilizados para realizar alguma
+tarefa no pomar.
+\item \textbf{Financeiros}: Recursos financeiros são representados pelos
+valores em moeda nacional envolvidos no processo.
+\item \textbf{Naturais}: Recursos naturais compreende os elementos que se
+encontram na natureza a disposição para uso no processo produtivo, como solo, 
+água, plantas, etc.
+\end{itemize}
+
+\section{O ciclo produtivo de um pomar de pessegueiros}
+
+\paragraph{Conversando sobre o ciclo produtivo do pessegueiro e sobre atividades executadas
+no pomar, concluímos que o ciclo produtivo do pomar é composto das seguintes
+fases:}
+
+\begin{enumerate}
+\item Dormência
+\item Floração
+\item Frutificação
+\item Maturação
+\item Colheita
+\item Comercialização
+\item Entresafra
+\end{enumerate}
+
+\paragraph{Embora a época de início da dormência seja semelhante, independente do cultivar,
+a fase de floração e maturação diferem influindo diretamente na época de realização
+das outras fases. Sendo que podemos classificar, quanto a época de maturação, em
+cultivar de ciclo:}
+
+\begin{itemize}
+\item \textbf{Precoce} quando ocorre a maturação até 25 de Novembro;
+\item \textbf{Médio} com maturação após 25 de Novembro até 25 de Dezembro e
+\item \textbf{Tardio} com maturação após 25 de Dezembro.
+\end{itemize}
+
+\paragraph{A seguir detalharei cada fase do ciclo produtivo do pomar.}
+
+\subsection{A fase de dormência}
+
+\paragraph{A fase de Dormência, também conhecida por ``repouso'', corresponde ao período
+em que diminui a atividade vegetativa do pessegueiro com a conseqüente queda
+das folhas.}
+\paragraph{Na fase de Dormência desenrola-se os seguintes tratos culturais:}
+\begin{itemize}
+\item \textbf{Roçada}: consiste numa limpeza (corte de pequenos arbustos, gramíneas,
+etc). Essa limpeza é feita utilizando-se roçadeira mecânica (tratorizada) ou
+manual. Para execução deste trato cultural utiliza-se recursos humanos e materiais
+(máquinas e implementos)
+\item \textbf{Tratamento de Inverno}: aplicação de produtos a base de óleo mineral,
+cobre, inseticida, etc, nas plantas em dormência. Essa aplicação é feita com
+uso de pulverizadores costal e tratorizado. Para execução deste trato cultural
+utiliza-se recursos humanos e materiais (máquinas, implementos, insumos e utensílios).
+\item \textbf{Poda Hibernal}: consiste no corte dos ramos indesejáveis para formação/condução
+da planta facilitando a aeração e penetração de luz no interior da mesma. Feito
+através do uso de tesouras de poda manual e serrote de poda. Para execução deste
+trato cultural utiliza-se recursos humanos e materiais (utensílios).
+\end{itemize}
+
+\subsection{A fase de floração}
+
+\paragraph{Esta fase corresponde ao início da atividade vegetativa do pessegueiro com o
+desenvolvimento de botões florais, desabrojar das flores até a queda das pétalas.}
+
+\paragraph{A fase de Floração possui os seguintes tratos culturais:}
+
+\begin{itemize}
+\item \textbf{Tratamento da Flor}: se dá desde o desenvolvimento do botão floral até
+a queda das pétalas, com produtos a base de fungicidas, inseticidas, etc. Aplicação
+feita com o uso de pulverizadores costal e tratorizados. Os recursos utilizados
+na execução deste trato cultural são os mesmo do Tratamento de Inverno da fase
+de Dormência.
+\item \textbf{Adubação de Base}: aplicação de adubo conforme orientação
+da análise de amostra de solo ou foliar, na projeção da copa das plantas, aplicado
+manualmente ou com o emprego de semeadeiras tratorizadas. Recursos humanos e
+materiais (máquinas, implementos e insumos) são utilizados na execução deste
+trato cultural.
+\end{itemize}
+
+\subsection{A fase de frutificação}
+
+\paragraph{Esta fase inicia com a queda da ``\emph{corola}`` até a completa formação
+do fruto.}
+
+\paragraph{Na fase de Frutificação são executados os seguintes tratos culturais:}
+
+\begin{itemize}
+\item \textbf{Capina}: consiste na eliminação das ervas daninhas no interior
+das linhas do pomar.  Pode ser manual (quando realizada com uso de enxadas), mecânica 
+(quando realizada com capinadeiras, grades tratorizadas, etc) ou química 
+(uso de herbicidas).
+Para aplicar o herbicida utiliza-se pulverizador tratorizado ou costal.
+\item \textbf{Tratamento dos Frutos}: controle de doenças e pragas com o uso de produtos
+químicos e/ou orgânicos (fungicidas, inseticidas, etc) que são aplicados com uso
+de pulverizadores (costal ou tratorizado). São utilizado os mesmo recursos do
+Tratamento de Inverno da fase de Dormência.
+\item \textbf{Raleio}: consiste na eliminação do excesso de frutos para obter maior
+tamanho e qualidade. Essa eliminação é feita manualmente. Retirando-se os
+frutos excedentes, defeituosos e mal localizados, operação feita antes do 
+endurecimento do caroço. Somente recursos humanos são utilizados neste trato 
+cultural.
+\item \textbf{Adubação de Cobertura}: distribuição de adubos nitrogenados durante
+o período vegetativo (aproximadamente 60 dias antes da colheita dependendo do
+cultivar). São utilizados
+os mesmos recursos da Adubação de Base da fase de Floração.
+\item \textbf{Poda Verde}: consiste na eliminação dos ramos mal localizados, facilitando
+a formação de ramos produtivos para a próxima safra e na formação de plantas 
+novas. Na execução deste trato
+cultural são utilizados recursos humanos e materiais (utensílios).
+\item \textbf{Irrigação}: quando necessário e possível, efetua-se a rega do solo com
+o uso de equipamentos próprios para irrigação. Se for necessário bombear água
+usa-se motor elétrico ou a combustão (motor estacionário ou trator). Este trato
+cultural possui características ímpar, por exigir uma série de recursos de utilidade
+única a este fim. Pode ser efetuado de diversas formas (gotejamento, aspersão,
+sulcos, etc), utilizando recursos humanos e materiais (máquinas, implementos
+e utensílios).
+\end{itemize}
+
+\subsection{A fase de maturação}
+
+\paragraph{Esta fase dá com o desenvolvimento da polpa do fruto, adquirindo textura, sabor
+e cor característica do cultivar.}
+\paragraph{A fase de Maturação compreende o seguinte trato cultural:}
+\begin{itemize}
+\item \textbf{Tratamento dos Frutos}: Idem ao tratamento de frutos da fase de frutificação,
+com atenção especial ao combate da mosca dos frutos e podridão parda.
+\item \textbf{Irrigação}: idem ao trato cultural de Irrigação da fase de Frutificação.
+\end{itemize}
+
+\subsection{A fase de colheita}
+
+\paragraph{Esta fase corresponde a coleta dos frutos com maturação completa.}
+\paragraph{Na fase de Colheita são realizadas as seguintes atividades:}
+\begin{itemize}
+\item \textbf{Apanha dos Frutos}: recolhimento manual dos frutos que estão com maturação
+completa em cestos e/ou bolsas especiais. Utiliza recursos humanos e materiais
+do tipo utensílios.
+\item \textbf{Transporte interno}: consiste na distribuição de caixas vazias nos lotes 
+e a recondução
+delas cheias para classificação em galpões. Utiliza recursos humanos e materiais
+do tipo máquina (trator e carreta) e utensílios (caixas).
+\item \textbf{Classificação dos Frutos}: consiste na classificação de acordo com o
+tamanho, sendo eliminados os defeituosos e avariados (amassados, podres, etc).
+A eliminação é feita manualmente, enquanto que a classificação é feita por mesas
+classificadoras elétricas ou não. Os frutos são acondicionados em caixas especiais
+com capacidade de 20kg para aguardar comercialização. Utiliza recursos humanos
+e materiais do tipo utensílios.
+\end{itemize}
+
+\subsection{A fase de comercialização}
+
+\paragraph{A fase de Comercialização consiste na entrega dos frutos embalados para a indústria,
+ou para o comércio \emph{in natura} em feiras e supermercados. A atividade executada
+nessa fase seria compostos pelo registro de venda de frutos com emissão de notas
+fiscais e o agendamento dos recebimentos, quando a prazo.}
+
+\subsection{A fase de entresafra}
+
+\paragraph{Entresafra é a fase em que a planta, após a produção dos frutos recompõe-se, 
+acumulando reservas em suas gemas, raízes e ramos para a produção na próxima safra.}
+\paragraph{A fase de Entresafra possui os seguintes tratos culturais:}
+\begin{itemize}
+\item \textbf{Adubação de Cobertura}: distribuição de adubos nitrogenados durante
+o período vegetativo. Na execução deste trato
+cultural são empregados os mesmo recursos da Adubação de Base da fase de Floração.
+\item \textbf{Combate as Pragas}: combate principalmente a formiga, grafolita, etc.
+Aplicação de formicidas, inseticidas com uso de pulverizadores (costal ou tratorizado)
+ou manualmente. Utiliza-se recursos humanos e materiais (máquinas, implementos,
+insumos e utensílios).
+\item \textbf{Adubação Orgânica}: consiste no emprego de matéria orgânica (cama
+de aviário, esterco de curral, etc) no outono e no período de pré-dormência.
+\item \textbf{Poda Verde}: idem a atividade de Poda Verde da fase de Frutificação.
+\item \textbf{Calagem do Solo}: consiste no uso de calcário de acordo com as
+indicações da análise de solo.
+\end{itemize}
+
+\section{A decomposição dos tratos culturais em tarefas\label{sec:decomposicao}}
+
+\paragraph{A execução de um trato cultural, é considerado uma ou mais tarefas 
+que utilizam recursos no pomar.}
+\paragraph{Baseado na descrição detalhada dos tratos culturais no ciclo produtivo do pomar,
+observei que muitos recursos são utilizados repetidamente, em fases diferentes e 
+com características diferentes, recebendo inclusive, denominações diferentes. Mas para efeito de
+gestão, notei a possibilidade de agrupar estes tratos culturais, facilitando
+deste modo, a compreensão, modelagem e futura implementação da aplicação proposta neste trabalho.}
+\paragraph{Note, por exemplo, que o trato cultural denominado ``poda'' pode ocorrer 2
+ou mais vezes no ciclo produtivo: poda hibernal (fase de dormência) e poda verde
+(fase de frutificação e entresafra).}
+\paragraph{São efetuadas várias adubações no decorrer do ciclo produtivo (Adubação de Base,
+fase de Floração; Adubação de Cobertura, fases de Frutificação e Entresafra; Adubação Orgânica,
+fase de Entresafra). Convém ressaltar
+que o trato cultural de Calagem possui forma de aplicação semelhante a uma adubação, logo,
+para efeito de gestão do pomar, podemos tratar como tal.}
+\paragraph{Também é possível agrupar as várias pulverizações desenvolvidas nos tratamentos
+(de Inverno, fase de Dormência; da Flor, fase de Floração; do Fruto, fase de
+Maturação) e combate a pragas (em qualquer fase).}
+\paragraph{Nas fases de colheita e comercialização são executadas tarefas que 
+também merecem gerenciamento, apesar de não fazerem parte do ciclo produtivo 
+do pessegueiro (como classificação, transporte, etc).}
+\paragraph{Considerando a similaridade de recursos utilizados e objetivos de 
+cada trato cultural foi possível identificar as seguintes tarefas:}
+\begin{enumerate}
+\item Capina Manual: utiliza recursos humanos e utensílios;
+\item Capina Mecânica: utiliza recursos humanos, máquinas e implementos;
+\item Capina Química: utiliza recursos humanos, máquinas e insumos;
+\item Roçada Manual: utiliza recursos humanos e utensílios;
+\item Roçada Mecânica: utiliza recursos humanos, máquinas e implementos;
+\item Tratamento Manual: utiliza recursos humanos e utensílios;
+\item Tratamento Mecânico: utiliza recursos humanos, máquinas, insumos e 
+implementos;
+\item Adubação Manual: utiliza recursos humanos, insumos e utensílios;
+\item Adubação Mecânica: utiliza recursos humanos, máquinas, insumos e 
+implementos;
+\item Combate a Pragas Manual: utiliza recursos humanos, insumos e utensílios;
+\item Combate a Pragas Mecânico: utiliza recursos humanos, máquinas, insumos e 
+implementos;
+\item Poda: utiliza recursos humanos e utensílios;
+\item Raleio: utiliza recursos humanos;
+\item Irrigação: utiliza recursos humanos, máquinas, utensílios e implementos;
+\item Apanha: utiliza recursos humanos, máquinas, utensílios e implementos;
+\item Transporte: utiliza recursos humanos, máquinas e implementos;
+\item Classificação Manual: utiliza recursos humanos e utensílios;
+\item Classificação Mecânica: utiliza recursos humanos e máquinas;
+\item Comercialização: utiliza recursos financeiros;
+\end{enumerate}
+
+\section{A gestão completa do pomar}
+
+\paragraph{Até o presente momento focalizamos apenas o ciclo produtivo do pomar. Convém
+lembrar que a gestão completa abrange mais do que isso, como por exemplo:}
+\begin{itemize}
+\item Precipitação pluviométrica ocorrida no pomar, para determinar a necessidade
+de irrigação nos lotes;
+\item Registro patrimonial: bens móveis (máquinas, implementos, ferramentas e/ou utensílios
+de trabalho manual), bens imóveis (terras, pomares, cercas, represas, casas,
+galpões), cálculo de depreciação de máquinas e equipamentos.
+\item Controle de Estoque: relacionando estoque de insumos (fertilizantes, inseticidas,
+fungicidas, formicidas, óleo diesel, lubrificantes, herbicidas, etc), peças
+para reposição e produtos para comercialização.
+\item Fluxo de Caixa: contabilizando entradas e saídas, contas a pagar e receber.
+\item Folha de pagamento: relatório de pagamentos mensais a empregados e encargos
+sociais.
+\end{itemize}
+
+\section{Conclusão do capítulo}
+\paragraph{Dado a complexidade do ambiente a ser modelado e a restrição de tempo disponível
+para execução deste trabalho, decidi modelar e implementar a gestão do ciclo
+produtivo, deixando os tópicos da seção acima para um trabalho futuro.}
+\paragraph{Um fato interessante que merece ser ressaltado, é que a confecção
+deste capítulo propiciou ao proprietário do pomar momentos onde ele pode refletir
+profundamente sobre detalhes do seu negócio, normalmente ele não encontra
+``tempo'' para fazer isso.}

@@ -1,0 +1,81 @@
+\documentclass[brazil, english]{esin}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{verbatim}
+\usepackage{graphics}
+\usepackage{url}
+\makeatletter
+
+%
+% Define a fonte para o \verbatim
+%
+\def\verbatim@font{\normalfont\ttfamily
+\footnotesize\let\do\do@noligs
+\verbatim@nolig@list}
+%
+% E números de linha
+%
+%\newcounter{VerbatimLineNo}
+%\addto@hook\every@verbatim{%
+%\setcounter{VerbatimLineNo}{0}}
+%\def\verbatim@processline{%
+%\addtocounter{VerbatimLineNo}{1}%
+%\leavevmode%
+%\makebox[2.5em][r]{\theVerbatimLineNo}\hskip1em%
+%\the\verbatim@line\par}
+
+% garante q o idioma é brazil
+\AtBeginDocument{\selectlanguage{brazil}}
+
+\makeatother
+
+\begin{document}
+
+\title{Sistema de Gestão via Web \\ para Pomar de Pessegueiros, \\ baseado em Software Livre}
+\author{ANDR\'{E} RIBEIRO CAMARGO}
+\adviser{Prof. Ramiro Saldaña}
+\coadviser{Prof. Guilherme Netto}
+\course{An\'{a}lise de Sistemas}
+\date[Dezembro]{2000}
+\maketitle{}
+
+\input{dedicatoria.tex}
+
+\input{epigrafe.tex}
+
+\input{agradecimentos.tex}
+
+\tableofcontents{}
+
+\listoffigures{}
+
+\input{resumo.tex}
+
+\input{abstract.tex}
+
+%\@addtoreset{footnote}{chapter}
+
+%\pagenumbering{arabic}
+
+\input{introducao.tex}
+
+\input{softwarelivre.tex}
+
+\input{estadodaarte.tex}
+
+\input{oo.tex}
+
+\input{estudodecaso.tex}
+
+\input{elaboracao.tex}
+
+\input{projeto.tex}
+
+\input{conclusao.tex}
+
+\input{anexos.tex}
+
+\input{bibliografia.tex}
+
+\end{document}

@@ -1,0 +1,216 @@
+
+                          Proposta de Projeto para
+                  Democratização da Informática em Canguçu
+   
+                       Versão 1.2 em 27/Novembro/2000
+                        Versão 1.1 em 14/Junho/2000
+                        Versão 1.0 em 09/Junho/2000
+                        Versão 0.9 em 07/Junho/2000
+                         Versão 0.3 em 29/Maio/2000
+                         Versão 0.2 em 26/Maio/2000
+                         Versão 0.1 em 20/Maio/2000
+   
+   1. Introdução
+   
+            "Democracia? É dar a todos o mesmo ponto de partida.
+           Quanto ao ponto de chegada, isso depende de cada um."
+                               Mário Quintana
+   
+          Com uma revolução chamada globalização acontecendo de certa
+          forma através da popularização da Internet, a informática vem
+          tornando-se cada vez mais parte do cotidiano humano. Isso
+          acarreta mudanças sociais enormes na vida das pessoas, um
+          exemplo direto dessas mudanças é saber manusear um novo
+          equipamento: o computador.
+          O conhecimento de como utilizar esse equipamento, permitirá às
+          pessoas manter-se em contato com o mundo, enquanto que, aqueles
+          sem acesso a essa tecnologia correm o sério risco de exclusão
+          social, profissional, etc.
+          Gilberto Dimenstein, em seu livro Aprendiz do Futuro, Cidadania
+          hoje e amanhã discorre que:
+          "As chances de o Brasil gerar emprego na era da informatização,
+          marcada por competição selvagem, dependem em boa parte não só
+          do que se faz nas empresas, mas do que se produz hoje em sala
+          de aula. Escola que não ensina a manejar computadores, entrar
+          em redes de informações, mantendo o aluno em permanente
+          reciclagem, cria novos analfabetos.
+          O sem-computador de hoje é o sem-terra do futuro. Vai ficar
+          vagando à procura de auxílio oficial, com poucas chances de
+          encontrar um bom emprego. Cedo ou tarde o drama dos
+          sem-computador vai entrar no topo da agenda brasileira."
+          Mas como possibilitar que qualquer pessoa tenha acesso a
+          informática?
+          Através de um projeto social visando ensinar informática, com
+          custo zero para os participantes.
+          A educação dessas pessoas na área da informática, geraria um
+          retorno social muito grande como, por exemplo, capacitação de
+          pessoal para o mercado de trabalho, descobrimento de novos
+          talentos e ampliação da perspectiva de vida da população.
+          Ciente dos problemas da região, onde muitas pessoas não tem
+          condições de vida digna e tantas outras sem condições de
+          adquirir um computador, proponho com este documento uma forma
+          de viabilizar o ensino da informática a essas pessoas.
+          Me refiro a ensinar, não apenas treinar, já que projeto deveria
+          desenvolver o educando, assegurar-lhe a formação comum
+          indispensável para o exercício da cidadania e fornecer-lhe
+          meios para progredir no trabalho e em estudos posteriores, não
+          sendo portanto, apenas um curso bitolado de como utilizar o
+          computador.
+          Quando este projeto se encontrar numa fase mais adiantada,
+          madura e auto-suficiente, poderia agir paralelamente a educação
+          básica (ensino fundamental e ensino médio) incluindo mais uma
+          área do saber na formação desses educandos.
+          
+   2. O Projeto ACANGUAÇU
+   
+      "ACANGUAÇU - Onça pintada que no passado viveu por estes pagos,
+     segundo teoria existente, deu origem ao nome da cidade de Canguçu"
+   
+          O Projeto ACANGUAÇU tem como meta proporcionar às pessoas
+          contato com o mundo da informática. O Projeto ACANGUAÇU
+          proporcionará este contato através da promoção de palestras,
+          painéis, grupos de estudos e cursos de capacitação de pessoal.
+          A mão-de-obra utilizada no projeto, num primeiro momento, deve
+          ser voluntária. Futuramente, se obtivermos recursos talvez seja
+          empregado mão-de-obra assalariada.
+          A utilização e divulgação de software livre é indiscutível, já
+          que o Movimento Software Livre valoriza os ideais de
+          solidariedade humana incentivando a criação de uma comunidade
+          de usuários de informática, além de ser uma forma de baratear o
+          custo de implantação deste projeto.
+          Atualmente, a proposta do Projeto ACANGUAÇU não está ligada a
+          nenhuma entidade, orgão ou partido político, sendo uma
+          iniciativa voluntária e sem fins lucrativos.
+          
+   2.1. Software Livre
+   
+          Segundo a Revista do Linux, edição de Maio/2000:
+          "O estado do Rio Grande do Sul é, sem dúvida, o estado
+          brasileiro mais entusiasta na discussão e disseminação do uso
+          de software livre na informática pública. Governo Estadual e
+          Prefeitura Municipal de Porto Alegre, através de suas empresas
+          de processamento de dados, a PROCERGS e a PROCEMPA, têm
+          levantado essa bandeira, mostrando que o uso de programas com
+          código aberto e de livre distribuição está entre as soluções
+          mais viáveis para um país que precisa reduzir os vultuosos
+          gastos públicos com a compra de software proprietário,
+          universalizar o acesso à tecnologia e oferecer uma
+          informatização segura e de qualidade aos cidadãos." 
+          O Projeto ACANGUAÇU objetiva ser o agente estimulador da
+          utilização de Software Livre na cidade de Canguçu.
+          
+   2.2. Palestras
+   
+          As palestras assumirão o papel de introduzir o projeto na
+          sociedade. Depois da família, a escola é o principal semeador
+          do saber, sendo responsável pelo pleno desenvolvimento do
+          educando, seu preparo para o exercício da cidadania e sua
+          qualificação para o trabalho. Baseado nisso, inicialmente o
+          público alvo seriam turmas de 8ª série do ensino fundamental da
+          rede escolar municipal, estadual e privada no município de
+          Canguçu-RS, podendo posteriormente, ampliar-se para todo o
+          ensino fundamental e médio.
+          
+   2.3. Painéis
+   
+          Através da promoção de painéis de discussão, o projeto
+          proporcionará uma forma da sociedade debater assuntos
+          relacionados a informática com convidados de outras
+          instituições de ensino, empresas e membros do projeto.
+          
+   2.4. Cursos de capacitação de pessoal
+   
+          Devido a escassez de recursos, este é o item de mais difícil
+          implantação. Seria necessário montar um laboratório com
+          equipamentos que permitisse a realização de cursos de
+          informática.
+          Os cursos abrangeriam áreas como informática básica, computação
+          gráfica, administração de redes, desenvolvimento de software,
+          etc. Sendo que o curso de informática básica deveria ser
+          implantado primeiramente, visto que como o nome já diz, ele
+          forneceria a base de conhecimento para os cursos seguintes.
+          Isso possibilitaria a identificação de novos talentos, sendo
+          que estes seriam convidados a participar de uma Cooperativa de
+          Desenvolvimento de Software Livre.
+          A clientela alvo desses cursos seriam pessoas que não possuem
+          computador e, portanto, precisam utilizar recursos de terceiros
+          (neste caso, recursos do Projeto) para desenvolver a prática do
+          material exposto durante as aulas.
+          Nos horários vagos, o laboratório ficaria a disposição da
+          comunidade canguçuense, propiciando que aquelas pessoas que não
+          dispunham de computador possam ter um contato extra ou ainda
+          aperfeiçoar seus conhecimentos.
+          
+   2.5. Grupos de Estudos
+   
+          O público alvo desses grupos de estudo seriam pessoas que
+          dispunham de um computador para estudar os assuntos abordados
+          durante os encontros.
+          Devido a dificuldade de se obter recursos para montagem do
+          laboratório, os Grupos de Estudo surgem como resposta rápida
+          para implantação deste projeto, já que os componentes
+          utilizariam recursos próprios, fazendo-se necessário somente a
+          locação de espaço físico para realização dos encontros.
+          Os grupos seriam organizados conforme o programa dos cursos de
+          capacitação de pessoal.
+          O material poderia ficar disponível na Internet, para que os
+          componentes dos grupos estudem por conta própria, reservando os
+          encontros para debate daquele material.
+          
+   2.6. A Cooperativa de Desenvolvimento de Software Livre
+   
+          [1]Hugo Fogliano Gonçalves, em seu artigo [2]"O Cooperativismo
+          de Trabalho e a Organização do Trabalho" diz que
+          "A união de pessoas objetivando a melhoria de todos, o
+          crescimento de cada um, o alcance de maiores resultados, o
+          aumento e a melhor distribuição de renda, o desenvolvimento da
+          criatividade, a afirmação dos mesmos interesses e das mesmas
+          dificuldades, caracterizam uma cooperativa".
+          A constituição de um provedor de serviços em informática,
+          organizada na forma de uma cooperativa de trabalho utilizando a
+          mão-de-obra oriunda do Projeto ACANGUAÇU, fecha o ciclo do
+          projeto. Já que formaríamos pessoas para o mercado de trabalho
+          e ainda absorveríamos parte dessa mão-de-obra.
+          Essa cooperativa prestaria serviços de informática para
+          terceiros mediante remuneração justa.
+          Proponho ainda que seja criado além da taxa administrativa uma
+          taxa de manutenção que seria aplicada no projeto para dar
+          continuidade ao processo.
+          
+   3. Quem é o proponente?
+   
+          [3]André Ribeiro Camargo é técnico em Eletrônica pelo CEFET-RS
+          e aluno formando do curso de Graduação em Análise de Sistemas
+          pela Universidade Católica de Pelotas. Trabalha na área da
+          informática desde 1994, tendo desenvolvido serviços tanto na
+          área de manutenção de computadores, desenvolvimento de software
+          e instrutor em cursos de informática. Atualmente atua como
+          desenvolvedor free-lancer de aplicações para Internet, já
+          prestou serviços no Centro de Informática da Universidade
+          Federal de Pelotas e para o Sindicado dos Municipários de
+          Canguçu(SIMCA).
+          Entusiasta do Movimento Software Livre, curioso por natureza e
+          aficionado em informática por vocação, André almeja através
+          desse projeto um futuro melhor para região onde vive.
+          
+   4. Conclusão
+   
+   "É tudo muito simples, Anji-san. Apenas mude sua concepção de mundo."
+                          Shogun, de James Clavell
+   
+          A realização de palestras, painéis e grupos de estudo é viável
+          a curto prazo, já que dispomos de pessoal e equipamentos para
+          isso. Enquanto que cursos de capacitação de pessoal, devido a
+          infra-estrutura envolvida, somente seria possível através de
+          financiamento de instituições como Estado do Rio Grande do Sul,
+          CDI (Comitê de Democratização da Informática), empresas
+          privadas interessadas no desenvolvimento da região ou ainda
+          doações de cidadãos entusiasmados com nossa causa.
+          De qualquer maneira, daremos início ao projeto através da
+          realização das palestras.
+
+References
+
+   1. mailto:hugo@domain.com.br
+   2. http://www.domain.com.br/clientes/hugo/pag3.html
+   3. mailto:acamargo@atlas.ucpel.tche.br
